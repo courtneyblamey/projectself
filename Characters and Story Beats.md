@@ -2,7 +2,7 @@
 
 
 
-Conversion time: 0.573 seconds.
+Conversion time: 0.73 seconds.
 
 
 Using this Markdown file:
@@ -15,12 +15,12 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β39
-* Thu Oct 10 2024 11:53:28 GMT-0700 (PDT)
+* Thu Oct 10 2024 12:43:55 GMT-0700 (PDT)
 * Source doc: Characters and Story Beats
 ----->
 
 
-Characters
+**Characters**
 
 (italics indicate pulled from prelim doc)
 
@@ -51,6 +51,8 @@ Bio: Lynda is a career-driven woman in her 40s. She loves to bring levity to her
 
 Apartment: A two-bed, so that she can host friends who come visit in the city. She’s renting because she recently moved to The City for her new job. Once she knows permanency, she might end up buying somewhere.
 
+Hesitancy to Sign: Might move away anyway.
+
 **Inner Child**
 
 
@@ -77,6 +79,8 @@ Bio: Antony may be a little closed off, but that doesn’t make him a total intr
 
 Apartment: Studio, but a reasonably sized one. Recently switched out the couch bed for a real bed. Has lived there about 4 years now.
 
+Hesitancy to Sign: Had a confrontation with the landlord before, and wants to not have his name on something that might lead to another one.
+
 **(Coping) Defence Mechanisms**
 
 
@@ -102,6 +106,8 @@ Perfect day-off: Going to art museums for sketching inspiration or craft fairs a
 Bio: Sasha is witty, silly, and a beacon of light in people’s dark days. Their style is unmatched in vibes and their creativity seeps into most corners of their life. They live with their dog Comet. Sasha is currently on the dating scene in The City and can provide all kinds of wild first-date stories. After some bad experiences at art school (and one really bad break up), and losing contact with a couple family members, Sasha decided to move away from where they grew up and start a life to call their own. They’ve been working as a moderately successful freelance illustrator for 5 years, with regular purchases made on her website, though it hasn’t been getting much traction as of late. Even when the going gets rough, Sasha has a quip for the occasion.
 
 Apartment: 1 bedroom, decorated with dopamine decor (bright colours, fun gimmick-y pieces). They’ve lived there 7 years now.
+
+Hesitancy to Sign: Thinks the landlord will get the repairs done, they said they would!
 
  
 
@@ -131,6 +137,8 @@ Bio: Cleo can have a laugh, but she typically operates in a head-down-get-on-wit
 
 Apartment: 2 bedroom with their fiance, Tyler, and their cat Squish. They’ve lived there just under a decade now.
 
+Hesitancy to Sign: …unsure
+
 **Procrastination**
 
 
@@ -156,17 +164,77 @@ Bio: Jasper isn’t amazing at their job, but they give it their best shot. They
 
 Apartment: Studio in the basement level, sparsely decorated, lived there a year or two.
 
+Hesitancy to Sign: No, he will sign it, don’t worry! He might forget though…
+
 *Other thoughts:*
 
 
 
 * *There needs to be stakes - you can fail to reconcile or heal the Other. I remember HPF not really having stakes… other than getting the achievements. It was a very well curated vibe.*
 
-Story Beats - Overarching Narrative
+**Story Beats - Overarching Narrative** (the days are not one after the other totally, might be mini time jumps, like a couple of days)
 
-Day 1 \
+Each character needs 3 opportunities to interact with them, to provide enough opportunity to max out their stars. This is going to need some fanangling. Once you’ve hung out with them you can’t for the rest of that day? Or can you spam hanging with them?
+
+Day 0 \
 
 
 
 
 * PC (Player Character) finishes unpacking their moving boxes
+* Bumps into Jasper heading out to meet friends.
+* Lynda spots them bringing up their laundry and they chat.
+* Day END.
+
+Day 1
+
+
+
+* PC wakes up to leaf blowing outside their window at a neighbouring building, notices that their window doesn’t have good sealant.
+* Decides to go get a coffee from local cafe. (I need to think about letting things be a decision though).
+* Meets Antony.
+* Heads back home, bumps into Sasha walking her dog.
+* Returns to building to see someone put up a notice that they want to take action for the disrepair in the building. Meet Cleo reading it.
+* Learn from Cleo that some folks might need encouragement to sign the paper, which says it wants to send off ASAP.
+* DAY END.
+
+Day 2
+
+
+
+* PC wakes up and ponders on the building situation. Do they just move? &lt;GAME END> Why do they have to convince the people they’ve just met? (These questions might alter depending on the onboarding questions).
+* MORNING: Interact with Cleo, Jasper, or Lynda.
+* AFTERNOON: Interact with Cleo, Jasper, or Sasha.
+* EVENING: Interact with Cleo, Sasha, or Antony
+* DAY END
+
+Day 3
+
+
+
+* PC’s day starts with their phone ringing, their job start date and contract is finally confirmed (leave ambiguous?).
+* MORNING: Interact with Antony, Lynda, or Sasha.
+* AFTERNOON: Interact with Sasha or Jasper
+* EVENING: Interact with Cleo, Sasha, or Lynda.
+* DAY END
+
+Day 4
+
+
+
+* PC wakes to email from tenant reminding them to sign the petition, offers a space to reflect on who has or hasn’t signed and why.
+* MORNING: Interact with Jasper, Sasha.
+* AFTERNOON: Interact with Lynda, Antony.
+* EVENING: Interact with Cleo, Sasha.
+* DAY END
+
+Day 5
+
+
+
+* PC wakes up, DETERMINED? OVERWHELMED?
+* MORNING: Interact with Antony, Lynda, or Cleo.
+* AFTERNOON: Interact with Sasha, Jasper.
+* EVENING: Interact with all cast at the cafe? Some kind of send off interaction.
+* DAY END: Win/Lose condition for the number of tenants PC got to sign the notice. 
+* “That’s all our time for this week’s session”.
