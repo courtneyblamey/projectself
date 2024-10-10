@@ -2,7 +2,7 @@
 
 
 
-Conversion time: 0.588 seconds.
+Conversion time: 0.573 seconds.
 
 
 Using this Markdown file:
@@ -15,7 +15,7 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β39
-* Thu Oct 10 2024 10:46:13 GMT-0700 (PDT)
+* Thu Oct 10 2024 11:53:28 GMT-0700 (PDT)
 * Source doc: Characters and Story Beats
 ----->
 
@@ -120,20 +120,23 @@ Pronouns: she/her
 
 Age: 30s
 
-Motivations:
+Motivations: Independence, but also partnership. Respect as an authority figure.
 
-Flaws:
+Flaws: Short patience, and suffers no fools.
 
-Perfect day-off:
+Perfect day-off: Ironically, a day shopping at an outlet mall. With a coffee in hand and her best friend in tow (and who drives, so she doesn’t have to).
 
  \
-Bio:
+Bio: Cleo can have a laugh, but she typically operates in a head-down-get-on-with-it approach to life and work. She seeks independence after feeling let down by the people she depended on in her teens and early 20s - Tyler has softened that side of her somewhat over the last four years. She worked her way up from temporary holiday sales assistant to store manager and has held that position for the last 2-3 years. There’s targets to hit, and sometimes the upper management don’t realise how brick and mortar doesn’t do the numbers it used to, which frustrates Cleo on many occasions. That doesn’t mean she won’t aim for those targets, and push her team to do so too, but it doesn’t win her too many favours with her sales assistants at times.
+
+Apartment: 2 bedroom with their fiance, Tyler, and their cat Squish. They’ve lived there just under a decade now.
 
 **Procrastination**
 
 
 
 * *Someone who helps others but never helps themselves, until the last moment.*
+* Often deflects and looks to do other things than the Big Task ™ he needs to do.
 
 Name: Jasper
 
@@ -141,15 +144,17 @@ Occupation: Line Cook
 
 Pronouns: they/them
 
-Age:
+Age: early 20s
 
-Motivations:
+Motivations: Learning more about cooking, getting better at their skills in the kitchen, work hard play hard.
 
-Flaws:
+Flaws: Does not put themselves first, ever. Neglects the rest their body manybe needs.
 
-Perfect day-off:
+Perfect day-off: A solid lie-in, and a late morning to late afternoon of gaming, and then going out for drinks and clubbing with friends.
 
-Bio:
+Bio: Jasper isn’t amazing at their job, but they give it their best shot. They’re well-loved by the crew they work with, but they’re often coached to pick up the pace by their head chef during prep work. Family focused, Jasper often uses their days off to help their parents with things around the house, or assists with picking up cousins from a sports match on Sundays when called upon. They’re a great help, but also their apartment still doesn’t have curtains hung up, and they’ve been sat in the box for 6 months. By the time Jasper gets to doing the task, there’s often a reason to delay it, however much of a stretch the reason is. There’s a buzzing in the back of their mind about all the things they need to do, reply to the person they’ve been chatting with, buy the cleaning products for the bathroom, send their details to a training course, oh and fitting those curtains.
+
+Apartment: Studio in the basement level, sparsely decorated, lived there a year or two.
 
 *Other thoughts:*
 
@@ -159,4 +164,9 @@ Bio:
 
 Story Beats - Overarching Narrative
 
-Day 1
+Day 1 \
+
+
+
+
+* PC (Player Character) finishes unpacking their moving boxes
