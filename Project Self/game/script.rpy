@@ -8,7 +8,7 @@ define m = Character("Me", color="#8be6ea")
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
 
-# The game starts here.
+# The game starts here. And this is me testing that the push works.
 
 label start:
 
