@@ -164,6 +164,89 @@ menu:
         label postdoor:
             m "[lynda_rating]"
             l "That door keeps getting stuck... I hope it doesn't properly jam one of thse days."
+            "She shrugs and moves further into the lobby."
+            m "What have you got there?"
+            l "Oh, some things from work I need to try out."
+            "She sighs placing the boxes down to stretch out her back."
+            l "It's a new product they want us to get to know."
+            "Lynda looks down at them with a grimace."
+
+            menu:
+                "Sounds fun?":
+                    $ BoxIntense = False
+                    l "Yeah." 
+                    "She lets out a soft sound through her nose."
+                    l "Super fun."
+                    "Lynda looks at you deadpan."
+                    l "I know nothing about tech, <playername>."
+                    l "Well, that's not fair actually. I know how to run apps and find which HDMI my devices are hiding on, but this?"
+                    "She indicates the boxes."
+                    l "Nothing."
+                    jump boxdetails
+                "You want me to carry them up for you?":
+                    $ BoxIntense = False
+                    $ CarryBox = True
+                    $ lynda_rating += 1
+                    "Lynda's eyes widen."
+                    l "Are you sure? These things are heavy! Which is ironic."
+                    m "Yeah, I got this!"
+                    "You lift up the boxes from the ground. They're certainly heavy, but you know you can make it to Lynda's apartment thanks to the elevator."
+                    "As you walk towards the elevator Lynda peels off a loose label on the top of the box with a sigh."
+                    jump boxdetails
+                "WHAT'S IN THE BOX.":
+                    $ BoxIntense = True
+                    jump boxdetails
+
+            label boxdetails:
+                if BoxIntense:
+                    $ lynda_rating -= 1
+                    m "WHAT'S IN THE BOOOOOX"
+                    "Lynda blinks at you."
+                    l "Great film."
+                    l "Specifically? Uh, some kind of holographic thing? There's some kind of app with it… They're pitching it for kid's bedtime stories."
+                else:
+                    l "They want us to test and play with some kind of holographic thing. It has an app integration too. Apparently they think it will be the next big thing in 'Kids Bedtime Tech Peripherals'"
+                    "You both continue along to the elevator."
+                    "There's a palpable silence before Lynda turns to you."
+                    l "Are you good at tech-y things?"
+                    "You see a glimmer of anxiety in her eyes."
+
+            menu:
+                "I'm not, but we can suffer together?":
+                    $ TechSkill += 1
+                    m "I'm not amazing with it but we can suffer together in it?"
+                    "Lynda's eyes light up."
+                    l "Really?"
+                    l "I really appreciate it <playername>! I'm feeling a little out of my depth here."
+                "I'm pretty good with tech-y things!":
+                    $ TechSkill =+ 2
+                    m "Actually, I do know a decent amount about tech."
+                    "Lynda's shoulders seem to relax as she smiles at you."
+                    l "Would you help me out in setting this thing up?"
+                    m "Of course! Lead the way!"
+                "I will break whatever you hand me.":
+                    m "Candidly, I will break whatever this is in record time."
+                    "Lynda's shoulders slump in defeat."
+                    l 'Damn it. Okay.'
+                    "Lynda looks at the boxes once more."
+                    l "Guess it's you, me, tutorial videos, and a tall glass of wine."
+                    jump lyndaboxfinal
+
+            if CarryBox and TechSkill = 0:
+                "You carry the boxes up to Lynda's apartment and wish her a good evening with her tech adventure and head home for the night."
+                jump lyndaboxend
+            elif CarryBox and TechSkill >= 1:
+                "You chat with Lynda on the way to her apartment, carrying the boxes along the way."
+            else:
+                jump lyndaboxapartment
+        label lyndaboxapartment:
+            $ lynda_rating += 1
+            "You reach her door, decorated with a minimalistic doormat stating REAL FRIENDS BRING WINE, and a fall wreath of brightly coloured leaves and pinecones."
+
+label lyndaboxend:
+    m "This is a sneaky peeky into the back-end, you're rating with Lynda is [lynda_rating]."
+    "Thanks for playing this sequence!"
+    return
 
 
         
