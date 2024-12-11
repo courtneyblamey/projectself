@@ -3,10 +3,26 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+#CHARACTERS#
 define l = Character("Lynda", color="#1bd033")
 define m = Character("Me", color="#8be6ea")
+
+#IMAGES#
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
+
+#VARIABLES#
+
+#Character Variables
+$ lynda_rating = 1
+
+#Misc Variables
+$ CarryBox = True
+$ BoxIntense = False
+$ LyndaDrink = False
+
+#Skill Variables
+$ TechSkill = 0
 
 # The game starts here. And this is me testing that the push works.
 
@@ -89,4 +105,67 @@ label afterwho:
 
     # This ends the game.
 
-    return
+    jump lyndaevent2
+
+
+## This is the start of the proper demo scene which (with some edits) will be in the game. It is the second event that takes place between the PC and Lynda.
+
+label lyndaevent2
+
+"As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door."
+
+"You quicken your approach to meet her at the door and go to hold it open."
+
+l "Oh thank you!"
+
+"She fumbles with the boxes and shimmies through the doorway."
+
+"Partway through, the door jams."
+
+l "You're kidding me."
+
+menu:
+
+    "Give the door a shove.":
+        jump doorshove
+
+        label doorshove:
+
+            $ lynda_rating += 1
+            "With some gumption, you give the door a swift boot. It pops back with force and slams against the doorway causing an echo down the corridor. BUT it is open. You see a shoe print on the (luckily) glazed glass."
+            jump postdoor
+
+    "Kick the door.":
+        jump doorkick
+
+        label doorshove:
+
+            "You give the door a hefty shove and it scrapes against the ground in protest before finally giving - swinging back on its hinges."
+
+            l "Nicely done!"
+
+            "She readjusts the boxes in he arms and carries on through the doorway."
+            jump postdoor
+
+    "Yell at the door.":
+        jump dooryell
+
+        label dooryell:
+
+            $ lynda_rating -= 1
+            m "CMON DOOR."
+            "..."
+            "The door remains stuck."
+            "Lynda leans into it and it scoots past its sticking point, finally swinging freely on its hinges once more."
+            l "I like the enthusiasm?"
+            "She nearly drops the boxes she’s holding, but manages to adjust her grip and carries on through the doorway."
+            jump postdoor
+
+        label postdoor:
+            m "[lynda_rating]"
+            l "That door keeps getting stuck... I hope it doesn't properly jam one of thse days."
+
+
+        
+        
+
