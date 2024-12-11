@@ -3,6 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+
 #CHARACTERS#
 define l = Character("Lynda", color="#1bd033")
 define m = Character("Me", color="#8be6ea")
@@ -10,6 +11,7 @@ define m = Character("Me", color="#8be6ea")
 #IMAGES#
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
+image bg doorway = "bg_doorway.jpg"
 
 #VARIABLES#
 
@@ -22,7 +24,7 @@ $ BoxIntense = False
 $ LyndaDrink = False
 
 #Skill Variables
-$ TechSkill = 0
+default TechSkill = 0
 
 # The game starts here. And this is me testing that the push works.
 
@@ -103,7 +105,7 @@ label afterwho:
 
     l "No problem. Anyway, my couch and cats are calling me, see you around the building."
 
-    # This ends the game.
+    hide lynda placeholder
 
     jump lyndaevent2
 
@@ -111,18 +113,23 @@ label afterwho:
 ## This is the start of the proper demo scene which (with some edits) will be in the game. It is the second event that takes place between the PC and Lynda.
 
 label lyndaevent2:
+    
+    scene bg doorway
+    with dissolve
 
-"As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door."
+    "As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door."
 
-"You quicken your approach to meet her at the door and go to hold it open."
+    "You quicken your approach to meet her at the door and go to hold it open."
 
-l "Oh thank you!"
+    show lynda_placeholder
 
-"She fumbles with the boxes and shimmies through the doorway."
+    l "Oh thank you!"
 
-"Partway through, the door jams."
+    "She fumbles with the boxes and shimmies through the doorway."
 
-l "You're kidding me."
+    "Partway through, the door jams."
+
+    l "You're kidding me."
 
 menu:
 
@@ -232,16 +239,55 @@ menu:
                     l "Guess it's you, me, tutorial videos, and a tall glass of wine."
                     jump lyndaboxfinal
 
-            if CarryBox and TechSkill = 0:
+            if CarryBox and TechSkill == 0:
                 "You carry the boxes up to Lynda's apartment and wish her a good evening with her tech adventure and head home for the night."
                 jump lyndaboxend
-            elif CarryBox and TechSkill >= 1:
+            elif CarryBox and TechSkill != 0:
                 "You chat with Lynda on the way to her apartment, carrying the boxes along the way."
             else:
                 jump lyndaboxapartment
         label lyndaboxapartment:
             $ lynda_rating += 1
             "You reach her door, decorated with a minimalistic doormat stating REAL FRIENDS BRING WINE, and a fall wreath of brightly coloured leaves and pinecones."
+            "Lynda notices you scanning the doorway and nods to the wreath."
+            l "Sasha made me this!"
+            "And points to the doormat."
+            l "*That* was a dumb online purchase, but I stand by it."
+            "She unlocks the door and flicks on the lights to the apartment."
+            if CarryBox:
+                l "You can place the boxes right here on the counter."
+                "You prop them up and onto the counter, trying very carefully to not drop them, noticing the VERY LARGE 'FRAGILE THIS WAY UP' label on the side."
+            else:
+                "Lynda grunts as she places the boxes on top of the countertop."
+                l "Alright, can I get you something to drink before we get into this?"
+        menu:
+            "No, I'm good for now.":
+                $ LyndaDrink = False
+                m "No, I think I'm okay for now, but thanks."
+                jump lyndaopenbox
+            "Yeah, some water would be great!":
+                m "Just some water for now, thanks."
+                "Lynda smiles from behind a heavily painted white cabinet door."
+                l "On it!"
+                jump lyndaopenbox
+            "I'd love some tea.":
+                $ LyndaDrink = True
+                m "I'd love some tea. actually."
+                l "Sure thing! Let me get it brewed for you and we'll get into it."
+                jump lyndaopenbox
+            "Some wine, perchance?":
+                $ lynda_rating += 1
+                $ LyndaDrink = True
+                m "I know great friends bring wine, but maybe you have some already to share?"
+                "Lynda peers from behind a heavily painted white cabinet door, wine glasses in hand."
+                l "Already on it!"
+                jump lyndaopenbox
+        
+        label lyndaopenbox:
+            if LyndaDrink:
+                "Lynda sets down the drinks and begins to open the box."
+            else:
+                "Lynda sets down her drink and begins to open the box."
 
 label lyndaboxend:
     m "This is a sneaky peeky into the back-end, you're rating with Lynda is [lynda_rating]."
