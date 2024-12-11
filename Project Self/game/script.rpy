@@ -14,7 +14,7 @@ image bg lobby = "bg_lobby.jpg"
 #VARIABLES#
 
 #Character Variables
-$ lynda_rating = 1
+default lynda_rating = 1
 
 #Misc Variables
 $ CarryBox = True
@@ -110,7 +110,7 @@ label afterwho:
 
 ## This is the start of the proper demo scene which (with some edits) will be in the game. It is the second event that takes place between the PC and Lynda.
 
-label lyndaevent2
+label lyndaevent2:
 
 "As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door."
 
@@ -138,7 +138,7 @@ menu:
     "Kick the door.":
         jump doorkick
 
-        label doorshove:
+        label doorkick:
 
             "You give the door a hefty shove and it scrapes against the ground in protest before finally giving - swinging back on its hinges."
 
