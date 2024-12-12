@@ -1,4 +1,4 @@
-2024-12-12 21:26:40 UTC
+2024-12-12 21:52:10 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.3.24111502
 
@@ -8,7 +8,7 @@ Built at 2024-12-12 00:53:42 UTC
 
 Early init took 0.07s
 Loading error handling took 0.03s
-Loading script took 0.18s
+Loading script took 0.17s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Set script version to: (8, 3, 3)
@@ -47,13 +47,6 @@ Version: b'4.6.0 NVIDIA 536.23'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.00s
