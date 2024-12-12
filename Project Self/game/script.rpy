@@ -12,7 +12,11 @@ define m = Character("Me", color="#8be6ea")
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
 image bg doorway = "bg_doorway.jpg"
-
+image lynda anger = "Lynda_Anger.png"
+image lynda furrow = "Lynda_Furrow.png"
+image lynda neutral = "Lynda_Neutral.png"
+image lynda surprise = "Lynda_Surprise.png"
+image lynda unsure = "Lynda_Unsure.png"
 #VARIABLES#
 
 #Character Variables
@@ -40,7 +44,7 @@ label start:
 
     "Lynda appears from around the corner."
 
-    show lynda placeholder at center
+    show lynda neutral at center
 
     # These display lines of dialogue.
 
@@ -117,7 +121,7 @@ label lyndaevent2:
     scene bg doorway
     with dissolve
 
-    "As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door."
+    "As you are headed back home you spot Lynda wrangling a pair of boxes through the building's front door."
 
     "You quicken your approach to meet her at the door and go to hold it open."
 
@@ -165,7 +169,7 @@ menu:
             "The door remains stuck."
             "Lynda leans into it and it scoots past its sticking point, finally swinging freely on its hinges once more."
             l "I like the enthusiasm?"
-            "She nearly drops the boxes she’s holding, but manages to adjust her grip and carries on through the doorway."
+            "She nearly drops the boxes she's holding, but manages to adjust her grip and carries on through the doorway."
             jump postdoor
 
         label postdoor:
@@ -288,6 +292,144 @@ menu:
                 "Lynda sets down the drinks and begins to open the box."
             else:
                 "Lynda sets down her drink and begins to open the box."
+
+            "You look into the boxes to see a short tangle of wires, an odd looking box with angled windows, and various cubes reading: Alice in Wonderland, The Gruffalo, Ferdinand the Bull, and more."
+            "Lynda pulls out and sets everything down on the countertop, throwing the boxes into the front room."
+            "Within moments, two cats appear and hop into each of them respectively. One a mottled grey, orange, and white, and the other a slim black cat."
+            l "They're cardboard box fiends. Give it a second and you'll see Bean just start chomping it."
+            "Sure enough, the black cat begins to move along the box, biting it. Leaving a trail of bite marks as it goes."
+            l "We found him behind a restaurant with a bunch of empty bean tins and boxes. You can take cat out of the street but-"
+            "Bean continues his holepunching tirade against the box's edges."
+            l "…anyway. Where to start with this thing."
+            "She looks with dismay at the tech in front of her."
+
+            if TechSkill == 1:
+                "You also look down at the tech in front of you."
+                m "Is there an instruction booklet?"
+                "Lynda fishes around in the box and produces a paper booklet with a flourish."
+                l "Yes, there is!"
+                "You both read over the instructions, which are relatively well-written, if a bit over-written."
+                l "Wow, these are kinda idiot-proof."
+                l "Maybe I could have done this myself. Now I feel bad for asking for help."
+                
+                menu:
+                    "You want me to leave you to get on with it?":
+                        jump lyndaleaveearly
+                    "I can stay, I don't mind.":
+                        jump lyndastayearly
+                
+                label lyndaleaveearly:
+                    $ lynda_rating += 1
+                    "Lynda flicks through the instructions with neon painted nails."
+                    l "Yeah, actually, I think I got this!"
+                    l "Thanks anyway. I'll let you know how it goes."
+                    if LyndaDrink:
+                        "You finish up your drink as Lynda gets to work and head back home for the evening. You sense she's feeling a little more confident in herself as she sets up the tech on your way out."
+                        l "See ya, <playername>!"
+                        jump lyndaboxend
+                    else:
+                        "You wish Lynda luck in deciphering the device and head home for the evening. You sense a new level of confidence in her as she begins to set up the pieces of tech."
+                        "See ya, <playername>!"
+                        jump lyndaboxend
+                
+                label lyndastayearly:
+                    "Lynda flicks through the instructions with neon painted nails."
+                    l "You know, I wouldn't hate the help…"
+                    m "Sure! Let's figure it out."
+                    "You each begin to take turns following the instructions, setting up the base, power source, and fetching the different story cubes."
+                    l "It's so comforting to know I'm not the only one moderately afraid of technology like this."
+                    m "I mean, this is pretty high-tech. I think you're allowed to be a little intimidated by it."
+                    l "I do feel a bit out of my depth. I moved to this job from the beauty industry, and it's just…"
+                    "Lynda slots a piece of the device in place."
+                    l "It's very different sometimes."
+                    l "I guess I didn't think I'd feel like this still at this point in my career."
+                    "She chuckles softly to herself and flicks on the device."
+                    m "Feel like what?"
+                    l "I don't really know how to describe it other than out of my depth."
+                    "The images of Alice in Wonderland begin to faintly appear on the holographic part of the device."
+                    l "Oh look at that!"
+                    "Over the next couple minutes, the images get brighter and words begin to appear, telling the story of a girl growing too fast after eating a cake."
+                    m "Not going to lie, that is pretty cool."
+                    "Lynda stares at the holograph with a slightly furrowed brow."
+                    l "This could be used for more than just storytime, right?"
+                    m "Probably? The concept can do lots of things."
+                    "Lynda grabs a notebook off of her desk and begins to scribble down notes."
+                    "She looks up at you after a moment with a soft smile."
+                    l "<player name> you have no idea how much this has helped me out."
+
+                    menu:
+                        "I think you know more than you realise.":
+                            jump lyndalearn
+                        "I'm happy to help!":
+                            jump playertech
+                        "I really enjoyed playing with this thing. It's cool.":
+                            jump playertech
+                
+                label lyndalearn:
+                    $ lynda_rating += 1
+                    m "You know, I think you actually know more than you're giving yourself credit, Lynda."
+                    "Lynda's face drops for a moment."
+                    l "You think so? Huh."
+                    m "Considering we both went into this a little unsure- we made it, and it works!"
+                    "She looks over the device, now clearly playing colourful sequences from Alice in Wonderland."
+                    l "I feel like the team is just so adept and knowledgeable about these things compared to me."
+                    "She looks at you with a smile and a wink."
+                    l "Maybe that's just me getting older."
+                    l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
+                    "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
+                    jump lyndaboxend
+            
+            if TechSkill == 2:
+                "You pick up the cables and untangle them, plugging in the power source, and opening the instructions."
+                m "Okay so, this is the base. You just have to make sure it is plugged into the outlet. And then…"
+                "You reach for one of the cubes."
+                m "This goes into the base."
+                l "Okay, this makes sense."
+                "You then pick up the box of angled windows and place it overtop, slowly piecing together the device, as Lynda watches on chewing her rosy pink stained lip."
+                "You talk her through each phase, ensuring she's following along and answering her questions. She slowly becomes more and more inquisitive as you get ready to boot up the device."
+                l "Okay and so this then refracts? the projection to make it look 3D?"
+                m "Exactly, yeah! And each of these cubes holds the data of the images and words that will play."
+                m "Wanna boot it up?"
+                l "YES!"
+                "You flick on the device and it whirs to life."
+                "After a couple minutes, you begin to faintly see the outlines of a girl growing too big for a doorway. Alice in Wonderland is playing on the holographic projector."
+                m "Weird, there's no sound…"
+                l "Oh! They told us they're working on the audio component right now. But the words appear on the screen- well holograph, too."
+                "You both continue to watch as the projector warms up and the colours become more vibrant and words clearly display alongside the pictures."
+                l "So, this could actually be used for more than just storytime, right?"
+                m "Probably? The concept can do lots of things."
+                "Lynda grabs a notebook off of her desk and begins to scribble down notes."
+                "She looks up at you after a moment with a soft smile."
+                l "<player name> you have no idea how much this has helped me out."
+
+                menu:
+                    "I think you know more than you realise.":
+                        jump lyndapride
+                    "I'm happy to help!":
+                        jump playertech
+                    "I really enjoyed playing with this thing. It's cool.":
+                        jump playertech
+                
+                label lyndapride:
+                    $ lynda_rating += 1
+                    m "You know, I think you actually know more than you're giving yourself credit, Lynda."
+                    "Lynda's face drops for a moment."
+                    l "You think so? Huh."
+                    "She looks over the device, now clearly playing colourful sequences from Alice in Wonderland."
+                    l "I feel like the team is just so adept and knowledgeable about these things compared to me."
+                    "She looks at you with a smile and a wink."
+                    l "Maybe that's just me getting older."
+                    l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
+                    "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
+                    jump lyndaboxend
+            
+            label playertech:
+                m "No problem! I enjoyed it."
+                l "Me too. It was less daunting than I expected in the end."
+                "Treacle comes to investigate the quietly whirring device. Lynda switches it off and shoos her away from the ever-tempting-to-cat-brain cubes."
+                l "I've kept you for enough of your evening, you should head home - but thank you, again."
+                "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
+                jump lyndaboxend
 
 label lyndaboxend:
     m "This is a sneaky peeky into the back-end, you're rating with Lynda is [lynda_rating]."
