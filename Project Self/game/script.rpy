@@ -262,6 +262,10 @@ menu:
                 jump lyndaboxend
             elif CarryBox and TechSkill != 1:
                 "You chat with Lynda on the way to her apartment, carrying the boxes along the way."
+                jump lyndaboxapartment
+            elif TechSkill == 1:
+                "You say your farewells to Lynda and head to your own apartment for the night."
+                jump lyndaboxend
             else:
                 jump lyndaboxapartment
         label lyndaboxapartment:
