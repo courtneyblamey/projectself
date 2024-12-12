@@ -12,6 +12,7 @@ define m = Character("Me", color="#8be6ea")
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
 image bg doorway = "bg_doorway.jpg"
+image bg apartment = "bg_lyndaapt.jpg"
 image lynda anger = "Lynda_Anger.png"
 image lynda furrow = "Lynda_Furrow.png"
 image lynda neutral = "Lynda_Neutral.png"
@@ -23,7 +24,7 @@ image lynda unsure = "Lynda_Unsure.png"
 default lynda_rating = 1
 
 #Misc Variables
-$ CarryBox = True
+$ CarryBox = False
 $ BoxIntense = False
 $ LyndaDrink = False
 
@@ -44,7 +45,7 @@ label start:
 
     "Lynda appears from around the corner."
 
-    show lynda neutral at center
+    show lynda neutral at truecenter 
 
     # These display lines of dialogue.
 
@@ -109,7 +110,7 @@ label afterwho:
 
     l "No problem. Anyway, my couch and cats are calling me, see you around the building."
 
-    hide lynda placeholder
+    hide lynda neutral
 
     jump lyndaevent2
 
@@ -125,13 +126,15 @@ label lyndaevent2:
 
     "You quicken your approach to meet her at the door and go to hold it open."
 
-    show lynda_placeholder
+    show lynda surprise at truecenter
 
     l "Oh thank you!"
 
     "She fumbles with the boxes and shimmies through the doorway."
 
     "Partway through, the door jams."
+
+    show lynda anger at truecenter
 
     l "You're kidding me."
 
@@ -153,6 +156,8 @@ menu:
 
             "You give the door a hefty shove and it scrapes against the ground in protest before finally giving - swinging back on its hinges."
 
+            show lynda surprise at truecenter
+
             l "Nicely done!"
 
             "She readjusts the boxes in he arms and carries on through the doorway."
@@ -173,9 +178,10 @@ menu:
             jump postdoor
 
         label postdoor:
-            m "[lynda_rating]"
+            show lynda furrow at truecenter
             l "That door keeps getting stuck... I hope it doesn't properly jam one of thse days."
             "She shrugs and moves further into the lobby."
+            show lynda neutral at truecenter
             m "What have you got there?"
             l "Oh, some things from work I need to try out."
             "She sighs placing the boxes down to stretch out her back."
@@ -189,6 +195,7 @@ menu:
                     "She lets out a soft sound through her nose."
                     l "Super fun."
                     "Lynda looks at you deadpan."
+                    show lynda unsure at truecenter
                     l "I know nothing about tech, <playername>."
                     l "Well, that's not fair actually. I know how to run apps and find which HDMI my devices are hiding on, but this?"
                     "She indicates the boxes."
@@ -212,10 +219,13 @@ menu:
                 if BoxIntense:
                     $ lynda_rating -= 1
                     m "WHAT'S IN THE BOOOOOX"
+                    show lynda furrow at truecenter
                     "Lynda blinks at you."
+                    show lynda neutral at truecenter
                     l "Great film."
                     l "Specifically? Uh, some kind of holographic thing? There's some kind of app with it… They're pitching it for kid's bedtime stories."
                 else:
+                    show lynda neutral at truecenter
                     l "They want us to test and play with some kind of holographic thing. It has an app integration too. Apparently they think it will be the next big thing in 'Kids Bedtime Tech Peripherals'"
                     "You both continue along to the elevator."
                     "There's a palpable silence before Lynda turns to you."
@@ -226,6 +236,7 @@ menu:
                 "I'm not, but we can suffer together?":
                     $ TechSkill += 1
                     m "I'm not amazing with it but we can suffer together in it?"
+                    show lynda surprise at truecenter
                     "Lynda's eyes light up."
                     l "Really?"
                     l "I really appreciate it <playername>! I'm feeling a little out of my depth here."
@@ -233,6 +244,7 @@ menu:
                     $ TechSkill =+ 2
                     m "Actually, I do know a decent amount about tech."
                     "Lynda's shoulders seem to relax as she smiles at you."
+                    show lynda unsure at truecenter
                     l "Would you help me out in setting this thing up?"
                     m "Of course! Lead the way!"
                 "I will break whatever you hand me.":
@@ -240,8 +252,10 @@ menu:
                     "Lynda's shoulders slump in defeat."
                     l 'Damn it. Okay.'
                     "Lynda looks at the boxes once more."
+                    show lynda furrow at truecenter
                     l "Guess it's you, me, tutorial videos, and a tall glass of wine."
-                    jump lyndaboxfinal
+                    "She wishes you a good night and heads into her apartment."
+                    jump lyndaboxend
 
             if CarryBox and TechSkill == 0:
                 "You carry the boxes up to Lynda's apartment and wish her a good evening with her tech adventure and head home for the night."
@@ -251,13 +265,18 @@ menu:
             else:
                 jump lyndaboxapartment
         label lyndaboxapartment:
+            show lynda neutral at truecenter
             $ lynda_rating += 1
             "You reach her door, decorated with a minimalistic doormat stating REAL FRIENDS BRING WINE, and a fall wreath of brightly coloured leaves and pinecones."
             "Lynda notices you scanning the doorway and nods to the wreath."
             l "Sasha made me this!"
             "And points to the doormat."
+            show lynda furrow at truecenter
             l "*That* was a dumb online purchase, but I stand by it."
+            show lynda neutral
             "She unlocks the door and flicks on the lights to the apartment."
+            scene bg apartment
+            with dissolve
             if CarryBox:
                 l "You can place the boxes right here on the counter."
                 "You prop them up and onto the counter, trying very carefully to not drop them, noticing the VERY LARGE 'FRAGILE THIS WAY UP' label on the side."
