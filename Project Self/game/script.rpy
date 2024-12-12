@@ -24,12 +24,12 @@ image lynda unsure = "Lynda_Unsure.png"
 default lynda_rating = 1
 
 #Misc Variables
-$ CarryBox = False
-$ BoxIntense = False
-$ LyndaDrink = False
+default CarryBox = False
+default BoxIntense = False
+default LyndaDrink = False
 
 #Skill Variables
-default TechSkill = 0
+default TechSkill = 1
 
 # The game starts here. And this is me testing that the push works.
 
@@ -254,13 +254,13 @@ menu:
                     "Lynda looks at the boxes once more."
                     show lynda furrow at truecenter
                     l "Guess it's you, me, tutorial videos, and a tall glass of wine."
-                    "She wishes you a good night and heads into her apartment."
-                    jump lyndaboxend
+                    jump carryboxchoice
 
-            if CarryBox and TechSkill == 0:
+        label carryboxchoice:
+            if CarryBox and TechSkill == 1:
                 "You carry the boxes up to Lynda's apartment and wish her a good evening with her tech adventure and head home for the night."
                 jump lyndaboxend
-            elif CarryBox and TechSkill != 0:
+            elif CarryBox and TechSkill != 1:
                 "You chat with Lynda on the way to her apartment, carrying the boxes along the way."
             else:
                 jump lyndaboxapartment
