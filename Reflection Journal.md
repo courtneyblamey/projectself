@@ -35,3 +35,31 @@ Also, I don't have a specific plan as to when I'll update these reflective journ
 #### 09-12-2024
 
 I've officially added the game file to the main (?) branch. There was a lot of Googling to make sure this didn't break anything, because "fetch" and "staging" are completely new words to me. But it is there! And now in theory, when I update the script (which I will now check) it will push here. There's a weird fumbling vulnerability with all of this, where I know folks are very aware and familiar with how to do this and I truly feel like I am taking my first Bambi-style steps into it all. In the same vein, I'm not converting this from a docs file, I'm typing it right into the code editor. Maybe that'll do something funky with the commits, idk. I'm definitely going to get things wrong, and need some guidance in keeping this all relatively sensical (in terms of where commits are coming from and pushes etc.) but I'm happy it didn't take me too long to set this up! I am going to edit the test script I have to see if it does anything, and I also have more reflections/updates that I'll need to do retroactively this week (I have two demo-weeks worth of feedback I'd like to document). With many plates spinning it definitely feels like a routine is necessary to avoid these reflections being somewhat scattered, but equally just in developing the game, it is a little haphazard and "when I have time" like the dissertation. I think this is just the plight of the contemporary grad student though. As I wrap this up, I will note that I did suggest a monthly update, so I'm SORT OF on track in that light. yay. Okay, off to see if edits, commits, and pushes are doing what they should.
+
+### Feedback before the holidays
+
+#### 13-12-2024
+
+So the first prototype/build hit itch.io this week! I had a bunch of folks at the Behaviour meeting give their feedback (I'm writing it after the session so that it is fresh and forcing good reflective practice). I presented the prototype with a couple of questions:
+
+1. Without knowing what the character Lynda represents in terms of restraints towards self-esteem, what do you think she is thematically?
+Responses I got included: hypervigilant, insecure, gives up easily, and writes herself off quickly. Which is supremely interesting as Lynda is embodying impostor syndrome. Perhaps I can build to this being more obvious, or allow this more open-ended non-specific take on the character!
+**Maybe it is more about what does this character facilitates in terms of thoughts and reflections around her persona?**
+
+2. How do we feel about the dialogue options not telling you what the outcome of your choice is (i.e. "help/not help Lynda")?
+I didn't actually get any specific feedback on this! Will need to continue not including it to see how folks feel.
+
+The remaining feedback can be ordered like so:
+
+**General Responses**
+Mostly the feedback was positive! Folks felt the story was relatable, cosy, and some of them want to be allowed to date the characters (a frequent tension I'm noticing - I might do a bigger write-up on this in the future). The comedic pacing worked well for folks also, which makes me happy. The facial reactions even of the placeholder twinned with the writing (her face drops) compounded the complexity of emotions going through Lynda's mind, which is what I wanted!!! Yay payoff!!
+
+**Character Customisation (Skills and Proficiency)**
+Folks liked shaping their character through dialogue choices rather than through a potential skill selection menu. We discussed how flags would make even the writing easier, so I don't have to account for all the different kinds of skills, and rather have them appear in the narrative as I see fit or make sense contextually.
+
+**Natural Conversational Flow**
+I floated the idea of looping menus, so that the player can select all the dialogue options to get insights into more things (in this case, information about the other NPCs) - however - the feedback was folks preferred having a more natural flow of conversation. Not just "click all options". Instead, you have to be thoughtful about the conversation choices you make. Like a dialogue economy of sorts.
+
+We chatted about how Ren'Py doesn't have a visualisation plug-in, which SUCKS, so coding hygiene and best practices are going to REALLY matter for this game project.
+
+So, the game is (as a prototype of one scene) definitely affective. There's an investment in the character, and that is GREAT this early. The identification of themes is pretty loose right now, but it is also extremely early days into the prototype. Next steps is making another scene, perhaps with a different character, or setting up the full introduction before the inciting incident. 
