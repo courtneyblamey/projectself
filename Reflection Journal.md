@@ -63,3 +63,35 @@ I floated the idea of looping menus, so that the player can select all the dialo
 We chatted about how Ren'Py doesn't have a visualisation plug-in, which SUCKS, so coding hygiene and best practices are going to REALLY matter for this game project.
 
 So, the game is (as a prototype of one scene) definitely affective. There's an investment in the character, and that is GREAT this early. The identification of themes is pretty loose right now, but it is also extremely early days into the prototype. Next steps is making another scene, perhaps with a different character, or setting up the full introduction before the inciting incident. 
+
+### Feedback 2.0 - Scoping is hard
+
+#### 04-02-2025
+
+I've been writing the "meet the gang" opening to the game script, and started to very quickly realise:
+
+I am one human.
+I only write so fast.
+I have a dissertation.
+My current script would need 50 scenes written and coded into Ren'Py.
+
+...
+
+See the concern?
+
+So, I wrote as much as I could for the opening, and came to the table asking for feedback on the writing's tone (i.e. is it consistent) and then asked for help scaling all of it down into a good vertical slice with the following conditions:
+
+1. I can get it done for end of August.
+2. It offers a strong portfolio piece to potential studios.
+3. It works towards my goals for the game.
+
+The feedback on the writing itself was great! Folks really enjoy the tone of the narrative, and that (most of - sorry Jasper, I'm working on you) the characters are compelling to interact with. Each of them offered a memorable moment during the interaction. Also, apparently my attention to detail in the writing is "insane" (the cardboard box of jumpers being safe to drop and sit on was cited). We also got into questions about the player character: who are they? Are they a distinct person, or a shell to be filled? One person noted that even Harry in Disco Elysium, despite his gripes, is a white, heteronormative, cop. We can play him differently, but who he is fundamentally still shapes his responses. By having a more defined player character, I can cut down a lot of extra work in trying to make them an open, empty shell for players to decide everything for. In the same vein, player choices can be limited too - building up to a more impactful option A or B can have a great payoff if done well. (I also got kudos on making one of the dialogue choices simple and the other being a hyperexaggerated version in "share" and "overshare" with Jasper, as a way to break from the binary yes/no options).
+
+I think a lot of my character and narrative design is based around having some similarities and familiarities to what has come before in visual novels, while also subverting expectations a bit to challenge myself as a designer and to offer (maybe) more impactful gameplay experience. Not selecting all the dialogue options and then moving on, or taking the good/bad choice route, I think I'm trying to create a more dynamic and natural feel to the conversations with these characters - partly because I know they stem from certain themes and I don't want them to be one-note. Also because so many games now present dialogue choices with three tones: anger/abrasive, funny/lighthearted, and compassionate/kind (looking at Horizon and DA:Veilguard as recent examples). Not sure why it bothers me, maybe it is a flattening of a character response, maybe it just doesn't feel impactful if I keep picking a certain one it doesn't seem to change anything other than how I want to personify the player character.
+
+I've flicked away and back to this a couple of times in the last 20 mins, so I think this is all I have for this reflection entry. Oh, actually - one last thing about *scope*. Once I've hashed out what a vertical slice could look like, I'll spend time coding it into Ren'Py, and MDM that experience (over a week was the suggestion), to give some insight into how it will actually go for more than one scene. Then I can kill my relative darlings and adjust from there.
+
+**Next steps...**
+- Who is the player character?
+- Who should I focus on for the vertical slice?
+- What is the ending, and write it.
