@@ -23,6 +23,7 @@ default lynda_rating = 1
 default CarryBox = False
 default BoxIntense = False
 default LyndaDrink = False
+default BuildingPastGood = False
 
 #Skill Variables
 default TechSkill = 1
