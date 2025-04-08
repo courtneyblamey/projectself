@@ -2,9 +2,47 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 31: expected statement.
-    m: "Hey! Me too, I guess..."
-     ^
+The label stop is defined twice, at File "game/scene/introduction/testscene.rpy", line 33:
+label stop:
+and File "game/scene/testscene.rpyc", line 33:
 
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Dec  5 16:27:41 2024
+
+
+The label question is defined twice, at File "game/scene/introduction/testscene.rpy", line 41:
+label question:
+and File "game/scene/testscene.rpyc", line 41:
+
+
+
+The label jasperwho is defined twice, at File "game/scene/introduction/testscene.rpy", line 56:
+label jasperwho:
+and File "game/scene/testscene.rpyc", line 56:
+
+
+
+The label antonywho is defined twice, at File "game/scene/introduction/testscene.rpy", line 62:
+label antonywho:
+and File "game/scene/testscene.rpyc", line 62:
+
+
+
+The label sashawho is defined twice, at File "game/scene/introduction/testscene.rpy", line 67:
+label sashawho:
+and File "game/scene/testscene.rpyc", line 67:
+
+
+
+The label afterwho is defined twice, at File "game/scene/introduction/testscene.rpy", line 72:
+label afterwho:
+and File "game/scene/testscene.rpyc", line 72:
+
+
+
+The label start is defined twice, at File "game/scene/testscene.rpyc", line 1:
+
+and File "game/script.rpy", line 35:
+label start:
+
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Tue Feb 25 14:44:35 2025
