@@ -152,6 +152,7 @@ define config.save_directory = "ProjectSelf-1733262483"
 
 define config.window_icon = "gui/window_icon.png"
 
+##define config.developer = True
 
 ## Build configuration #########################################################
 ##
