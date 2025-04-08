@@ -1,26 +1,4 @@
-<!-----
-
-
-
-Conversion time: 1.07 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β40
-* Wed Dec 11 2024 10:40:47 GMT-0800 (PST)
-* Source doc: TEST SCENE LYNDA AND PC
------>
-
-
-**label lyndaevent2**
+**label lyndainteraction2:**
 
 “As you are headed back home you spot Lynda wrangling a pair of boxes through the building’s front door.”
 
@@ -46,9 +24,9 @@ L “You’re kidding me.”
 
 ### **Shove the door**
 
-**set $ DoorShove to = True**
+**$ DoorShove = True**
 
-**+1 to $ LyndaRating**
+**$ lynda_rating += 1**
 
 “You give the door a hefty shove and it scrapes against the ground in protest before finally giving - swinging back on its hinges.”
 
@@ -56,19 +34,21 @@ L “Nicely done!”
 
 “She readjusts the boxes in her arms and carries on through the doorway.”
 
+jump postdoor
+
 
 ### **Kick the door**
 
-**set $ DoorKick to = True**
+**$ DoorKick = True**
 
 “With some gumption, you give the door a swift boot. It pops back with force and slams against the doorway causing an echo down the corridor. BUT it is open. You see a shoe print on the (luckily) glazed glass.”
 
 
 ### **Yell at the door**
 
-**set $ DoorYell to= True**
+**$ DoorYell = True**
 
-**-1 to $ LyndaRating**
+**$ lynda_rating += 1**
 
 M “C’MON DOOR.”
 
@@ -94,7 +74,7 @@ M “What have you got there?”
 
 L “Oh, some things from work I need to try out.”
 
-“She sighs placing the boxes down to stretch out her back”
+“She sighs placing the boxes down to stretch out her back.”
 
 L “It's a new product they want us to get to know.”
 
@@ -112,7 +92,7 @@ L “It's a new product they want us to get to know.”
 
 ### **Sounds fun?**
 
-**set $BoxIntense = False**
+**$ BoxIntense = False**
 
 M “Sounds… fun?”
 
@@ -133,9 +113,9 @@ L “Nothing.”
 
 ### **You want me to carry them up for you?**
 
-**set $BoxIntense = False**
+**$Box Intense = False**
 
-**set $CarryBox = True**
+**$CarryBox = True**
 
 **$ lynda_rating += 1**
 
@@ -156,7 +136,7 @@ M “Yeah, I got this!”
 
 ### **WHAT’S IN THE BOX.**
 
-**set $ BoxIntense = True**
+**$ BoxIntense = True**
 
 **label boxdetails**
 
@@ -170,11 +150,13 @@ L “Great film.”
 
 L “Specifically? Uh, some kind of holographic thing? There’s some kind of app with it… They’re pitching it for kid's bedtime stories.”
 
-**if $BoxIntense = False**
+**(else) if $BoxIntense = False**
 
 L “They want us to test and play with some kind of holographic thing. It has an app integration too. Apparently they think it will be the next big thing in ‘Kids Bedtime Tech Peripherals’”
 
 “You both continue along to the elevator.”
+
+“There’s a palpable silence before Lynda turns to you.”
 
 L “Are you good at tech-y things?”
 
@@ -192,7 +174,7 @@ L “Are you good at tech-y things?”
 
 ### **I’m not but we can suffer together?**
 
-**Set $ TechSkill to 1**
+**$ TechSkill += 1**
 
 M “I’m not amazing with it, but we can suffer together in it?”
 
@@ -207,7 +189,7 @@ L “Oh, I really appreciate it &lt;player name>! I’m feeling a little out of 
 
 ### **I’m pretty good with tech!**
 
-**Set $ TechSkill to 2**
+**$ TechSkill =+ 2**
 
 M “Actually I do know a decent amount about tech.”
 
@@ -220,7 +202,7 @@ M “Of course! Lead the way!”
 
 ### **I will break whatever you hand me**
 
-**Set $ TechSkill to 0**
+**$ TechSkill = 0**
 
 M “Candidly, I will break whatever this is in record time.”
 
@@ -236,13 +218,13 @@ L “Guess it’s you, me, tutorial videos, and a tall glass of wine.”
 
 **label lyndaboxfinal**
 
-**if $CarryBox = True and $ TechSkill = 0**
+**if $CarryBox = True and TechSkill == 0**
 
 “You carry the boxes up to Lynda’s apartment and wish her a good evening with her tech adventure and head home for the night.”
 
 **jump lyndaboxend**
 
-**if $CarryBox = True and $ TechSkill = >1**
+**if $CarryBox and TechSkill != 0**
 
 “You chat with Lynda on the way to her apartment, carrying the boxes along the way.”
 
@@ -336,7 +318,7 @@ L “Already on it!”
 
 **label lyndaopenbox**
 
-if $LyndaDrink = true
+**if $LyndaDrink = true**
 
 “Lynda sets down the drinks and begins to open the box.”
 
@@ -404,7 +386,7 @@ L “See ya, &lt;playername>!”
 
 **jump lyndaboxend**
 
-else
+**else**
 
 “You wish Lynda luck in deciphering the device and head home for the evening. You sense a new level of confidence in her as she begins to set up the pieces of tech.”
 
@@ -432,7 +414,7 @@ L “I do feel a bit out of my depth. I moved to this job from the beauty indust
 
 L “It’s very different sometimes.”
 
-L “I didn’t think I’d feel like this still at this point in my career.”
+L “I guess I didn’t think I’d feel like this still at this point in my career.”
 
 “She chuckles softly to herself and flicks on the device.”
 
@@ -584,7 +566,7 @@ L “I’ve kept you for enough of your evening, you should head home - but than
 
 “You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her.”
 
-**jump lyndaboxend**
+**jump lyndainteraction3**
 
 **label lyndaboxend**
 
