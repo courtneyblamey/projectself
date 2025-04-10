@@ -2,47 +2,9 @@
 errors listed below, and try again.
 
 
-The label stop is defined twice, at File "game/scene/introduction/testscene.rpy", line 33:
-label stop:
-and File "game/scene/testscene.rpyc", line 33:
-
-
-
-The label question is defined twice, at File "game/scene/introduction/testscene.rpy", line 41:
-label question:
-and File "game/scene/testscene.rpyc", line 41:
-
-
-
-The label jasperwho is defined twice, at File "game/scene/introduction/testscene.rpy", line 56:
-label jasperwho:
-and File "game/scene/testscene.rpyc", line 56:
-
-
-
-The label antonywho is defined twice, at File "game/scene/introduction/testscene.rpy", line 62:
-label antonywho:
-and File "game/scene/testscene.rpyc", line 62:
-
-
-
-The label sashawho is defined twice, at File "game/scene/introduction/testscene.rpy", line 67:
-label sashawho:
-and File "game/scene/testscene.rpyc", line 67:
-
-
-
-The label afterwho is defined twice, at File "game/scene/introduction/testscene.rpy", line 72:
-label afterwho:
-and File "game/scene/testscene.rpyc", line 72:
-
-
-
-The label start is defined twice, at File "game/scene/testscene.rpyc", line 1:
-
-and File "game/script.rpy", line 35:
-label start:
-
+File "game/scene/introduction/testscene.rpy", line 80: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump lyndainteraction1
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Feb 25 14:44:35 2025
+Thu Apr 10 15:30:47 2025
