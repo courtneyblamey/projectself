@@ -24,9 +24,12 @@ default CarryBox = False
 default BoxIntense = False
 default LyndaDrink = False
 default BuildingPastGood = False
+default DiligentLaundry = False
+default ChaosLaundry = False
 
 #Skill Variables
 default TechSkill = 1
+default TidySkill = 1
 
 # The game starts here. And this is me testing that the push works.
 
