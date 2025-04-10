@@ -1,4 +1,4 @@
-label lyndaevent2:
+label lyndainteraction2:
     
     scene bg doorway
     with dissolve

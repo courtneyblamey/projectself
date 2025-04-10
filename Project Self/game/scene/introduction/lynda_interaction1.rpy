@@ -66,10 +66,72 @@ menu:
 
                         m "Well, I moved to avoid it all, so let's hope it'll work out here!"
                         jump lyndabye1
-                        
-                "General disrepair"
-                "Frequent fire alarms"
-                "All of the above"
+
+                "General disrepair":
+                    jump generaldisrepair
+
+                    label generaldisrepair:
+                        m "I think the building was held together with duct tape and dreams by the time I left…"
+
+                        "Another look of concern from Lynda."
+
+                        m  "What?"
+
+                        l  "Hm? No, nothing, I just- this building has its quirks."
+
+                        m "As in, sometimes the doors get stuck in the summer, or more, we've had multiple gas leaks? Because my old place existed across that spectrum of experiences."
+
+                        l "...then you'll be fine!"
+
+                        m "Well, I moved to avoid it all, so let's hope so!"
+                        jump lyndabye1
+
+                "Frequent fire alarms":
+                    jump firealarms
+
+                    label firealarms:
+                        m  "I think I've stood in rain, snow, and shine multiple times due to people setting off the fire alarm with toast or cigarettes or one time a birthday cake candle situation"
+
+                        l  "You won't have to worry about that here, the last time it was set off was months ago with a very real fire, but they contained it quickly. Someone left something on the stove and it was a warning and reminder enough to us all to be vigilant."
+
+                        m "Yikes."
+
+                        m "Well, I moved to avoid that kind of thing, so I'm looking forward to not waking up to beeping!"
+                        jump lyndabye1
+
+                "All of the above":
+                    jump allabove
+
+                    label allabove:
+                        m "I mean, the building may as well have been Grey Sloan Memorial Hospital with the amount of tragedies that hit it."
+
+                        l "Oh dear… well then I think you'll be just fine here!"
+
+                        m "Well, I moved to avoid it all, so let's hope so!"
+                        jump lyndabye1
+
+label lyndabye1:
+
+if BuildingPastGood:
+    l "Well, nice to meet you, and see you around the building!"
+
+    m "Nice to meet you, Lynda!"
+
+    "You both head off to your apartments for the night."
+
+    jump lyndainteraction2
+else:
+    l "It's been nice chatting, <playername> but this laundry isn't going to fold itself, unfortunately."
+
+    m "No worries at all."
+
+    l "See you around the building!"
+
+    "You both head off to your apartments for the night."
+
+    jump lyndainteraction2
+
+
 
 
 
