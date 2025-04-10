@@ -77,4 +77,7 @@ label afterwho:
 
     hide lynda neutral
 
+    jump afterwho2
+
+label afterwho2:
     jump lyndainteraction1
