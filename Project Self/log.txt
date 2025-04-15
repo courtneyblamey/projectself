@@ -1,4 +1,4 @@
-2025-04-15 21:06:44 UTC
+2025-04-15 21:26:57 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.4.24120703
 
@@ -273,7 +273,7 @@ and File "game/scene/testscene.rpyc", line 72:
 
 The label start is defined twice, at File "game/scene/testscene.rpyc", line 1:
 
-and File "game/script.rpy", line 43:
+and File "game/script.rpy", line 44:
 label start:
 
 
@@ -327,7 +327,7 @@ label afterwho2:
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start took 0.55s
+Interface start took 0.61s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

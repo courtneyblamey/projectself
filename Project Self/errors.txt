@@ -262,7 +262,7 @@ and File "game/scene/testscene.rpyc", line 72:
 
 The label start is defined twice, at File "game/scene/testscene.rpyc", line 1:
 
-and File "game/script.rpy", line 43:
+and File "game/script.rpy", line 44:
 label start:
 
 
@@ -315,4 +315,4 @@ label afterwho2:
 
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Apr 15 17:06:44 2025
+Tue Apr 15 17:26:58 2025
