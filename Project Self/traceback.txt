@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 260, in script
-    if CarryBox and TechSkill == 0:
-  File "game/script.rpy", line 260, in <module>
-    if CarryBox and TechSkill == 0:
-NameError: name 'CarryBox' is not defined
+  File "game/script.rpy", line 36, in script
+    default config.developer = True
+  File "game/script.rpy", line 36, in execute
+    default config.developer = True
+  File "renpy/common/000namespaces.rpy", line 37, in set_default
+    raise Exception("The default statement can not be used with the {} namespace.".format(self.name))
+Exception: The default statement can not be used with the config namespace.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 260, in script
-    if CarryBox and TechSkill == 0:
-  File "C:\Users\court\Documents\PS GitHub\projectself\PS PC Build 12_12_24\renpy\ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\court\Documents\PS GitHub\projectself\PS PC Build 12_12_24\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\court\Documents\PS GitHub\projectself\PS PC Build 12_12_24\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 260, in <module>
-    if CarryBox and TechSkill == 0:
-NameError: name 'CarryBox' is not defined
+  File "game/script.rpy", line 36, in script
+    default config.developer = True
+  File "game/script.rpy", line 36, in execute
+    default config.developer = True
+  File "renpy/common/000namespaces.rpy", line 37, in set_default
+    raise Exception("The default statement can not be used with the {} namespace.".format(self.name))
+Exception: The default statement can not be used with the config namespace.
 
 Windows-10-10.0.19045 AMD64
-Ren'Py 8.3.3.24111502
+Ren'Py 8.3.4.24120703
 Project Self 1.0
-Thu Dec 12 10:17:09 2024
+Tue Apr 15 17:03:46 2025
