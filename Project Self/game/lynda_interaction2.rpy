@@ -338,4 +338,4 @@ menu:
 label lyndaboxend:
     m "This is a sneaky peeky into the back-end, you're rating with Lynda is [lynda_rating]."
     "Thanks for playing this sequence!"
-    return
+    jump lyndainteraction3

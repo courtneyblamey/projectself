@@ -39,3 +39,21 @@ label changesearch:
     "You search around the apartment for some change."
 
     m "I know I saw a pile of quarters somewhere around here..."
+
+    menu laundry_money:
+        "Check the bowl by the door.":
+            jump bowlmoney
+
+            label bowlmoney:
+                $ BowlMoney = True
+
+                "You shuffle around some mail and loyalty cards to find a smattering of coins."
+
+                $ Money =+5
+
+                if CoatMoney:
+                    jump laundryquest
+                else:
+                    jump laundry_money
+        
+        "Check your coat pockets."
