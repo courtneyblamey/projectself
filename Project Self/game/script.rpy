@@ -3,7 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-
 #IMAGES#
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
