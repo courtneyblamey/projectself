@@ -18,6 +18,7 @@ image lynda unsure = "Lynda_Unsure.png"
 
 #Character Variables
 default lynda_rating = 1
+default Money = 1
 
 #Misc Variables
 default CarryBox = False
@@ -26,6 +27,8 @@ default LyndaDrink = False
 default BuildingPastGood = False
 default DiligentLaundry = False
 default ChaosLaundry = False
+default BowlMoney = False
+default CoatMoney = False
 
 #Skill Variables
 default TechSkill = 1
