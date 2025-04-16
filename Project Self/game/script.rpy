@@ -8,11 +8,14 @@ image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.jpg"
 image bg doorway = "bg_doorway.jpg"
 image bg apartment = "bg_lyndaapt.jpg"
+image bg pc_apartment = "bg_pcapart.jpg"
+image bg laundry = "bg_laundry.jpg"
 image lynda anger = "Lynda_Anger.png"
 image lynda furrow = "Lynda_Furrow.png"
 image lynda neutral = "Lynda_Neutral.png"
 image lynda surprise = "Lynda_Surprise.png"
 image lynda unsure = "Lynda_Unsure.png"
+
 #VARIABLES#
 
 #Character Variables
