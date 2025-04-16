@@ -23,7 +23,7 @@ label lyndatest:
     l "Can I help you?"
 
     #testing for now without DEV MODE
-    jump lyndainteraction2
+    jump lyndainteraction3
 
 menu:
     

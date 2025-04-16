@@ -1,4 +1,7 @@
 label lyndainteraction3:
+     
+    scene bg pc_apartment
+    with dissolve
 
     "After scrolling social media for the morning, you roll over to spot your mountain of clothes bursting out of your laundry basket."
 
@@ -41,7 +44,7 @@ label changesearch:
     m "I know I saw a pile of quarters somewhere around here..."
 
     menu laundry_money:
-        "Check the bowl by the door.":
+        "Check the bowl by the door." if CoatMoney:
             jump bowlmoney
 
             label bowlmoney:
@@ -56,4 +59,21 @@ label changesearch:
                 else:
                     jump laundry_money
         
-        "Check your coat pockets."
+        "Check your coat pockets." if BowlMoney:
+            jump coatmoney
+
+            label coatmoney:
+                $ CoatMoney = True
+
+                "You fish around in some coat pockets and find a stash of coins."
+
+                $ Money =+2
+
+                if BowlMoney:
+                    jump laundryquest
+                else:
+                    jump laundry_money
+        "Go to the Laundry Room." if CoatMoney and BowlMoney:
+            jump laundryquest
+
+label laundryquest:
