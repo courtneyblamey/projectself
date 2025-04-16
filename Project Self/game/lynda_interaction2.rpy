@@ -140,13 +140,13 @@ menu:
         label carryboxchoice:
             if CarryBox and TechSkill == 1:
                 "You carry the boxes up to Lynda's apartment and wish her a good evening with her tech adventure and head home for the night."
-                jump lyndaboxend
+                jump lyndalastbox
             elif CarryBox and TechSkill != 1:
                 "You chat with Lynda on the way to her apartment, carrying the boxes along the way."
                 jump lyndaboxapartment
             elif TechSkill == 1:
                 "You say your farewells to Lynda and head to your own apartment for the night."
-                jump lyndaboxend
+                jump lyndalastbox
             else:
                 jump lyndaboxapartment
         label lyndaboxapartment:
@@ -230,11 +230,11 @@ menu:
                     if LyndaDrink:
                         "You finish up your drink as Lynda gets to work and head back home for the evening. You sense she's feeling a little more confident in herself as she sets up the tech on your way out."
                         l "See ya, <playername>!"
-                        jump lyndaboxend
+                        jump lyndalastbox
                     else:
                         "You wish Lynda luck in deciphering the device and head home for the evening. You sense a new level of confidence in her as she begins to set up the pieces of tech."
                         "See ya, <playername>!"
-                        jump lyndaboxend
+                        jump lyndalastbox
                 
                 label lyndastayearly:
                     "Lynda flicks through the instructions with neon painted nails."
@@ -281,7 +281,7 @@ menu:
                     l "Maybe that's just me getting older."
                     l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
                     "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
-                    jump lyndaboxend
+                    jump lyndalastbox
             
             if TechSkill == 2:
                 "You pick up the cables and untangle them, plugging in the power source, and opening the instructions."
@@ -325,7 +325,7 @@ menu:
                     l "Maybe that's just me getting older."
                     l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
                     "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
-                    jump lyndaboxend
+                    jump lyndalastbox
             
             label playertech:
                 m "No problem! I enjoyed it."
@@ -333,12 +333,8 @@ menu:
                 "Treacle comes to investigate the quietly whirring device. Lynda switches it off and shoos her away from the ever-tempting-to-cat-brain cubes."
                 l "I've kept you for enough of your evening, you should head home - but thank you, again."
                 "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
-                jump lyndaboxend
+                jump lyndalastbox
 
-label lyndaboxend:
-    m "This is a sneaky peeky into the back-end, you're rating with Lynda is [lynda_rating]."
-    "Thanks for playing this sequence!"
-    jump lyndaboxendfinal
-
-label lyndaboxendfinal:
+label lyndalastbox:
+    m "I hope I go to the next scene!"
     jump lyndainteraction3

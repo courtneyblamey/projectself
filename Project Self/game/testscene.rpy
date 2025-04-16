@@ -22,6 +22,9 @@ label lyndatest:
 
     l "Can I help you?"
 
+    #testing for now without DEV MODE
+    jump lyndainteraction2
+
 menu:
     
     "No I think I'm okay for now...":
