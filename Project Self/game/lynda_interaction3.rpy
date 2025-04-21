@@ -43,37 +43,16 @@ label changesearch:
 
     m "I know I saw a pile of quarters somewhere around here..."
 
+    $ menu1 = []
     menu laundry_money:
-        "Check the bowl by the door." if CoatMoney:
-            jump bowlmoney
-
-            label bowlmoney:
-                $ BowlMoney = True
-
+        set menu1
+        "Check the bowl by the door.":
                 "You shuffle around some mail and loyalty cards to find a smattering of coins."
-
                 $ Money =+5
-
-                if CoatMoney:
-                    jump laundryquest
-                else:
-                    jump laundry_money
-        
-        "Check your coat pockets." if BowlMoney:
-            jump coatmoney
-
-            label coatmoney:
-                $ CoatMoney = True
-
+                jump laundry_money
+        "Check your coat pockets.":
                 "You fish around in some coat pockets and find a stash of coins."
-
                 $ Money =+2
+                jump laundry_money
 
-                if BowlMoney:
-                    jump laundryquest
-                else:
-                    jump laundry_money
-        "Go to the Laundry Room." if CoatMoney and BowlMoney:
-            jump laundryquest
-
-label laundryquest:
+m "To the laundry room!"
