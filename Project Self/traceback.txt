@@ -1,26 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 36, in script
-    default config.developer = True
-  File "game/script.rpy", line 36, in execute
-    default config.developer = True
-  File "renpy/common/000namespaces.rpy", line 37, in set_default
-    raise Exception("The default statement can not be used with the {} namespace.".format(self.name))
-Exception: The default statement can not be used with the config namespace.
+  File "game/lynda_interaction3.rpy", line 245, in script
+    jump lyndainteraction4
+ScriptError: could not find label 'lyndainteraction4'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 36, in script
-    default config.developer = True
-  File "game/script.rpy", line 36, in execute
-    default config.developer = True
-  File "renpy/common/000namespaces.rpy", line 37, in set_default
-    raise Exception("The default statement can not be used with the {} namespace.".format(self.name))
-Exception: The default statement can not be used with the config namespace.
+  File "game/lynda_interaction3.rpy", line 245, in script
+    jump lyndainteraction4
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'lyndainteraction4'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Project Self 1.0
-Tue Apr 15 17:03:46 2025
+Mon Apr 21 18:00:10 2025

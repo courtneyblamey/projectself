@@ -1,4 +1,4 @@
-2025-04-21 19:37:44 UTC
+2025-04-21 21:58:54 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.4.24120703
 
@@ -6,9 +6,9 @@ Project Self
 1.0
 Built at 2024-12-12 00:53:42 UTC
 
-Early init took 0.08s
+Early init took 0.07s
 Loading error handling took 0.03s
-Loading script took 0.15s
+Loading script took 0.16s
 Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
 Set script version to: (8, 3, 3)
@@ -24,7 +24,7 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.33s
+Creating interface object took 0.31s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
@@ -35,7 +35,7 @@ Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -47,10 +47,17 @@ Version: b'4.6.0 NVIDIA 536.23'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+
+Full traceback:
+  File "game/lynda_interaction3.rpy", line 245, in script
+    jump lyndainteraction4
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'lyndainteraction4'.
+
+While running game code:
+  File "game/lynda_interaction3.rpy", line 245, in script
+    jump lyndainteraction4
+ScriptError: could not find label 'lyndainteraction4'.

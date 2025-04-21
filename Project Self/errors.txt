@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lynda_interaction3.rpy", line 46: menu statement expects a non-empty block.
-    menu laundry_money:
-        ^
-
-File "game/lynda_interaction3.rpy", line 50: expected statement.
-    "Check the bowl by the door.":
-                                 ^
-
-File "game/lynda_interaction3.rpy", line 65: expected statement.
-    "Check your coat pockets.":
-                              ^
+File "game/lynda_interaction3.rpy", line 6: expected statement.
+    xsize 1200
+              ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Apr 16 16:58:11 2025
+Mon Apr 21 15:47:58 2025
