@@ -15,6 +15,8 @@ image lynda furrow = "Lynda_Furrow.png"
 image lynda neutral = "Lynda_Neutral.png"
 image lynda surprise = "Lynda_Surprise.png"
 image lynda unsure = "Lynda_Unsure.png"
+image lynda content = "lynda_content.png"
+image lynda joy = "lynda_joy.png"
 
 #VARIABLES#
 

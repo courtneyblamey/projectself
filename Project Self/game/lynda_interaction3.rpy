@@ -62,11 +62,17 @@ with dissolve
 
 "As you reach the door, you notice someone filling the dryer."
 
+show lynda surprise at truecenter
+
 l "Oh hey, <playername>, sorry I'm just finishing this load and then I'm outta here."
+
+show lynda neutral at truecenter
 
 "Lynda subtly dabs her eye with a sock and throws it into the drum. She slots her change in as you dump your laundry into the machine."
 
 if ChaosLaundry:
+    show lynda unsure at truecenter
+    
     l "Wow, you just throw it all together."
 
     "You shrug."
@@ -79,23 +85,32 @@ if ChaosLaundry:
     jump lyndaokay
 else:
     $ lynda_rating =+1
+    show lynda joy at truecenter
     l "Ah, you're a fellow laundry sorter are you?"
 
     m "I want my stuff to stay soft!"
-
+    show lynda content at truecenter
     l "Not judging! Admiring, really."
     jump lyndaokay
 
 label lyndaokay:
+    show lynda neutral at truecenter
+    
     "You notice Lynda's eyes are tinged pink."
 
     m "Hey, are you okay?"
+    
+    show lynda surprise at truecenter
 
     l "What? Me?"
 
     "She takes a deep breath."
 
+    show lynda furrow at truecenter
+
     l "I was hoping to have my silly feelings contained by this age."
+
+    show lynda unsure at truecenter
 
     "Lynda looks at you and tears brim in her eyes."
 
@@ -110,10 +125,14 @@ label lyndaokay:
     l "Yeah. And sometimes, I'm not sure I should even be trying to make this job work, I had a good one back home, but this one seemed so good for developing my skillset and-"
 
     if TechSkill == 1:
+        show lynda neutral at truecenter
+
         l  "Anyway, I am going to go back upstairs while this dries and have a nice glass of wine."
 
         jump invitelynda
     else:
+        show lynda content at truecenter
+        
         l "Sorry, I've already blabbed to you about all this before."
 
         menu:
@@ -122,9 +141,13 @@ label lyndaokay:
 
                 m "You can blab more, I don't mind."
 
+                show lynda surprise at truecenter
+
                 l "You're sweet, but I won't subject you to all of-"
 
                 "She gestures to her wet eyes."
+
+                show lynda unsure at truecenter
 
                 l "-this."
 
@@ -136,6 +159,8 @@ label lyndaokay:
 
                 l "And I *never* subscribed to that idea until I met her."
 
+                show lynda content at truecenter
+
                 l "Cliche, I know."
 
                 l "She has wholeheartedly supported my ambitions, and I've supported hers, don't get me wrong. Just, this last endeavour has me wondering if I made the right choice."
@@ -145,11 +170,14 @@ label lyndaokay:
                         m "What has you wondering?"
 
                         if lynda_rating >= 4:
+                            show lynda unsure at truecenter
 
                             l "I just don't think I fit in at the office at all. Like we talked about the other day, I hear all these acronyms and everyone nodding in the room like it is something I should know, but I really don't."
 
                             m "Do you mean with the people or like, the work itself?"
-
+                            
+                            show lynda neutral at truecenter
+                            
                             "Lynda stares at the rumbling dryer."
 
                             l "That is a good question…"
@@ -158,6 +186,7 @@ label lyndaokay:
 
                             jump invitelynda
                         else: 
+                            show lynda neutral at truecenter
                             "Lynda picks at some loose skin on her lip, lost in thought."
 
                             jump invitelynda
@@ -170,7 +199,7 @@ label lyndaokay:
                 $ lynda_rating =+ 1
 
                 m "I get it. It's tough."
-
+                show lynda furrow at truecenter
                 l "Yeah, yeah it is."
 
                 "She wipes away a slight smear of eyeliner."
@@ -182,10 +211,12 @@ label invitelynda:
         "Offer a coffee hang.":
             $ lynda_rating =+1
             m "Do you wanna grab coffee sometime?"
+
+            show lynda joy at truecenter
             "Lynda smiles at you."
 
             l "You know what? That would be nice."
-
+            show lynda furrow at truecenter
             l "And Antony owes me one anyway for saving his dried laundry from being thrown onto the floor."
 
             m "Okay! Then let's plan a time and we'll grab some."
@@ -195,13 +226,13 @@ label invitelynda:
         "Offer a picnic in the park":
             $ lynda_rating =-1
             m "Are you a fan of picnics?"
-
+            show lynda neutral at truecenter
             l "Uhhh…"
-
+            show lynda unsure at truecenter
             l "Sure!"
 
             m "Okay! I make a mean spinach dip. We can find a time and go to the park nearby?"
-            #small smile here
+            show lynda content at truecenter
 
             l "That sounds lovely."
 
@@ -210,13 +241,13 @@ label invitelynda:
         "Offer drinks at a local bar.":
             $ lynda_rating =+2
             m "Do you want to grab a casual drink sometime?"
-
+            show lynda surprise at truecenter
             "Lynda's eyes light up."
-
+            show lynda joy at truecenter
             l "Oh, I'd love that."
 
             l "I haven't had a drink outside of my place in a hot minute."
-
+            show lynda content at truecenter
             l "I've forgotten what it is like to be overcharged for an ounce of liquor."
 
             m "Then we shall correct this and refresh your memory so that you remember why you drink at home instead!"
@@ -230,7 +261,9 @@ label invitelynda:
             jump endlyndainteraction3
 label endlyndainteraction3:
     "Lynda wiggles her fingers goodbye to you as she heads out of the laundry room. You don't see her again when you go to move over your own laundry."
-
+    hide lynda content
+    hide lynda neutral
+    hide lynda furrow
     if lynda_rating >= 5:
         "As you re-enter the laundry room you realise that the dryer is already running with your clothes in it. Lynda must have moved them over when she collected hers."
 
