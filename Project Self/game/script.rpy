@@ -5,7 +5,7 @@
 
 #IMAGES#
 image lynda placeholder = "lynda_placeholder.png"
-image bg lobby = "bg_lobby.jpg"
+image bg lobby = "bg_lobby.png"
 image bg doorway = "bg_doorway.jpg"
 image bg apartment = "bg_lyndaapt.jpg"
 image bg pc_apartment = "bg_pcapart.png"
@@ -44,7 +44,7 @@ default TidySkill = 1
 
 ## This is the start of the proper demo scene which (with some edits) will be in the game. It is the second event that takes place between the PC and Lynda.
 label start:
-    jump lyndatest
+    jump lyndainteraction1
 
 
         

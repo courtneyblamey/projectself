@@ -1,5 +1,7 @@
 label lyndainteraction1:
-
+    scene bg lobby
+    with dissolve
+    
     "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs. A woman emerges from the stairwell holding a laundry basket."
 
     show lynda neutral at truecenter
