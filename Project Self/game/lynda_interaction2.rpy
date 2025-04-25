@@ -166,7 +166,9 @@ menu:
                 l "You can place the boxes right here on the counter."
                 "You prop them up and onto the counter, trying very carefully to not drop them, noticing the VERY LARGE 'FRAGILE THIS WAY UP' label on the side."
             else:
+                show lynda furrow at truecenter
                 "Lynda grunts as she places the boxes on top of the countertop."
+                show lynda neutral at truecenter
                 l "Alright, can I get you something to drink before we get into this?"
         menu:
             "No, I'm good for now.":
@@ -175,35 +177,42 @@ menu:
                 jump lyndaopenbox
             "Yeah, some water would be great!":
                 m "Just some water for now, thanks."
+                show lynda joy at truecenter
                 "Lynda smiles from behind a heavily painted white cabinet door."
                 l "On it!"
                 jump lyndaopenbox
             "I'd love some tea.":
                 $ LyndaDrink = True
                 m "I'd love some tea. actually."
+                show lynda joy at truecenter 
                 l "Sure thing! Let me get it brewed for you and we'll get into it."
                 jump lyndaopenbox
             "Some wine, perchance?":
                 $ lynda_rating += 1
                 $ LyndaDrink = True
                 m "I know great friends bring wine, but maybe you have some already to share?"
+                show lynda content at truecenter
                 "Lynda peers from behind a heavily painted white cabinet door, wine glasses in hand."
                 l "Already on it!"
                 jump lyndaopenbox
         
         label lyndaopenbox:
             if LyndaDrink:
+                show lynda neutral at truecenter
                 "Lynda sets down the drinks and begins to open the box."
             else:
+                show lynda neutral at truecenter
                 "Lynda sets down her drink and begins to open the box."
 
             "You look into the boxes to see a short tangle of wires, an odd looking box with angled windows, and various cubes reading: Alice in Wonderland, The Gruffalo, Ferdinand the Bull, and more."
             "Lynda pulls out and sets everything down on the countertop, throwing the boxes into the front room."
             "Within moments, two cats appear and hop into each of them respectively. One a mottled grey, orange, and white, and the other a slim black cat."
+            show lynda furrow at truecenter
             l "They're cardboard box fiends. Give it a second and you'll see Bean just start chomping it."
             "Sure enough, the black cat begins to move along the box, biting it. Leaving a trail of bite marks as it goes."
             l "We found him behind a restaurant with a bunch of empty bean tins and boxes. You can take cat out of the street but-"
             "Bean continues his holepunching tirade against the box's edges."
+            show lynda neutral at truecenter
             l "…anyway. Where to start with this thing."
             "She looks with dismay at the tech in front of her."
 
@@ -211,8 +220,10 @@ menu:
                 "You also look down at the tech in front of you."
                 m "Is there an instruction booklet?"
                 "Lynda fishes around in the box and produces a paper booklet with a flourish."
+                show lynda surprise at truecenter
                 l "Yes, there is!"
                 "You both read over the instructions, which are relatively well-written, if a bit over-written."
+                show lynda unsure at truecenter
                 l "Wow, these are kinda idiot-proof."
                 l "Maybe I could have done this myself. Now I feel bad for asking for help."
                 
@@ -225,6 +236,7 @@ menu:
                 label lyndaleaveearly:
                     $ lynda_rating += 1
                     "Lynda flicks through the instructions with neon painted nails."
+                    show lynda content at truecenter
                     l "Yeah, actually, I think I got this!"
                     l "Thanks anyway. I'll let you know how it goes."
                     if LyndaDrink:
@@ -238,26 +250,33 @@ menu:
                 
                 label lyndastayearly:
                     "Lynda flicks through the instructions with neon painted nails."
+                    show lynda unsure at truecenter
                     l "You know, I wouldn't hate the help…"
                     m "Sure! Let's figure it out."
+                    show lynda neutral at truecenter
                     "You each begin to take turns following the instructions, setting up the base, power source, and fetching the different story cubes."
                     l "It's so comforting to know I'm not the only one moderately afraid of technology like this."
                     m "I mean, this is pretty high-tech. I think you're allowed to be a little intimidated by it."
                     l "I do feel a bit out of my depth. I moved to this job from the beauty industry, and it's just…"
                     "Lynda slots a piece of the device in place."
+                    show lynda furrow at truecenter
                     l "It's very different sometimes."
                     l "I guess I didn't think I'd feel like this still at this point in my career."
                     "She chuckles softly to herself and flicks on the device."
                     m "Feel like what?"
+                    show lynda unsure at truecenter
                     l "I don't really know how to describe it other than out of my depth."
                     "The images of Alice in Wonderland begin to faintly appear on the holographic part of the device."
+                    show lynda surprise at truecenter
                     l "Oh look at that!"
                     "Over the next couple minutes, the images get brighter and words begin to appear, telling the story of a girl growing too fast after eating a cake."
                     m "Not going to lie, that is pretty cool."
                     "Lynda stares at the holograph with a slightly furrowed brow."
+                    show lynda furrow at truecenter
                     l "This could be used for more than just storytime, right?"
                     m "Probably? The concept can do lots of things."
                     "Lynda grabs a notebook off of her desk and begins to scribble down notes."
+                    show lynda neutral at truecenter
                     "She looks up at you after a moment with a soft smile."
                     l "<player name> you have no idea how much this has helped me out."
 
@@ -272,11 +291,14 @@ menu:
                 label lyndalearn:
                     $ lynda_rating += 1
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
+                    show lynda surprise at truecenter
                     "Lynda's face drops for a moment."
                     l "You think so? Huh."
+                    show lynda neutral at truecenter
                     m "Considering we both went into this a little unsure- we made it, and it works!"
                     "She looks over the device, now clearly playing colourful sequences from Alice in Wonderland."
                     l "I feel like the team is just so adept and knowledgeable about these things compared to me."
+                    show lynda joy at truecenter
                     "She looks at you with a smile and a wink."
                     l "Maybe that's just me getting older."
                     l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
@@ -284,6 +306,7 @@ menu:
                     jump lyndalastbox
             
             if TechSkill == 2:
+                show lynda neutral at truecenter
                 "You pick up the cables and untangle them, plugging in the power source, and opening the instructions."
                 m "Okay so, this is the base. You just have to make sure it is plugged into the outlet. And then…"
                 "You reach for one of the cubes."
@@ -291,15 +314,19 @@ menu:
                 l "Okay, this makes sense."
                 "You then pick up the box of angled windows and place it overtop, slowly piecing together the device, as Lynda watches on chewing her rosy pink stained lip."
                 "You talk her through each phase, ensuring she's following along and answering her questions. She slowly becomes more and more inquisitive as you get ready to boot up the device."
+                show lynda furrow at truecenter
                 l "Okay and so this then refracts? the projection to make it look 3D?"
                 m "Exactly, yeah! And each of these cubes holds the data of the images and words that will play."
                 m "Wanna boot it up?"
+                show lynda joy at truecenter
                 l "YES!"
                 "You flick on the device and it whirs to life."
                 "After a couple minutes, you begin to faintly see the outlines of a girl growing too big for a doorway. Alice in Wonderland is playing on the holographic projector."
                 m "Weird, there's no sound…"
+                show lynda content at truecenter
                 l "Oh! They told us they're working on the audio component right now. But the words appear on the screen- well holograph, too."
                 "You both continue to watch as the projector warms up and the colours become more vibrant and words clearly display alongside the pictures."
+                show lynda neutral at truecenter
                 l "So, this could actually be used for more than just storytime, right?"
                 m "Probably? The concept can do lots of things."
                 "Lynda grabs a notebook off of her desk and begins to scribble down notes."
@@ -317,11 +344,14 @@ menu:
                 label lyndapride:
                     $ lynda_rating += 1
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
+                    show lynda surprise at truecenter
                     "Lynda's face drops for a moment."
                     l "You think so? Huh."
+                    show lynda neutral at truecenter
                     "She looks over the device, now clearly playing colourful sequences from Alice in Wonderland."
                     l "I feel like the team is just so adept and knowledgeable about these things compared to me."
                     "She looks at you with a smile and a wink."
+                    show lynda joy at truecenter
                     l "Maybe that's just me getting older."
                     l "Anyway, I've kept you long enough. I'm sure you'd like some of your evening to yourself!"
                     "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
@@ -329,6 +359,7 @@ menu:
             
             label playertech:
                 m "No problem! I enjoyed it."
+                show lynda content at truecenter
                 l "Me too. It was less daunting than I expected in the end."
                 "Treacle comes to investigate the quietly whirring device. Lynda switches it off and shoos her away from the ever-tempting-to-cat-brain cubes."
                 l "I've kept you for enough of your evening, you should head home - but thank you, again."
@@ -336,5 +367,5 @@ menu:
                 jump lyndalastbox
 
 label lyndalastbox:
-    m "I hope I go to the next scene!"
+    "You head off to your apartment for the night."
     jump lyndainteraction3
