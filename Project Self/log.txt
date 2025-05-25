@@ -1,49 +1,47 @@
-2025-04-25 20:46:06 UTC
-Windows-10-10.0.19045
-Ren'Py 8.3.4.24120703
+2025-05-25 19:57:46 UTC
+macOS-12.6-arm64-arm-64bit
+Ren'Py 8.3.7.25031702
 
 Project Self
 1.0
 Built at 2024-12-12 00:53:42 UTC
 
-Early init took 0.07s
-Loading error handling took 0.03s
-Loading script took 0.18s
-Loading save slot metadata took 0.04s
+Early init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Set script version to: (8, 3, 3)
-Running init code took 0.04s
-Loading analysis data took 0.01s
+Running init code took 0.02s
+Loading analysis data took 0.00s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Dump and make backups took 0.04s
+Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.30s
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.00s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
+Analyze screens took 0.00s
 Save screen analysis took 0.01s
-Prepare screens took 0.05s
+Prepare screens took 0.02s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.08s
+Interface start took 0.26s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 1470, 956)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 536.23'
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 76.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1920, 1080) physical=(1368, 770) drawable=(2736, 1540)
 Maximum texture size: 4096x4096
