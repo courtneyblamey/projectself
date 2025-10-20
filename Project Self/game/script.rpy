@@ -6,17 +6,17 @@
 #IMAGES#
 image lynda placeholder = "lynda_placeholder.png"
 image bg lobby = "bg_lobby.png"
-image bg doorway = "bg_doorway.jpg"
-image bg apartment = "bg_lyndaapt.jpg"
+image bg doorway = "bg_doorway.png"
+image bg apartment = "bg_lyndaapt.png"
 image bg pc_apartment = "bg_pcapart.png"
 image bg laundry = "bg_laundry.png"
-image lynda anger = "Lynda_Anger.png"
-image lynda furrow = "Lynda_Furrow.png"
+image lynda anger = "Lynda_Neutral.png"
+image lynda furrow = "Lynda_Neutral.png"
 image lynda neutral = "Lynda_Neutral.png"
-image lynda surprise = "Lynda_Surprise.png"
-image lynda unsure = "Lynda_Unsure.png"
-image lynda content = "lynda_content.png"
-image lynda joy = "lynda_joy.png"
+image lynda surprise = "Lynda_Neutral.png"
+image lynda unsure = "Lynda_Neutral.png"
+image lynda content = "Lynda_Neutral.png"
+image lynda joy = "Lynda_Neutral.png"
 
 #VARIABLES#
 
