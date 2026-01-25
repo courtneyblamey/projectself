@@ -95,3 +95,18 @@ I've flicked away and back to this a couple of times in the last 20 mins, so I t
 - Who is the player character?
 - Who should I focus on for the vertical slice?
 - What is the ending, and write it.
+
+
+### A Design and Writing Sprint - and some retroactive thoughts
+
+#### 25-01-2026
+
+Hello again. Turns out running a non-profit, writing a dissertation, and making a game might be a *bit* much on the old to-do list. I have an immovable deadline to complete my PhD by August, so we traced back the steps and that means this game project needs to be done early March to get playtesting and writing done. So, I'm dedicating chunks of my weekend (don't worry I am resting) to do sprints on this game. 
+
+I've answered one of the questions from the last journal - I'm going to focus on Lynda for the vertical slice. I'm sad to lose some of the mechanics I wanted (dividing time between characters, managing the relationships, and inter-NPC interactions), but this way I can instead provide a deeper connection with one NPC and their struggle, while having the other NPCs maybe guest star for now.
+
+Next I need to ruminate on who the PC is. This is partly scope, to reduce all the options one can make or rather that I feel should be available to a blank slate, but also to help shape their responses. There's a world where I do the writerly thing: write from my experience. There's still variety in responses, but I'm keeping it closer to home. While it is stereotypical for a female/femme character to be a source of empathy or emotional labour, I'm still trying to subvert this in the form of being overly helpful to an NPC wigs them out a bit (a proper documentation of that forthcoming from an archive reflection that I didn't digitise yet.)
+
+Ending wise, I have them for Lynda (in the MEET_THE_TEAM.md), as I continue writing there's a chance they might shift, or have more nuance.
+
+All in all, I've geared up for this sprint, with a game plan in action. Today is story-beating out the events to give myself a framework to write within. Something with a low commitment bar to get the creative ball rolling. I've found doing this effective for the performance anxiety I'm facing when staring at the Mountain of Things To Do. 
