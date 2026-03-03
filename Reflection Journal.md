@@ -110,3 +110,16 @@ Next I need to ruminate on who the PC is. This is partly scope, to reduce all th
 Ending wise, I have them for Lynda (in the MEET_THE_TEAM.md), as I continue writing there's a chance they might shift, or have more nuance.
 
 All in all, I've geared up for this sprint, with a game plan in action. Today is story-beating out the events to give myself a framework to write within. Something with a low commitment bar to get the creative ball rolling. I've found doing this effective for the performance anxiety I'm facing when staring at the Mountain of Things To Do. 
+
+### Turns Out its a Marathon
+
+#### 03-03-2026
+
+My lesson of 2026 is that life will continue to happen even when you have Things To Do.
+
+With that in mind, I'm dedicating myself to getting the game fully finished in the next couple of weeks, to then be able to write up my chapter and submit a version of it to FDG's late breaking work (alongside my game demo). I think one of the things MDM has made uncomfortable for me is that the traceability means I am constantly confronting how far behind I am and what Past Courtney thought I should have done by now. Not tracking it means I could generate a facade of getting certain things done, when in reality I could be doing the sprint under the guise of "yeah I have xyz done it should be fine". Instead, you can LITERALLY SEE WHAT MATERIALS I HAVE. I also want to be mindful that this isn't a journal of "woe is me" either. And on that note, allow me to shift to some interim reflective thoughts I've had on the project:
+
+For managing the relationship tracker between the PC and Lynda, I've been grappling with whether I gate off certain interactions (these are in comments in the document that Markdown struggles to transpose). In the spirit of a deeper connection with Lynda, I am going to experiment writing more terse/unfriendly exchanges between Lynda and the PC, which may be shorter, but allows for a realisitic portrayal of the character interactions. I'm curious if there's a way to embed her impostor syndrome into that version of the relationship? Additionally, with the "overly helpful" storyline, there's an opportunity for a variance in what a "low" relationship can manifest as! Lynda might become avoidant of the PC because she feels they're a little overbearing, or avoidant because she doesn't like the PC. We've seen in BG3 some of the "fun" that can be derived from annoying or trying out what negative relationships with NPCs can look like (such as how they interact with you or respond to you when beginning a conversation, or just their general demeanour around you). Since this vertical slice is only with Lynda, I really don't want it to feel binary, like there's a good and bad outcome/choice every time. I'm keeping this all in mind as I set to fleshing out these Event scripts today. The upside of doing this in Ren'Py is that the coding is *relatively* straightforward, so I am not too stressed about getting it into engine. (Don't worry I just knocked on wood).
+
+Finally, I've been playing around in QualCoder for MaDe RA work, and I think it is pretty good! A little janky in places (what software isn't) but I think it will be a suitable format to conduct my QDA for my repo!
+
