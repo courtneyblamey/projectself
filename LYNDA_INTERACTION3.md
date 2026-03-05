@@ -17,9 +17,9 @@ M "I should probably deal with that."
 
 ### Sort the laundry
 
-**set $DiligentLaundry = True **
+**set $DiligentLaundry = True**
 
-**+1 to $TidySkill **
+**+1 to $TidySkill**
 
 "You dutifully separate out your laundry into piles."
 
@@ -178,59 +178,56 @@ L "Cliche, I know."
 L "She has wholeheartedly supported my ambitions, and I've supported hers, don't get me wrong. Just, this last endeavour has me wondering if I made the right choice."
 
 
-## 
-    **CHOICE**
+## **CHOICE**
 
 
 
 1. Why's that?
 2. Maybe I've pried enough
 
-### 
-    Why's that?
+### Why's that?
 
 
-    M "What has you wondering?"
+   M "What has you wondering?"
 
 
-    If $lynda_rating is x
+   If $lynda_rating is x
 
 
-    L "I just don't think I fit in at the office at all. Like we talked about the other day, I hear all these acronyms and everyone nodding in the room like it is something I should know, but I really don't."
+   L "I just don't think I fit in at the office at all. Like we talked about the other day, I hear all these acronyms and everyone nodding in the room like it is something I should know, but I really don't."
 
 
-    M "Do you mean with the people or like, the work itself?"
+   M "Do you mean with the people or like, the work itself?"
 
 
-    "Lynda stares at the rumbling dryer."
+   "Lynda stares at the rumbling dryer."
 
 
-    L "That is a good question…"
+   L "That is a good question…"
 
 
-    "She looks lost in thought."
+   "She looks lost in thought."
 
 
-    **jump invitelynda**
+   **jump invitelynda**
 
 
-    **Else**
+   **Else**
 
 
-    "Lynda picks at some loose skin on her lip, lost in thought."
+   "Lynda picks at some loose skin on her lip, lost in thought."
 
 
-    **jump invitelynda**
+   **jump invitelynda**
 
 
-### 
-    Pried enough
+### Pried enough
 
 
-    "Maybe that's enough questions for this evening."
+   "Maybe that's enough questions for this evening."
 
 
-    **jump invitelynda**
+   **jump invitelynda**
 
 
 
@@ -325,33 +322,33 @@ M "Sure!"
 "Lynda wiggles her fingers goodbye to you as she heads out of the laundry room. You don't see her again when you go to move over your own laundry.
 
 
-    if $lynda_rating > X
+if $lynda_rating > X
 
 
-    "You realise that the dryer is already running with your clothes in it. Lynda must have moved them over when she collected hers."
+"You realise that the dryer is already running with your clothes in it. Lynda must have moved them over when she collected hers."
 
 
-    if $ChaosLaundry = True
+if $ChaosLaundry = True
 
 
-    "You decide to scroll on your phone for the last five minutes of the cycle and collect them, heading back upstairs for the night."
+"You decide to scroll on your phone for the last five minutes of the cycle and collect them, heading back upstairs for the night."
 
 
-    Else
+Else
 
 
-    "You load your next batch of clothes and head back upstairs. Eventually completing your laundry just in time for a reasonable bedtime."
+"You load your next batch of clothes and head back upstairs. Eventually completing your laundry just in time for a reasonable bedtime."
 
 
-    if $lynda_rating &lt; X and $ChaosLaundry = True
+if $lynda_rating &lt; X and $ChaosLaundry = True
 
 
-    "You throw the load into the dryer and return upstairs while it finishes the dry cycle. You grab it once it is done and watch some TV while folding it before heading off to bed."
+"You throw the load into the dryer and return upstairs while it finishes the dry cycle. You grab it once it is done and watch some TV while folding it before heading off to bed."
 
 
-    If lynda_rating &lt; X and $DiligentLaundry = True
+If lynda_rating &lt; X and $DiligentLaundry = True
 
 
-    "You move over the current load and prep the next one, which you do one more time for the delicates, before bringing the last load upstairs. You lay out your delicates to dry, realising you should have done them first, and fold the remaining laundry while watching TV. Eventually, you sort it all away and flomp into bed for the night."
+"You move over the current load and prep the next one, which you do one more time for the delicates, before bringing the last load upstairs. You lay out your delicates to dry, realising you should have done them first, and fold the remaining laundry while watching TV. Eventually, you sort it all away and flomp into bed for the night."
 
 **jump lyndainteraction4**
