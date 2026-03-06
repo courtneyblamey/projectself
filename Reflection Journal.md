@@ -123,3 +123,18 @@ For managing the relationship tracker between the PC and Lynda, I've been grappl
 
 Finally, I've been playing around in QualCoder for MaDe RA work, and I think it is pretty good! A little janky in places (what software isn't) but I think it will be a suitable format to conduct my QDA for my repo!
 
+### Make Do Push! - Visual Map
+
+#### 05-03-2026
+
+Thanks to the Make Do Meeting this week, I've set up deliverables to have by next week. One of those is a visual map of the game to help myself write what remains.
+
+I've begun to map out the Interaction and Event Scenes to account for the Lynda relationship tracker, the skill variables, and weaving in now a Help/Hinder mechanic where players can be overly helpful and put Lynda off, or help the "right" way and increase their relationship with her. Doing this has made me realise: I, at no point, have introduced the concept of a tenancy board. THE ROOT OF THE PC'S PURPOSE. So! Mapping this out has been *extremely* useful. I've included the images and progress thus far below.
+
+<img width="1024" height="768" alt="Whiteboard Mapping 5_PS" src="https://github.com/user-attachments/assets/dc2fe837-7a70-4ac9-99f1-423e60ace34f" />
+<img width="1024" height="768" alt="Whiteboard Mapping 4_PS" src="https://github.com/user-attachments/assets/cb68fa62-7cfa-471d-9980-2170785e1133" />
+<img width="1024" height="768" alt="Whiteboard Mapping 3_PS" src="https://github.com/user-attachments/assets/22c66eeb-82cf-4187-a18f-52f57b2f14e5" />
+<img width="1024" height="768" alt="Whiteboard Mapping 2_PS" src="https://github.com/user-attachments/assets/fa723815-621b-4f03-88e4-8786ee401be2" />
+<img width="1024" height="768" alt="Whiteboard Mapping 1_PS" src="https://github.com/user-attachments/assets/8c8ee9d0-a3c1-405f-b8f5-b74f7564d62c" />
+
+I'll continue working on this tomorrow. More to come.
