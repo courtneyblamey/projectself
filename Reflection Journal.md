@@ -131,10 +131,41 @@ Thanks to the Make Do Meeting this week, I've set up deliverables to have by nex
 
 I've begun to map out the Interaction and Event Scenes to account for the Lynda relationship tracker, the skill variables, and weaving in now a Help/Hinder mechanic where players can be overly helpful and put Lynda off, or help the "right" way and increase their relationship with her. Doing this has made me realise: I, at no point, have introduced the concept of a tenancy board. THE ROOT OF THE PC'S PURPOSE. So! Mapping this out has been *extremely* useful. I've included the images and progress thus far below.
 
-<img width="1024" height="768" alt="Whiteboard Mapping 5_PS" src="https://github.com/user-attachments/assets/dc2fe837-7a70-4ac9-99f1-423e60ace34f" />
-<img width="1024" height="768" alt="Whiteboard Mapping 4_PS" src="https://github.com/user-attachments/assets/cb68fa62-7cfa-471d-9980-2170785e1133" />
-<img width="1024" height="768" alt="Whiteboard Mapping 3_PS" src="https://github.com/user-attachments/assets/22c66eeb-82cf-4187-a18f-52f57b2f14e5" />
-<img width="1024" height="768" alt="Whiteboard Mapping 2_PS" src="https://github.com/user-attachments/assets/fa723815-621b-4f03-88e4-8786ee401be2" />
 <img width="1024" height="768" alt="Whiteboard Mapping 1_PS" src="https://github.com/user-attachments/assets/8c8ee9d0-a3c1-405f-b8f5-b74f7564d62c" />
+WHITEBOARD IMAGE 1
+<img width="1024" height="768" alt="Whiteboard Mapping 2_PS" src="https://github.com/user-attachments/assets/fa723815-621b-4f03-88e4-8786ee401be2" />
+WHITEBOARD IMAGE 2
+<img width="1024" height="768" alt="Whiteboard Mapping 3_PS" src="https://github.com/user-attachments/assets/22c66eeb-82cf-4187-a18f-52f57b2f14e5" />
+WHITEBOARD IMAGE 3
+<img width="1024" height="768" alt="Whiteboard Mapping 4_PS" src="https://github.com/user-attachments/assets/cb68fa62-7cfa-471d-9980-2170785e1133" />
+WHITEBOARD IMAGE 4
+<img width="1024" height="768" alt="Whiteboard Mapping 5_PS" src="https://github.com/user-attachments/assets/dc2fe837-7a70-4ac9-99f1-423e60ace34f" />
+WHITEBOARD IMAGE 5
 
 I'll continue working on this tomorrow. More to come.
+
+### Visual Map Complete!
+
+#### 06-03-2026
+
+The visual map is complete and I had a couple breakthroughs:
+
+1. Having two separate variables to track the type of help the PC gave was going to get too complicated to code (see Discord image #1) because they could be simultaneous (i.e. +2 in each). So I've altered it to be one variable that is +ve or -ve instead, and once a certain -ve threshold is reached, it permanently impacts the relationship between the NPC and PC.
+2. In getting into designing the -ve choice outcomes, I realised that self-doubt is a large component of Imposter Syndrome (thank you to National Library of Medicine for reminding me of this). So as a player, if you keep making comments or doing things that reaffirm this, I thought it would be interesting to have it result in Lynda realising her own capability (in seeing it be seen) helping offset the self-doubt and instead replaced by a level of self-assurance (e.g. "actually, I do have a handle on things!"). This has helped me weave back in her characteristic of IS without having to bash the player over the head with it.
+
+Now that the visual map is completed, I can move into writing the remaining scenes over the weekend with a MUCH clearer sense of how I want to approach each scene and the variables that exist to make use of during the dialogue to keep it feeling dynamic to how the player defines themselves. I don't plan to have this visualised for the demo - but it could be something to design when I port this outside of Ren'Py post-PhD (Ren'Py is good for the time allowance I had to do this and keeping it simple, but it is not a user-friendly interface to use longer term imho).
+
+Onwards!
+
+<img width="1024" height="768" alt="Whiteboard Mapping 6_PS" src="https://github.com/user-attachments/assets/32af244c-541b-4723-88ca-9b1b9ca27c89" />
+WHITEBOARD IMAGE 6
+<img width="1024" height="768" alt="Whiteboard Mapping 7_PS" src="https://github.com/user-attachments/assets/4ea6b989-8087-4b1d-b34a-32ce2e796da4" />
+WHITEBOARD IMAGE 7
+<img width="1024" height="768" alt="Whiteboard Mapping 8_PS" src="https://github.com/user-attachments/assets/df4cb804-7851-4106-9fe9-4081fbc2c033" />
+WHITEBOARD IMAGE 8
+<img width="1024" height="768" alt="Whiteboard Mapping 9_PS" src="https://github.com/user-attachments/assets/d326c0eb-673c-4ed2-baac-6458e6e301f6" />
+WHITEBOARD IMAGE 9
+
+<img width="1168" height="116" alt="Screenshot 2026-03-06 at 5 14 55 PM" src="https://github.com/user-attachments/assets/6c6f63a5-e154-4b15-a11b-e49455c80fd1" />
+DISCORD IMAGE 1
+
