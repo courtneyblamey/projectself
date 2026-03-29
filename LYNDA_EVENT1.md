@@ -1,4 +1,4 @@
-Note: no matter the $character_rating, these events will occur in sequence, but the rating entering the Event (plus any choice made that can bump the rating) will impact the outcome.
+Note: no matter the $ character_rating, these events will occur in sequence, but the rating entering the Event (plus any choice made that can bump the rating) will impact the outcome.
 
 SINK EXPLODES
 
@@ -8,7 +8,7 @@ SINK EXPLODES
 "You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
 
 
-## **CHOICE**
+## **MENU**
 
 
 
@@ -18,12 +18,18 @@ SINK EXPLODES
 
 ### Totally scroll
 
-**set $AttentionSkill to 1**
+**set $ AttentionSkill to 1**
 
-**set $SinkTimer to 3**
+**set $ SinkTimer to 3**
 
 "You select something mindless that fades into the background as you scroll through social media, also mindlessly." \
 "Sometimes brain overload feels good."
+
+"*beep boop*"
+
+"The electrical room below you beeps."
+
+m "That sound is going to get real annoying."
 
 
 ## SCROLL
@@ -64,7 +70,7 @@ SINK EXPLODES
 "Silence."
 
 
-## **CHOICE**
+## **MENU**
 
 
 
@@ -74,7 +80,7 @@ SINK EXPLODES
 
 ### Continue scrolling
 
-**set $SinkTimer to 5**
+**set $ SinkTimer to 5**
 
 "You continue to scroll your feed."
 
@@ -87,7 +93,7 @@ SINK EXPLODES
 
 ### Pause scrolling and listen
 
-**Set $SinkTimer to 4**
+**Set $ SinkTimer to 4**
 
 "You stop the video and listen."
 
@@ -107,7 +113,7 @@ SINK EXPLODES
 **jump enteraptsink**
 
 
-## **CHOICE**
+## **MENU**
 
 
 
@@ -117,7 +123,7 @@ SINK EXPLODES
 
 ### Continue scrolling
 
-**set $SinkTimer to 6**
+**set $ SinkTimer to 6**
 
 "You continue to scroll."
 
@@ -147,24 +153,24 @@ l "Ohhhhh noooooo! Stop!!!"
 "Lynda sits in front of her sink, slinging towels under it to prevent the jettison of water from going any further."
 
 
-## **CHOICE**
+## **MENU**
 
 
 
-1. PANIC AS WELL $HandsonSkill to 1
-2. Grab more towels to help! $HandsonSkill to 3
-3. Dive under the sink. $HandsonSkill 5
+1. PANIC AS WELL $ HandsonSkill to 1
+2. Grab more towels to help! $ HandsonSkill to 3
+3. Dive under the sink. $ HandsonSkill 5
 
 
 ### **PANIC AS WELL**
 
-**set $HandsonSkill to 1**
+**set $ HandsonSkill to 1**
 
-**( $lynda_rating =-1)**
+**( $ lynda_rating -= 1)**
 
 m "UH OH."
 
-"Bean and Treacle scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+"Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
 
 l "h e l p"
 
@@ -197,11 +203,11 @@ m "Well, that sucked."
 
 ### TOWELS
 
-**set $HandsonSkill to 3**
+**set $ HandsonSkill to 3**
 
-**$ lynda_rating = +1**
+**$  lynda_rating = +1**
 
-"Bean and Treacle scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+"Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
 
 l "h e l p"
 
@@ -238,9 +244,9 @@ l "Ah HA!"
 
 ### DIVE UNDER SINK
 
-**set $HandsonSkill to 5**
+**set $ HandsonSkill to 5**
 
-**$ lynda_rating = +1**
+**$  lynda_rating = +1**
 
 m "Move!"
 
@@ -256,9 +262,9 @@ if TechSkill = 1
 
 Else
 
-$SinkTimer = +1
+$ SinkTimer = +1
 
-$lynda_rating = -1
+$ lynda_rating = -1
 
 "You dive under the sink."
 
@@ -291,16 +297,16 @@ m "Sorry…"
 
 ### Attention strong
 
-**set $AttentionSkill to 5**
+**set $ AttentionSkill to 5**
 
-**set $SinkTimer to 1**
+**set $ SinkTimer to 1**
 
 "You flick through some videos."
 
 m "I'm pretty sure I've hit the end of all the content that ever existed."
 
 
-## CHOICE
+## MENU
 
 
 
@@ -339,7 +345,7 @@ m "Ooh I forgot there's a new episode of Attraction Isle."
 "You feel your eyes starting to drift shut when you hear some stomping upstairs."
 
 
-## CHOICE 
+## MENU 
 
 
 
@@ -349,7 +355,7 @@ m "Ooh I forgot there's a new episode of Attraction Isle."
 
 ### SHRUG IT OFF
 
-**$ SinkTimer = +1**
+**$  SinkTimer = +1**
 
 "Lynda does love a one-woman dance party. You swear you can hear music. She might not have rhythm, but the woman loves to groove."
 
@@ -393,8 +399,8 @@ l "*muffled* motherfuc-"
     * ~~Go upstairs ~~
         * ~~See the door open and hear banging~~
 * Lynda's kitchen tap is spraying water everywhere
-* Determine physical skill! $HandsonSkill
-    * Oh holy s#$&! - set to 1
+* Determine physical skill! $ HandsonSkill
+    * Oh holy s#$ &! - set to 1
     * Grab some towels - and tampons if you have them!!!! - set to 3
     * Ask to start pulling stuff from out under the sink - set to 5
 
@@ -404,18 +410,18 @@ l "*muffled* motherfuc-"
 "You step into Lynda's apartment to see her sink tap spraying water in the air and a small flood emerging under the sink."
 
 
-## CHOICE
+## MENU
 
 
 ### Oh holy S***
 
-**set $HandsonSkill to 1**
+**set $ HandsonSkill to 1**
 
-**( $lynda_rating =-1)**
+**( $ lynda_rating -= 1)**
 
 m "UH OH."
 
-"Bean and Treacle scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+"Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
 
 l "h e l p"
 
@@ -431,7 +437,7 @@ l "It won't stop!!!"
 
 m "C'monnnn"
 
-**if $ StrengthSkill = 2 : break the tap**
+**if $  StrengthSkill = 2 : break the tap**
 
 **else : it really won't budge**
 
@@ -461,11 +467,11 @@ m "Well, that sucked."
 
 ### Grab towels
 
-**set $HandsonSkill to 3**
+**set $ HandsonSkill to 3**
 
-**$ lynda_rating = +1**
+**$  lynda_rating = +1**
 
-"Bean and Treacle scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+"Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
 
 l "h e l p"
 
@@ -475,7 +481,7 @@ l "In the bathroom!"
 
 "You rush to grab more towels."
 
-**If $ ShareSkill is 2: ask about tampons, lynda is menopausal so no**
+**If $  ShareSkill is 2: ask about tampons, lynda is menopausal so no**
 
 **else :and sprint back to the kitchen."**
 
@@ -497,7 +503,7 @@ l "There has to be a way to turn this off!!!"
 
 
 ## 
-    CHOICE
+    MENU
 
 
 
@@ -508,7 +514,7 @@ l "There has to be a way to turn this off!!!"
     4. "You both wipe the water off your faces and adjust yourselves."
     5. **jump investigatefaucet**
 2. Twist down (uh oh)
-    6. **$ lynda_rating =-1**
+    6. **$  lynda_rating -= 1**
     7. "You turn the handle down in line with the pipe."
     8. "The water pressure increases."
     9. m "Oh NO"
@@ -530,13 +536,13 @@ l "There has to be a way to turn this off!!!"
 
 ### Under Sink
 
-**set $HandsonSkill to 5**
+**set $ HandsonSkill to 5**
 
-**$ lynda_rating = +1**
+**$  lynda_rating = +1**
 
 m "Move!"
 
-"Bean and Treacle scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+"Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
 
 l "h e l p"
 
@@ -548,9 +554,9 @@ l "h e l p"
 
 Else
 
-**$SinkTimer = +1**
+**$ SinkTimer = +1**
 
-**$lynda_rating = -1**
+**$ lynda_rating = -1**
 
 "You dive under the sink."
 
@@ -589,7 +595,7 @@ m "Sorry…"
 
 #### label investigatefaucet1
 
-**if $ lynda_rating = more +1**
+**if $  lynda_rating = more +1**
 
 	"The two of you take a moment to catch your breath and look at each other. Lynda's makeup is all over her face and your shirt is drenched."
 
@@ -645,15 +651,15 @@ l "Sasha had a similar problem next door, not quite as bad, and it took nearly t
 
 l "I need a faucet &lt;playername>! My partner is coming to visit soon!"
 
-"Well, this is what a tenant's board is good for… shall I suggest it to Lynda?"
+"Well, this is what a tenant's association is good for… shall I suggest it to Lynda?"
 
 
-## CHOICE
+## MENU
 
 
 
 1. Ask Lynda
-    1. **jump lyndaboard1**
+    1. **jump lyndaassociation1**
 2. Leave it be
     2. **jump lyndatidyup**
 
@@ -665,9 +671,9 @@ Investigate Faucet
 * ~~Realise that the faucet is horribly corroded~~
 * ~~Its probably been like that for a while~~
 * ~~Mentions another neighbour had a similar problem that wasn't sorted for a week. And her S.O. is coming to visit soon.~~
-* Relationship determines options to talk to her about the board
+* Relationship determines options to talk to her about the association
     * High at this point = +2 to Convince
-    * This is what a board can help with
+    * This is what a association can help with
     * Bargaining power for this and pressure to sort things
     * I know you're busy with your new job and it can take the pressure off
     * Neutral = +1 Convince
@@ -676,24 +682,24 @@ Investigate Faucet
     * Lynda is frustrated and doesn't like you using this situation against her.
 
 
-#### label lyndaboard1
+#### label lyndaassociation1
 
 
 
 * **if lynda_rating +1> and SinkTimer is >5**
-    * m "You know… I mentioned that tenancy board before. This is the kind of thing that it could help with."
+    * m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
     * "Lynda sighs, looking around her now very damp kitchen."
     * l "I really do appreciate the sentiment &lt;playername>... let me think on it, okay?"
     * l "I do think it's a good idea."
     * **jump lyndatidyup**
 * **Elseif lynda_rating +1> and SinkTimer is &lt;5**
-    * m "You know… I mentioned that tenancy board before. This is the kind of thing that it could help with."
+    * m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
     * "Lynda looks at the corroded faucet in her hand and then to you."
     * l "Yeah, I know. You make a good point. Just… let me think about it, okay? I just have so much on right now."
     * m "I understand."
     * **jump lyndatidyup**
 * **else**
-    * m "You know… I mentioned that tenancy board before. This is the kind of thing that it could help with."
+    * m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
     * l "Right now is not the time &lt;playername>! We don't know that it'll speed things up and it takes time and paperwork to even set it up."
     * "Lynda plonks the corroded faucet down in the sink and sighs."
     * l "I need to deal with this."
@@ -719,4 +725,4 @@ l "Okay then!"
 
 "You both get to mopping up the kitchen, chatting and laughing, before you head home for the night."
 
-END
+**jump lyndainteraction3**
