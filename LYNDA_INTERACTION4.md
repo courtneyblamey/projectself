@@ -409,7 +409,7 @@ l "No, not yet, she's been busy with her own work with an art collective. I'm ex
 
 m "Wait, how long have you been apart and not seen each other?"
 
-l "Oh! I still travel back to our home every month or so. I think Bean and Treacle would lose it if they didn't see her for long periods of time."
+l "Oh! I still travel back to our home every month or so. I think Bean and Maple would lose it if they didn't see her for long periods of time."
 
 l "Though wrangling them into the car and giving them their "chill out" pill leaves something to be desired."
 
@@ -425,7 +425,7 @@ l "Oh, absolutely, look-"
 
 "Lynda pulls out her phone and opens a pet camera."
 
-l "Bean, Treacle~"
+l "Bean, Maple~"
 
 "Two very curious faces appear close up to the camera."
 
@@ -495,7 +495,7 @@ m "An automated dispenser? And you're really trying to sell me on the fact you'r
 
 "Lynda elbows you playfully."
 
-l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Treacle gained 2lbs because I didn't realise the setting was giving her double portions."
+l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Maple gained 2lbs because I didn't realise the setting was giving her double portions."
 
 m "But I bet she was happy."
 
@@ -666,7 +666,7 @@ l "No, not yet, she's been busy with her own work with an art collective. I'm ex
 
 m "Wait, how long have you been apart and not seen each other?"
 
-l "Oh! I still travel back to our home every month or so. I think Bean and Treacle would lose it if they didn't see her for long periods of time."
+l "Oh! I still travel back to our home every month or so. I think Bean and Maple would lose it if they didn't see her for long periods of time."
 
 l "Though wrangling them into the car and giving them their "chill out" pill leaves something to be desired."
 
@@ -682,7 +682,7 @@ l "Oh, absolutely, look-"
 
 "Lynda pulls out her phone and opens a pet camera."
 
-l "Bean, Treacle~"
+l "Bean, Maple~"
 
 "Two very curious faces appear close up to the camera."
 
@@ -752,7 +752,7 @@ m "An automated dispenser? And you're really trying to sell me on the fact you'r
 
 "Lynda elbows you playfully."
 
-l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Treacle gained 2lbs because I didn't realise the setting was giving her double portions."
+l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Maple gained 2lbs because I didn't realise the setting was giving her double portions."
 
 **jump lyndapark2**
 
@@ -816,7 +816,7 @@ l "No, not yet, she's been busy with her own work with an art collective. I'm ex
 
 m "Wait, how long have you been apart and not seen each other?"
 
-l "Oh! I still travel back to our home every month or so. I think Bean and Treacle would lose it if they didn't see her for long periods of time."
+l "Oh! I still travel back to our home every month or so. I think Bean and Maple would lose it if they didn't see her for long periods of time."
 
 l "Though wrangling them into the car and giving them their "chill out" pill leaves something to be desired."
 
@@ -832,7 +832,7 @@ l "Oh, absolutely, look-"
 
 "Lynda pulls out her phone and opens a pet camera."
 
-l "Bean, Treacle~"
+l "Bean, Maple~"
 
 "Two very curious faces appear close up to the camera."
 
@@ -902,7 +902,11 @@ m "An automated dispenser? And you're really trying to sell me on the fact you'r
 
 "Lynda elbows you playfully."
 
-l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Treacle gained 2lbs because I didn't realise the setting was giving her double portions."
+l "Yeah, yeah, you should have seen me trying to set it up when I moved here. Maple gained 2lbs because I didn't realise the setting was giving her double portions."
+
+"*beep boop*"
+
+l "Oh my god, you can even hear that damn beeping through the camera."
 
 **jump lyndacafe2**
 
@@ -949,7 +953,7 @@ l "I might be moving…"
 
 m "Oh."
 
-l "I know… I just know you've been working hard to get folks to sign up, and I don't want you to waste your time with me if I'm not even going to be here."
+l "I know… I just know you've been working hard to get folks to sign up to the association, and I don't want you to waste your time with me if I'm not even going to be here."
 
 l "My partner and I are looking at properties and have been for a while. I just didn't have the heart to tell you."
 
@@ -960,46 +964,47 @@ l "I'm sorry…"
 
 
 
-1. MAKE A SCENE
+1. Press her
 2. Nod understandably
 3. Express disappointment
 
 
-## Make a scene
+## Press her
 
-"Your blood starts to boil. She has been hiding this from you for how long? You thought you'd become good friends over the last few weeks, and she knew this was something you were working towards. Something you cared about."
+m "How long have you be intending to leave?"
 
-m "Are you serious???"
+l "Uhh, a little bit."
 
-"Folks around take notice of you both."
+m "How long?"
+
+l "A little before you moved in…"
+
+m "You've known it the whole time and only now you're telling me?"
 
 l "&lt;playername> I-"
 
-m "No, seriously?! The building is basically falling down around our ears and you're just gonna move??"
+m "Were you ever going to sign it?"
 
-l "I just don't think I'm the person to help with this. I think you need someone who can coordinate and communicate with the other tenants and-"
+l "Look, a lot of things have been up in the air and so I just don't know if it would be right for me to commit to something that I might not even be here for."
 
-m "Isn't that what you do for work?!"
+m "But I need your help! I was relying on you to help me get folks interested!"
+
+l "I don't think I can."
+
+m "Why not? You work in marketing, you can sell any idea!"
+
+l "This is asking for more than peddling a product, &lt;playername>, this is people's time and energy against a clearly disinterested entity."
+
+m "You won't even try?" \
+l "What if I'm not enough to convince them? Then what?"
+
+m "Then why even do it for work?!"
 
 l "..."
 
-m "You're literally in selling things to people! You could help me 'sell' the idea of a functional building!"
+l "..."
 
-l "And what if I can't?!"
-
-"..."
-
-l "...what if I'm not good enough at convincing them?"
-
-"..."
-
-l "I think it's time for me to go."
-
-"Lynda picks up her things, puts on her coat, and begins to leave."
-
-"..."
-
-l "...I understand you're upset. You know I've been struggling with things at work. So this-"
+l "...I understand you're upset. But you know I've been struggling with things at work. So this-"
 
 "She gestures between the two of you."
 
@@ -1007,11 +1012,11 @@ l "-was a low blow from someone I considered a friend."
 
 "Lynda leaves."
 
-"You look around to see folks try to look like they were not obviously listening in on the conversation."
+"You sit for a moment with your thoughts rushing around your mind."
 
-"Lynda's words 'what if I'm not good enough', echo in your mind."
+"Why tell you now? Why does she have to leave? Why doesn't she think she could help? Who else can you convince to help you do this? Is this a waste of time?"
 
-m "Ah, hell."
+"Lynda's 'what if I'm not good enough' echoes in your mind."
 
 
 ## MENU:
@@ -1188,7 +1193,7 @@ l "Ahaha, done!"
 
 "You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
 
-"It seems getting Lynda to join the association is going well. Hopefully, she'll jump on board officially soon. The paperwork is due shortly."
+"It seems getting Lynda to join the association is going well. Hopefully, she'll jump on board officially soon. You want to get this association up and running sooner rather than later."
 
 "It's been lovely getting to know Lynda."
 
