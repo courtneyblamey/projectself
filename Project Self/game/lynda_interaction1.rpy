@@ -97,9 +97,9 @@ label notice_after:
 
     l "Lynda."
 
-    m "<playername>."
+    m "[player_name]."
 
-    l "Well, welcome to the building, <playername>. I'm glad no one stole your things."
+    l "Well, welcome to the building, [player_name]. I'm glad no one stole your things."
     show lynda neutral at char_center
     l "How are you liking it so far?"
 
@@ -255,7 +255,7 @@ if BuildingPastGood:
 
     m "Okay, how many signatures do I need?"
 
-    "*It is recommended to get 50% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+    "*It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
 
     m "Okay… so I just need one person to start?"
 
@@ -266,7 +266,7 @@ if BuildingPastGood:
     jump lyndainteraction2
 else:
     show lynda neutral at char_center
-    l "It's been nice chatting, <playername> but this laundry isn't going to fold itself, unfortunately."
+    l "It's been nice chatting, [player_name] but this laundry isn't going to fold itself, unfortunately."
 
     m "No worries at all."
 
@@ -326,7 +326,7 @@ else:
 
     m "Okay, how many signatures do I need?"
 
-    "*It is recommended to get 50% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+    "*It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
 
     m "Okay… so I just need one person to start?"
 
