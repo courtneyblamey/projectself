@@ -2,33 +2,33 @@ label lyndaevent1:
 
 scene bg pc apartment at bg_fit
 
-    "You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
+"You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
 
-    menu:
-        "While you totally scroll on your phone at the same time.":
-            $ AttentionSkill += 1
-            $ SinkTimer += 3
+menu:
+    "While you totally scroll on your phone at the same time.":
+        $ AttentionSkill += 1
+        $ SinkTimer += 3
 
-            "You select something mindless that fades into the background as you scroll through social media, also mindlessly."
-            "Sometimes brain overload feels good."
+        "You select something mindless that fades into the background as you scroll through social media, also mindlessly."
+        "Sometimes brain overload feels good."
 
-            "*beep boop*"
+        "{i}beep boop{/i}"
 
-            "The electrical room below you beeps."
+        "The electrical room below you beeps."
 
-            m "That sound is going to get real annoying."
+        m "That sound is going to get real annoying."
 
-            jump scroll_sequence
+        jump scroll_sequence
 
-        "Your attention can handle one screen.":
-            $ AttentionSkill += 5
-            $ SinkTimer += 1
+    "Your attention can handle one screen.":
+        $ AttentionSkill += 5
+        $ SinkTimer += 1
 
-            "You flick through some videos."
+        "You flick through some videos."
 
-            m "I'm pretty sure I've hit the end of all the content that ever existed."
+        m "I'm pretty sure I've hit the end of all the content that ever existed."
 
-            jump focused_menu
+        jump focused_menu
 
 
 # -------------------------
@@ -253,12 +253,16 @@ label enteraptsink:
             m "UH OH."
 
             transform fly_left_to_right:
-                xalign -0.3
-                linear 2.0 xalign 1.3
+                zoom 0.7
+                xpos -500
+                yalign 0.5
+                linear 0.9 xpos config.screen_width + 500
 
             transform fly_right_to_left:
-                xalign 1.3
-                linear 2.0 xalign -0.3
+                zoom 0.7
+                xpos config.screen_width + 500
+                yalign 0.5
+                linear 0.9 xpos -500
 
             show maple at fly_left_to_right
             pause 0.2
@@ -309,12 +313,16 @@ label enteraptsink:
             $ lynda_rating += 1
 
             transform fly_left_to_right:
-                xalign -0.3
-                linear 2.0 xalign 1.3
+                zoom 0.7
+                xpos -500
+                yalign 0.5
+                linear 0.9 xpos config.screen_width + 500
 
             transform fly_right_to_left:
-                xalign 1.3
-                linear 2.0 xalign -0.3
+                zoom 0.7
+                xpos config.screen_width + 500
+                yalign 0.5
+                linear 0.9 xpos -500
 
             show maple at fly_left_to_right
             pause 0.2
@@ -373,12 +381,16 @@ label enteraptsink:
             m "Move!"
 
             transform fly_left_to_right:
-                xalign -0.3
-                linear 2.0 xalign 1.3
+                zoom 0.7
+                xpos -500
+                yalign 0.5
+                linear 0.9 xpos config.screen_width + 500
 
             transform fly_right_to_left:
-                xalign 1.3
-                linear 2.0 xalign -0.3
+                zoom 0.7
+                xpos config.screen_width + 500
+                yalign 0.5
+                linear 0.9 xpos -500
 
             show maple at fly_left_to_right
             pause 0.2
@@ -446,7 +458,7 @@ label investigatefaucet1:
 
         "The two of you take a moment to catch your breath and look at each other. Lynda's makeup is all over her face and your shirt is drenched."
 
-        show lynda_laugh at char_center
+        show lynda laugh at char_center
 
         l "Pfft."
 
@@ -485,7 +497,7 @@ label investigatefaucet2:
 
 
 label investigatefaucet3:
-    show lynda_neutral at char_center
+    show lynda neutral at char_center
 
     m "Well, there's your problem."
 

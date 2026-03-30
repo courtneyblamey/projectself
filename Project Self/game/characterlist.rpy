@@ -1,5 +1,5 @@
 define l = Character("Lynda", color="#1bd033")
-define m = Character("[playername]", color="#8be6ea")
+define m = Character("[player_name]", color="#8be6ea")
 define t = Character("Maple", color= "#b57ba2")
 define b = Character("Bean", color = "#D1851B")
 define a = Character("Anna", color = "#535CA6")

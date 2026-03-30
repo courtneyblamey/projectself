@@ -1,6 +1,6 @@
 label lyndainteraction3:
      
-    scene bg pc_apartment
+    scene bg pc apartment
     with dissolve
 
     "After scrolling social media for the morning, you roll over to spot your mountain of clothes bursting out of your laundry basket."

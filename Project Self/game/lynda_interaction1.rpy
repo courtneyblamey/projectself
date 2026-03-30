@@ -255,7 +255,7 @@ if BuildingPastGood:
 
     m "Okay, how many signatures do I need?"
 
-    "*It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+    "{i}It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.{/i}"
 
     m "Okay… so I just need one person to start?"
 
@@ -326,7 +326,7 @@ else:
 
     m "Okay, how many signatures do I need?"
 
-    "*It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+    "{i}It is recommended to get 50\% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.{/i}"
 
     m "Okay… so I just need one person to start?"
 
