@@ -95,3 +95,77 @@ I've flicked away and back to this a couple of times in the last 20 mins, so I t
 - Who is the player character?
 - Who should I focus on for the vertical slice?
 - What is the ending, and write it.
+
+
+### A Design and Writing Sprint - and some retroactive thoughts
+
+#### 25-01-2026
+
+Hello again. Turns out running a non-profit, writing a dissertation, and making a game might be a *bit* much on the old to-do list. I have an immovable deadline to complete my PhD by August, so we traced back the steps and that means this game project needs to be done early March to get playtesting and writing done. So, I'm dedicating chunks of my weekend (don't worry I am resting) to do sprints on this game. 
+
+I've answered one of the questions from the last journal - I'm going to focus on Lynda for the vertical slice. I'm sad to lose some of the mechanics I wanted (dividing time between characters, managing the relationships, and inter-NPC interactions), but this way I can instead provide a deeper connection with one NPC and their struggle, while having the other NPCs maybe guest star for now.
+
+Next I need to ruminate on who the PC is. This is partly scope, to reduce all the options one can make or rather that I feel should be available to a blank slate, but also to help shape their responses. There's a world where I do the writerly thing: write from my experience. There's still variety in responses, but I'm keeping it closer to home. While it is stereotypical for a female/femme character to be a source of empathy or emotional labour, I'm still trying to subvert this in the form of being overly helpful to an NPC wigs them out a bit (a proper documentation of that forthcoming from an archive reflection that I didn't digitise yet.)
+
+Ending wise, I have them for Lynda (in the MEET_THE_TEAM.md), as I continue writing there's a chance they might shift, or have more nuance.
+
+All in all, I've geared up for this sprint, with a game plan in action. Today is story-beating out the events to give myself a framework to write within. Something with a low commitment bar to get the creative ball rolling. I've found doing this effective for the performance anxiety I'm facing when staring at the Mountain of Things To Do. 
+
+### Turns Out its a Marathon
+
+#### 03-03-2026
+
+My lesson of 2026 is that life will continue to happen even when you have Things To Do.
+
+With that in mind, I'm dedicating myself to getting the game fully finished in the next couple of weeks, to then be able to write up my chapter and submit a version of it to FDG's late breaking work (alongside my game demo). I think one of the things MDM has made uncomfortable for me is that the traceability means I am constantly confronting how far behind I am and what Past Courtney thought I should have done by now. Not tracking it means I could generate a facade of getting certain things done, when in reality I could be doing the sprint under the guise of "yeah I have xyz done it should be fine". Instead, you can LITERALLY SEE WHAT MATERIALS I HAVE. I also want to be mindful that this isn't a journal of "woe is me" either. And on that note, allow me to shift to some interim reflective thoughts I've had on the project:
+
+For managing the relationship tracker between the PC and Lynda, I've been grappling with whether I gate off certain interactions (these are in comments in the document that Markdown struggles to transpose). In the spirit of a deeper connection with Lynda, I am going to experiment writing more terse/unfriendly exchanges between Lynda and the PC, which may be shorter, but allows for a realisitic portrayal of the character interactions. I'm curious if there's a way to embed her impostor syndrome into that version of the relationship? Additionally, with the "overly helpful" storyline, there's an opportunity for a variance in what a "low" relationship can manifest as! Lynda might become avoidant of the PC because she feels they're a little overbearing, or avoidant because she doesn't like the PC. We've seen in BG3 some of the "fun" that can be derived from annoying or trying out what negative relationships with NPCs can look like (such as how they interact with you or respond to you when beginning a conversation, or just their general demeanour around you). Since this vertical slice is only with Lynda, I really don't want it to feel binary, like there's a good and bad outcome/choice every time. I'm keeping this all in mind as I set to fleshing out these Event scripts today. The upside of doing this in Ren'Py is that the coding is *relatively* straightforward, so I am not too stressed about getting it into engine. (Don't worry I just knocked on wood).
+
+Finally, I've been playing around in QualCoder for MaDe RA work, and I think it is pretty good! A little janky in places (what software isn't) but I think it will be a suitable format to conduct my QDA for my repo!
+
+### Make Do Push! - Visual Map
+
+#### 05-03-2026
+
+Thanks to the Make Do Meeting this week, I've set up deliverables to have by next week. One of those is a visual map of the game to help myself write what remains.
+
+I've begun to map out the Interaction and Event Scenes to account for the Lynda relationship tracker, the skill variables, and weaving in now a Help/Hinder mechanic where players can be overly helpful and put Lynda off, or help the "right" way and increase their relationship with her. Doing this has made me realise: I, at no point, have introduced the concept of a tenancy board. THE ROOT OF THE PC'S PURPOSE. So! Mapping this out has been *extremely* useful. I've included the images and progress thus far below.
+
+<img width="1024" height="768" alt="Whiteboard Mapping 1_PS" src="https://github.com/user-attachments/assets/8c8ee9d0-a3c1-405f-b8f5-b74f7564d62c" />
+WHITEBOARD IMAGE 1
+<img width="1024" height="768" alt="Whiteboard Mapping 2_PS" src="https://github.com/user-attachments/assets/fa723815-621b-4f03-88e4-8786ee401be2" />
+WHITEBOARD IMAGE 2
+<img width="1024" height="768" alt="Whiteboard Mapping 3_PS" src="https://github.com/user-attachments/assets/22c66eeb-82cf-4187-a18f-52f57b2f14e5" />
+WHITEBOARD IMAGE 3
+<img width="1024" height="768" alt="Whiteboard Mapping 4_PS" src="https://github.com/user-attachments/assets/cb68fa62-7cfa-471d-9980-2170785e1133" />
+WHITEBOARD IMAGE 4
+<img width="1024" height="768" alt="Whiteboard Mapping 5_PS" src="https://github.com/user-attachments/assets/dc2fe837-7a70-4ac9-99f1-423e60ace34f" />
+WHITEBOARD IMAGE 5
+
+I'll continue working on this tomorrow. More to come.
+
+### Visual Map Complete!
+
+#### 06-03-2026
+
+The visual map is complete and I had a couple breakthroughs:
+
+1. Having two separate variables to track the type of help the PC gave was going to get too complicated to code (see Discord image #1) because they could be simultaneous (i.e. +2 in each). So I've altered it to be one variable that is +ve or -ve instead, and once a certain -ve threshold is reached, it permanently impacts the relationship between the NPC and PC.
+2. In getting into designing the -ve choice outcomes, I realised that self-doubt is a large component of Imposter Syndrome (thank you to National Library of Medicine for reminding me of this). So as a player, if you keep making comments or doing things that reaffirm this, I thought it would be interesting to have it result in Lynda realising her own capability (in seeing it be seen) helping offset the self-doubt and instead replaced by a level of self-assurance (e.g. "actually, I do have a handle on things!"). This has helped me weave back in her characteristic of IS without having to bash the player over the head with it.
+
+Now that the visual map is completed, I can move into writing the remaining scenes over the weekend with a MUCH clearer sense of how I want to approach each scene and the variables that exist to make use of during the dialogue to keep it feeling dynamic to how the player defines themselves. I don't plan to have this visualised for the demo - but it could be something to design when I port this outside of Ren'Py post-PhD (Ren'Py is good for the time allowance I had to do this and keeping it simple, but it is not a user-friendly interface to use longer term imho).
+
+Onwards!
+
+<img width="1024" height="768" alt="Whiteboard Mapping 6_PS" src="https://github.com/user-attachments/assets/32af244c-541b-4723-88ca-9b1b9ca27c89" />
+WHITEBOARD IMAGE 6
+<img width="1024" height="768" alt="Whiteboard Mapping 7_PS" src="https://github.com/user-attachments/assets/4ea6b989-8087-4b1d-b34a-32ce2e796da4" />
+WHITEBOARD IMAGE 7
+<img width="1024" height="768" alt="Whiteboard Mapping 8_PS" src="https://github.com/user-attachments/assets/df4cb804-7851-4106-9fe9-4081fbc2c033" />
+WHITEBOARD IMAGE 8
+<img width="1024" height="768" alt="Whiteboard Mapping 9_PS" src="https://github.com/user-attachments/assets/d326c0eb-673c-4ed2-baac-6458e6e301f6" />
+WHITEBOARD IMAGE 9
+
+<img width="1168" height="116" alt="Screenshot 2026-03-06 at 5 14 55 PM" src="https://github.com/user-attachments/assets/6c6f63a5-e154-4b15-a11b-e49455c80fd1" />
+DISCORD IMAGE 1
+
