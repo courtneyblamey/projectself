@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+﻿# This file contains all the important setup to run the game.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -23,6 +23,28 @@ image anna annoyed = "Anna_Annoyed.png"
 image anna concern = "Anna_Concerned.png"
 image anna happy = "Anna_Happy.png"
 image anna neutral = "Anna_Neutral.png"
+
+init:
+    transform bg_fit:
+        fit "contain"
+        xalign 0.5
+        yalign 0.5
+            
+init:
+    transform char_left:
+        zoom 0.35
+        xalign 0.25
+        yalign 0.5
+
+    transform char_center:
+        zoom 0.35
+        xalign 0.5
+        yalign 0.5
+
+    transform char_right:
+        zoom 0.35
+        xalign 0.75
+        yalign 0.5
 
 #VARIABLES#
 
