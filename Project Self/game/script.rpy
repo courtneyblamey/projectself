@@ -33,6 +33,10 @@ default DiligentLaundry = False
 default ChaosLaundry = False
 default BowlMoney = False
 default CoatMoney = False
+default read_laundry = False
+default read_disposal = False
+default read_pipes = False
+default read_noise = False
 
 #Skill Variables
 default TechSkill = 1
