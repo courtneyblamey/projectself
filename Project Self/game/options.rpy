@@ -208,3 +208,6 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+#dev mode force
+define config.developer = True

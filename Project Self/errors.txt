@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/lynda_interaction3.rpy", line 6: expected statement.
-    xsize 1200
-              ^
+The label start is defined twice, at File "game/script.rpy", line 62:
+label start:
+and File "game/setup.rpyc", line 62:
+
+
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Apr 21 15:47:58 2025
+Mon Mar 30 15:34:26 2026

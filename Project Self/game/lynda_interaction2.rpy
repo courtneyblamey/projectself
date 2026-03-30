@@ -361,11 +361,11 @@ menu:
                 m "No problem! I enjoyed it."
                 show lynda content at truecenter
                 l "Me too. It was less daunting than I expected in the end."
-                "Treacle comes to investigate the quietly whirring device. Lynda switches it off and shoos her away from the ever-tempting-to-cat-brain cubes."
+                "Maple comes to investigate the quietly whirring device. Lynda switches it off and shoos her away from the ever-tempting-to-cat-brain cubes."
                 l "I've kept you for enough of your evening, you should head home - but thank you, again."
                 "You finish up with the device and say bye to Lynda for the evening. She sends you off with a small haul of beauty goods that her old co-workers sent her."
                 jump lyndalastbox
 
 label lyndalastbox:
     "You head off to your apartment for the night."
-    jump lyndainteraction3
+    jump lyndaevent1

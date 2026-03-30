@@ -1,5 +1,5 @@
 label lyndainteraction1:
-    scene bg lobby
+    scene bg lobby at bg_fit
     with dissolve
     
     "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs."
@@ -36,8 +36,8 @@ label lyndainteraction1:
 
 label notice_laundry:
 
-    "*Dear tenants, as of the new rent cycle please be advised that the cost of laundry will increase by 1$. We have installed a new change machine to assist in this adjustment.*"
-    "*Scrawled beneath it reads: don't bother, none of the machines work anyway!!!!*"
+    "{i}Dear tenants, as of the new rent cycle please be advised that the cost of laundry will increase by 1$. We have installed a new change machine to assist in this adjustment.{/i}"
+    "Scrawled beneath it reads: {i}don't bother, none of the machines work anyway!!!!{/i}"
 
     m "Uh oh."
 
@@ -46,7 +46,7 @@ label notice_laundry:
 
 label notice_disposal:
 
-    "*Can we get some more garbage bins?! We're having to pile laundry in the garage and the raccoons are having a field day with all the bags.*"
+    "{i}Can we get some more garbage bins?! We're having to pile laundry in the garage and the raccoons are having a field day with all the bags.{/i}"
 
     m "Raccoons are criminals, but cute and hungry tiny criminals."
 
@@ -55,14 +55,14 @@ label notice_disposal:
 
 label notice_pipes:
 
-    "*Has anyone else noticed weird groaning sounds when running their sink? Come knock at apartment 7 - Lynda*"
+    "{i}Has anyone else noticed weird groaning sounds when running their sink? Come knock at apartment 7 - Lynda{/i}"
 
     jump notice_menu
 
 
 label notice_noise:
 
-    "*Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building. This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.*"
+    "{i}Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building. This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.{/i}"
 
     "A slight concern rises in your stomach."
 
@@ -75,15 +75,17 @@ label notice_after:
 
     m "OH!"
 
+    show lynda laugh at char_center
+
     l "Oh no, sorry!"
 
     m "No, I'm sorry, I was just checking out this board and got lost reading."
 
-    show lynda neutral at truecenter
+    show lynda neutral at char_center
 
     "She looks to be in her late 40s, with some hints of grey in her hair wrapped up into a messy bun, though it looks so done with intention that it looks tidy."
 
-    "A set of well-manicured nails peek overtop the laundry basket handle and a gentle smell of lavender lingers in the air."
+    "A set of well-manicured nails peek overtop the laundry basket handle and a gentle smell of laundry detergent hangs in the air."
 
     l "I thought I heard some chatter this morning outside my window - are you the one I heard telling someone 'no one will steal my stuff from the sidewalk it's 10am'?"
 
@@ -92,13 +94,13 @@ label notice_after:
     m "Hah, yes that was me."
 
     "The woman extends her hand out."
-    show lynda joy at truecenter
+
     l "Lynda."
 
     m "<playername>."
 
     l "Well, welcome to the building, <playername>. I'm glad no one stole your things."
-    show lynda neutral at truecenter
+    show lynda neutral at char_center
     l "How are you liking it so far?"
 
 menu:
@@ -107,7 +109,7 @@ menu:
 
         label adjusting:
             m "I'm getting used to it. Once I've spent a few nights here, it'll feel a bit more like home, right?"
-            show lynda content at truecenter
+            show lynda unsure at char_center
             l "Of course! It takes some time"
             $ BuildingPastGood = True
             jump lyndabye1
@@ -117,7 +119,7 @@ menu:
 
         label betterthan:
             m "Well, it's already better than my last place!"
-            show lynda surprise at truecenter
+            show lynda annoyed at char_center
             "A flash of concern flits across Lynda's expression."
 
             l  "Oh, really? What was wrong with your place before?"
@@ -130,13 +132,13 @@ menu:
 
                     label noisyneigh:
                         m "It was a classic thin-walls-EDM-loving-party-neighbours situation. Didn't get much sleep."
-                        show lynda unsure at truecenter
+                        show lynda unsure at char_center
                         l "Oh dear… luckily everyone in this building tends to be respectful of volume. Unless there's some kind of sports on. Antony is very into his sports."
 
                         m "What kind of sports?"
 
                         l "No idea."
-                        show lynda joy at truecenter
+                        show lynda laugh at char_center
                         "She laughs."
 
                         l "All I know is if the referee could hear him, they would be blushing."
@@ -151,15 +153,15 @@ menu:
 
                     label generaldisrepair:
                         m "I think the building was held together with duct tape and dreams by the time I left…"
-                        show lynda furrow at truecenter
+                        show lynda sad at char_center
                         "Another look of concern from Lynda."
 
                         m  "What?"
-                        show lynda neutral at truecenter
+                        show lynda neutral at char_center
                         l  "Hm? No, nothing, I just- this building has its quirks."
 
                         m "As in, sometimes the doors get stuck in the summer, or more, we've had multiple gas leaks? Because my old place existed across that spectrum of experiences."
-                        show lynda joy at truecenter
+                        show lynda laugh at char_center
                         l "...then you'll be fine!"
 
                         m "Well, I moved to avoid it all, so let's hope so!"
@@ -170,7 +172,7 @@ menu:
 
                     label firealarms:
                         m  "I think I've stood in rain, snow, and shine multiple times due to people setting off the fire alarm with toast or cigarettes or one time a birthday cake candle situation"
-                        show lynda neutral at truecenter
+                        show lynda neutral at char_center
                         l  "You won't have to worry about that here, the last time it was set off was months ago with a very real fire, but they contained it quickly. Someone left something on the stove and it was a warning and reminder enough to us all to be vigilant."
 
                         m "Yikes."
@@ -183,7 +185,7 @@ menu:
 
                     label allabove:
                         m "I mean, the building may as well have been Grey Sloan Memorial Hospital with the amount of tragedies that hit it."
-                        show lynda unsure at truecenter
+                        show lynda unsure at char_center
                         l "Oh dear… well then I think you'll be just fine here!"
 
                         m "Well, I moved to avoid it all, so let's hope so!"
@@ -192,12 +194,14 @@ menu:
 label lyndabye1:
 
 if BuildingPastGood:
-    show lynda content at truecenter
+    show lynda neutral at char_center
     l "Well, nice to meet you, and see you around the building!"
 
     m "Nice to meet you, Lynda!"
 
     "Lynda starts to walk away, but pivots back to you."
+
+    show lynda unsure at char_center
 
     l "Hey, uh, if you have any issues in the building, I just want to warn you that building management isn't great at dealing with things."
 
@@ -212,12 +216,18 @@ if BuildingPastGood:
     m "Hmm… Well, hopefully it isn't necessary!"
 
     "There's a pause."
+    
+    show lynda neutral
 
     l "Okay, well, see you round! Laundry still not folding itself."
 
     m "See ya!"
 
+    hide lynda neutral
+
     "You both head off to your apartments for the night."
+
+    scene bg pc apartment at  bg_fit
 
     "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
 
@@ -253,12 +263,9 @@ if BuildingPastGood:
 
     "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
-jump lyndainteraction2
-
-
     jump lyndainteraction2
 else:
-    show lynda content at truecenter
+    show lynda neutral at char_center
     l "It's been nice chatting, <playername> but this laundry isn't going to fold itself, unfortunately."
 
     m "No worries at all."
@@ -266,6 +273,8 @@ else:
     l "See you around the building!"
 
     "Lynda starts to walk away, but pivots back to you."
+
+    show lynda unsure at char_center
 
     l "Hey, uh, if you have any issues in the building, I just want to warn you that building management isn't great at dealing with things."
 
@@ -281,9 +290,13 @@ else:
 
     "There's a pause."
 
+    show lynda neutral at char_center
+
     l "Okay, well, see you round! Laundry still not folding itself."
 
     m "See ya!"
+
+    hide lynda neutral
 
     "You both head off to your apartments for the night."
 
@@ -317,7 +330,7 @@ else:
 
     m "Okay… so I just need one person to start?"
 
-    m "Lynda suggested this, maybe she'd be interested… I'll bring it up when I next see her."
+    m "...maybe Lynda? I'll bring it up when I next see her."
 
     "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
