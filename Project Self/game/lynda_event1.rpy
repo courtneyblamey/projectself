@@ -1,5 +1,7 @@
 label lyndaevent1:
 
+scene bg pc apartment at bg_fit
+
     "You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
 
     menu:
@@ -32,28 +34,60 @@ label lyndaevent1:
 # -------------------------
 # SCROLL SEQUENCE - needs scroll choice in top sequence
 # -------------------------
-
 label scroll_sequence:
 
     "A cute video of a dog. Aww, he's chasing something in his sleep."
 
+    menu:
+        "Scroll":
+            pass
+
     "How to make girl dinner actually nutritious."
+
+    menu:
+        "Scroll":
+            pass
 
     "Why is everyone so obsessed with protein?"
 
+    menu:
+        "Scroll":
+            pass
+
     "Did you know, that when you know, you know things?"
 
+    menu:
+        "Scroll":
+            pass
+
     "Do I smell burnt toast?"
+
+    menu:
+        "Scroll":
+            pass
 
     "You hearing thumping upstairs from Lynda's apartment."
 
     m "Oh, she must be home."
 
+    menu:
+        "Scroll":
+            pass
+
     "Come with me to check out this cute new spot in the city."
+
+    menu:
+        "Scroll":
+            pass
 
     "More thumping from upstairs."
 
+    menu:
+        "Scroll":
+            pass
+
     "Silence."
+
 
     menu:
         "Continue scrolling":
@@ -129,7 +163,7 @@ label focused_menu:
             jump upstairsnoise
 
         "Ooh, latest episode of a dating show":
-            m "Ooh I forgot there's a new episode of Attraction Isle."
+            m "Ooh, I forgot there's a new episode of Attraction Isle."
 
             "You tune in to your guilty pleasure."
 
@@ -154,7 +188,7 @@ label upstairsnoise:
 
             "You collect a mug and select your tea when-"
 
-            "C R A S H"
+            "{size=+10} C R A S H {/size}"
 
             "A loud noise from upstairs."
 
@@ -189,6 +223,10 @@ label goupstairspanic:
 
     "You skid around the corner to see Lynda's door open and run to it."
 
+    scene bg lynda apartment at bg_fit
+
+    show lynda sad at char_center
+
     l "Ohhhhh noooooo! Stop!!!"
 
     "Lynda sits in front of her sink, slinging towels under it to prevent the jettison of water from going any further."
@@ -201,6 +239,9 @@ label goupstairspanic:
 # -------------------------
 
 label enteraptsink:
+    scene bg lynda apartment at bg_fit
+
+    show lynda sad at char_center
 
     "You step into Lynda's apartment to see her sink tap spraying water in the air and a small flood emerging under the sink."
 
@@ -211,13 +252,31 @@ label enteraptsink:
 
             m "UH OH."
 
+            transform fly_left_to_right:
+                xalign -0.3
+                linear 2.0 xalign 1.3
+
+            transform fly_right_to_left:
+                xalign 1.3
+                linear 2.0 xalign -0.3
+
+            show maple at fly_left_to_right
+            pause 0.2
+            show bean at fly_right_to_left
+
             "Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+
+            show lynda sad at char_center
 
             l "h e l p"
 
-            m "What do i do?!"
+            m "What do I do?!"
+
+            show lynda annoyed at char_center
 
             l "I don't know!!!"
+
+            show lynda sad at char_center
 
             l "It won't stop!!!"
 
@@ -233,7 +292,11 @@ label enteraptsink:
 
             l "Ah HA!"
 
+            show lynda laugh at char_center
+
             "You watch her twist something. With a *clunk*, the water flow ebbs from a jet to a trickle."
+
+            show lynda neutral at char_center
 
             "You both wipe the water off your faces and adjust yourselves."
 
@@ -245,7 +308,21 @@ label enteraptsink:
             $ HandsonSkill += 3
             $ lynda_rating += 1
 
+            transform fly_left_to_right:
+                xalign -0.3
+                linear 2.0 xalign 1.3
+
+            transform fly_right_to_left:
+                xalign 1.3
+                linear 2.0 xalign -0.3
+
+            show maple at fly_left_to_right
+            pause 0.2
+            show bean at fly_right_to_left
+
             "Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+
+            show lynda sad at char_center
 
             l "h e l p"
 
@@ -257,9 +334,13 @@ label enteraptsink:
 
             "Lynda grabs one of the towels out of your hand."
 
+            show lynda annoyed at char_center
+
             l "WAIT NOT THIS ONE."
 
             "She clutches a red towel with a cat chasing leaves embroidered on it."
+
+            show lynda unsure at char_center
 
             l "...its decorative."
 
@@ -267,13 +348,19 @@ label enteraptsink:
 
             "You create a barrier out of the remaining towels to prevent the water from spreading further."
 
+            show lynda sad at char_center
+
             l "There has to be a way to turn this off!!!"
 
             "Lynda reaches in and fumbles at the back of the pipes."
 
             l "Ah HA!"
 
+            show lynda laugh at char_center
+
             "You watch her twist something. With a *clunk*, the water flow ebbs from a jet to a trickle."
+
+            show lynda neutral at char_center
 
             "You both wipe the water off your faces and adjust yourselves."
 
@@ -285,11 +372,25 @@ label enteraptsink:
 
             m "Move!"
 
+            transform fly_left_to_right:
+                xalign -0.3
+                linear 2.0 xalign 1.3
+
+            transform fly_right_to_left:
+                xalign 1.3
+                linear 2.0 xalign -0.3
+
+            show maple at fly_left_to_right
+            pause 0.2
+            show bean at fly_right_to_left
+
             "Bean and Maple scatter across the floor as Lynda tries to block the water spray and catches them in the crossfire."
+
+            show lynda sad at char_center
 
             l "h e l p"
 
-            if TechSkill == 1:
+            if TechSkill == 2:
 
                 "You dive under the sink, moving Lynda out of the way, and reach for the stop valve."
 
@@ -314,6 +415,8 @@ label enteraptsink:
 
                 "Lynda clocks you fumbling around."
 
+                show lynda annoyed at char_center
+
                 l "Oh hell, now *you* move."
 
                 "Lynda pushes you out of the way and gets under the sink once more."
@@ -321,6 +424,8 @@ label enteraptsink:
                 "You hear a *thunk* and the water finally ceases flowing across the kitchen."
 
                 "She emerges, equally as soaked as you."
+
+                show lynda neutral at char_center
 
                 l "I appreciate your enthusiasm to help."
 
@@ -337,7 +442,11 @@ label investigatefaucet1:
 
     if lynda_rating >= 1:
 
+        show lynda neutral at char_center
+
         "The two of you take a moment to catch your breath and look at each other. Lynda's makeup is all over her face and your shirt is drenched."
+
+        show lynda_laugh at char_center
 
         l "Pfft."
 
@@ -349,6 +458,8 @@ label investigatefaucet1:
 
     else:
 
+        show lynda neutral at char_center
+
         "You both stand in silence with only the quiet dripping of the remaining water in the background."
 
     jump investigatefaucet2
@@ -358,21 +469,23 @@ label investigatefaucet2:
 
     m "What the hell caused the sink to explode like that?"
 
+    show lynda annoyed at char_center
+
     l "I don't know, I was just washing my dishes when the water pressure dipped and then-"
 
     "She gestures at the flood around you both."
 
     "You check out the sink."
 
-    "TAPS - turn no problem, no issues."
-    "PIPE - all intact, no drippage."
-
+    "The taps turn no issue, and the pipes seem fine too..."
+    
     menu:
         "Check the faucet":
             jump investigatefaucet3
 
 
 label investigatefaucet3:
+    show lynda_neutral at char_center
 
     m "Well, there's your problem."
 
@@ -380,19 +493,25 @@ label investigatefaucet3:
 
     m "This thing's corroded to hell."
 
+    show lynda annoyed at char_center
+
     l "Oh GOD. How long has it been like THAT?!"
 
     "She takes the faucet head from you and looks it over."
 
     l "This has to have been going on for ages."
 
+    show lynda unsure at char_center
+
     l "Well… hell."
 
     l "Sasha had a similar problem next door, not quite as bad, and it took nearly two or three weeks before someone came to fix it."
 
+    show lynda sad at char_center
+
     l "I need a faucet [player_name]! My partner is coming to visit soon!"
 
-    "Well, this is what a tenant's association is good for… shall I suggest it to Lynda?"
+    "Well, this is what a tenant association is good for… shall I suggest it to Lynda?"
 
     menu:
         "Ask Lynda":
@@ -408,21 +527,31 @@ label lyndaassociation1:
 
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
 
+        show lynda neutral at char_center
+
         l "I really do appreciate the sentiment [player_name]... let me think on it, okay?"
+
+        show lynda unsure at char_center
 
         l "I do think it's a good idea."
 
     elif lynda_rating >= 1:
+        show lynda neutral at char_center
 
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
+
+        show lynda unsure at char_center
 
         l "Yeah, I know. You make a good point. Just… let me think about it, okay? I just have so much on right now."
 
         m "I understand."
 
     else:
-
+        show lynda neutral at char_center 
+        
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
+
+        show lynda annoyed at char_center
 
         l "Right now is not the time [player_name]!"
 
@@ -435,6 +564,8 @@ label lyndaassociation1:
 
 label lyndatidyup:
 
+    show lynda neutral at char_center
+    
     "Lynda starts sorting out the area around the sink."
 
     m "Can I help?"
@@ -443,8 +574,19 @@ label lyndatidyup:
 
     m "Yeah, but I'd like to help."
 
-    l "Okay then!"
+    show lynda unsure at char_center
 
-    "You both get to mopping up the kitchen, chatting and laughing, before you head home for the night."
+    l "Sure then, thanks."
+
+    if lynda_rating >= 1:
+        show lynda neutral at char_center
+
+        "You both get to mopping up the kitchen, chatting and laughing, before you head home for the night."
+    
+    else:
+        show lynda neutral at char_center
+
+        "You both get to mopping up the kitchen, in a slightly awkward silence, before heading back home for the night."
+
 
     jump lyndainteraction3
