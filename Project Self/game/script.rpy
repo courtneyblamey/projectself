@@ -5,7 +5,7 @@
 
 #IMAGES#
 image bg lobby = "lobby_environment.png"
-image bg apartment = "lynda_apartment_environment.png"
+image bg lynda apartment = "lynda_apartment_environment.png"
 image bg pc apartment = "pc_apartment_environment.png"
 image bg laundry = "laundry_environment.png"
 image bg bar = "bar_environment.png"
@@ -65,10 +65,17 @@ default read_laundry = False
 default read_disposal = False
 default read_pipes = False
 default read_noise = False
+default AttentionSkill = 0
+default SinkTimer = 0
 
 #Skill Variables
 default TechSkill = 1
 default TidySkill = 1
+default HandsonSkill = 1
+default StrengthSkill = 1
+default ShareSkill = 1
+
+default player_name = "Maria"
 
 # The game starts here. And this is me testing that the push works.
 
@@ -76,6 +83,16 @@ default TidySkill = 1
 
 ## This is the start of the proper demo scene which (with some edits) will be in the game. It is the second event that takes place between the PC and Lynda.
 label start:
+    "Before we begin..."
+
+    $ player_name = renpy.input("What's your name?")
+    $ player_name = player_name.strip()
+
+    if player_name == "":
+        $ player_name = "Maria"
+
+    "Nice to meet you, [player_name]."
+
     jump lyndainteraction1
 
 
