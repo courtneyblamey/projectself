@@ -4,19 +4,25 @@
 # name of the character.
 
 #IMAGES#
-image lynda placeholder = "lynda_placeholder.png"
-image bg lobby = "bg_lobby.png"
-image bg doorway = "bg_doorway.png"
-image bg apartment = "bg_lyndaapt.png"
-image bg pc_apartment = "bg_pcapart.png"
-image bg laundry = "bg_laundry.png"
-image lynda anger = "Lynda_Neutral.png"
-image lynda furrow = "Lynda_Neutral.png"
+image bg lobby = "lobby_environment.png"
+image bg apartment = "lynda_apartment_environment.png"
+image bg pc apartment = "pc_apartment_environment.png"
+image bg laundry = "laundry_environment.png"
+image bg bar = "bar_environment.png"
+image bg cafe = "cafe_environment.png"
+image bg park = "park_environment.png"
+image lynda annoyed = "Lynda_Annoyed.png"
 image lynda neutral = "Lynda_Neutral.png"
-image lynda surprise = "Lynda_Neutral.png"
-image lynda unsure = "Lynda_Neutral.png"
-image lynda content = "Lynda_Neutral.png"
-image lynda joy = "Lynda_Neutral.png"
+image lynda unsure = "Lynda_Unsure.png"
+image lynda laugh = "Lynda_Laughing.png"
+image lynda sad = "Lynda_Sad.png"
+image lynda wink = "Lynda_Wink.png"
+image maple = "Maple.png"
+image bean = "Bean.png"
+image anna annoyed = "Anna_Annoyed.png"
+image anna concern = "Anna_Concerned.png"
+image anna happy = "Anna_Happy.png"
+image anna neutral = "Anna_Neutral.png"
 
 #VARIABLES#
 
