@@ -17,8 +17,8 @@ image lynda unsure = "Lynda_Unsure.png"
 image lynda laugh = "Lynda_Laughing.png"
 image lynda sad = "Lynda_Sad.png"
 image lynda wink = "Lynda_Wink.png"
-image maple = "Maple.png"
-image bean = "Bean.png"
+image maple = Transform("Maple.png", zoom=0.5)
+image bean = Transform("Bean.png", zoom=0.5)
 image anna annoyed = "Anna_Annoyed.png"
 image anna concern = "Anna_Concerned.png"
 image anna happy = "Anna_Happy.png"

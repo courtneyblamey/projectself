@@ -117,7 +117,7 @@ menu:
                 "I'm not, but we can suffer together?":
                     $ TechSkill += 1
                     m "I'm not amazing with it but we can suffer together in it?"
-                    show lynda netural at char_center
+                    show lynda neutral at char_center
                     "Lynda's eyes light up."
                     l "Really?"
                     l "I really appreciate it [player_name]! I'm feeling a little out of my depth here."
@@ -163,8 +163,10 @@ menu:
             scene bg lynda apartment at bg_fit
             with dissolve
             if CarryBox:
+                show lynda neutral at char_center
                 l "You can place the boxes right here on the counter."
                 "You prop them up and onto the counter, trying very carefully to not drop them, noticing the VERY LARGE 'FRAGILE THIS WAY UP' label on the side."
+                l "Can I get you something to drink?"
             else:
                 show lynda annoyed at char_center
                 "Lynda grunts as she places the boxes on top of the countertop."
@@ -209,12 +211,16 @@ menu:
             "Within moments, two cats appear and hop into each of them respectively. One a mottled grey, orange, and white, and the other a large orange cat."
             show lynda unsure at char_center
             l "They're cardboard box fiends. Give it a second and you'll see Bean just start chomping it."
+            show bean at left
+            show maple at right
             "Sure enough, the orange cat begins to move along the box, biting it. Leaving a trail of bite marks as it goes."
             l "We found him behind a restaurant with a bunch of empty bean tins and boxes. You can take cat out of the street but-"
             "Bean continues his holepunching tirade against the box's edges."
             show lynda neutral at char_center
             l "…anyway. Where to start with this thing."
             "She looks with dismay at the tech in front of her."
+            hide bean with dissolve
+            hide maple with dissolve
 
             if TechSkill == 1:
                 "You also look down at the tech in front of you."
