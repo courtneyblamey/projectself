@@ -2,7 +2,82 @@ label lyndainteraction1:
     scene bg lobby
     with dissolve
     
-    "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs. A woman emerges from the stairwell holding a laundry basket."
+    "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs."
+    "There's a notice board in the entrance littered with 'for sale' furniture posters, business cards, and a couple hand-scrawled notes."
+
+    label notice_menu:
+
+        # If all have been read, continue automatically
+        if read_laundry and read_disposal and read_pipes and read_noise:
+            jump notice_after
+
+        menu:
+            "What do you read?"
+
+            "Read 'laundry room'" if not read_laundry:
+                $ read_laundry = True
+                jump notice_laundry
+
+            "Read 'disposal of goods'" if not read_disposal:
+                $ read_disposal = True
+                jump notice_disposal
+
+            "Read 'pipe issues'" if not read_pipes:
+                $ read_pipes = True
+                jump notice_pipes
+
+            "Read 'noise notice'" if not read_noise:
+                $ read_noise = True
+                jump notice_noise
+
+            "Step away from the board":
+                jump notice_after
+
+
+label notice_laundry:
+
+    "*Dear tenants, as of the new rent cycle please be advised that the cost of laundry will increase by 1$. We have installed a new change machine to assist in this adjustment.*"
+    "*Scrawled beneath it reads: don't bother, none of the machines work anyway!!!!*"
+
+    m "Uh oh."
+
+    jump notice_menu
+
+
+label notice_disposal:
+
+    "*Can we get some more garbage bins?! We're having to pile laundry in the garage and the raccoons are having a field day with all the bags.*"
+
+    m "Raccoons are criminals, but cute and hungry tiny criminals."
+
+    jump notice_menu
+
+
+label notice_pipes:
+
+    "*Has anyone else noticed weird groaning sounds when running their sink? Come knock at apartment 7 - Lynda*"
+
+    jump notice_menu
+
+
+label notice_noise:
+
+    "*Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building. This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.*"
+
+    "A slight concern rises in your stomach."
+
+    jump notice_menu
+
+
+label notice_after:
+
+    "A woman emerges from the stairwell holding a laundry basket, startling you."
+
+    m "OH!"
+
+    l "Oh no, sorry!"
+
+    m "No, I'm sorry, I was just checking out this board and got lost reading."
 
     show lynda neutral at truecenter
 
@@ -122,7 +197,64 @@ if BuildingPastGood:
 
     m "Nice to meet you, Lynda!"
 
+    "Lynda starts to walk away, but pivots back to you."
+
+    l "Hey, uh, if you have any issues in the building, I just want to warn you that building management isn't great at dealing with things."
+
+    m "Oh, really? We had a tenant's association in my last building, which helped with that."
+
+    l "Like a union?"
+
+    m "Sort of! Collective action and power to deal with an absentee landlord."
+
+    l "Huh. Honestly, that might not be a bad thing for here."
+
+    m "Hmm… Well, hopefully it isn't necessary!"
+
+    "There's a pause."
+
+    l "Okay, well, see you round! Laundry still not folding itself."
+
+    m "See ya!"
+
     "You both head off to your apartments for the night."
+
+    "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
+
+    m "Shower first. Fresh sheets, new apartment, clean pyjamas. The perfect rest trifecta."
+
+    "You undress and crank the shower on."
+
+    "The water dribbles out."
+
+    m "Maybe it needs a second."
+
+    "The pressure remains the same."
+
+    m "Ooookay then."
+
+    "You get into the shower and lather up. Upon rinsing some soap from your eyes, you look up and clock a patch of mould across the ceiling."
+
+    m "Not ideal."
+
+    "Finally, as you exit the shower, you reach for your towel and the rail falls out of the wall fixture."
+
+    m "...COOL."
+
+    "You dry off and open up your laptop, typing in the search 'how to start a tenants association' with gusto."
+
+    m "Okay, how many signatures do I need?"
+
+    "*It is recommended to get 50% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+
+    m "Okay… so I just need one person to start?"
+
+    m "Lynda suggested this, maybe she'd be interested… I'll bring it up when I next see her."
+
+    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
+
+jump lyndainteraction2
+
 
     jump lyndainteraction2
 else:
@@ -133,7 +265,61 @@ else:
 
     l "See you around the building!"
 
+    "Lynda starts to walk away, but pivots back to you."
+
+    l "Hey, uh, if you have any issues in the building, I just want to warn you that building management isn't great at dealing with things."
+
+    m "Oh, really? We had a tenant's association in my last building, which helped with that."
+
+    l "Like a union?"
+
+    m "Sort of! Collective action and power to deal with an absentee landlord."
+
+    l "Huh. Honestly, that might not be a bad thing for here."
+
+    m "Hmm… Well, hopefully it isn't necessary!"
+
+    "There's a pause."
+
+    l "Okay, well, see you round! Laundry still not folding itself."
+
+    m "See ya!"
+
     "You both head off to your apartments for the night."
+
+    "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
+
+    m "Shower first. Fresh sheets, new apartment, clean pyjamas. The perfect rest trifecta."
+
+    "You undress and crank the shower on."
+
+    "The water dribbles out."
+
+    m "Maybe it needs a second."
+
+    "The pressure remains the same."
+
+    m "Ooookay then."
+
+    "You get into the shower and lather up. Upon rinsing some soap from your eyes, you look up and clock a patch of mould across the ceiling."
+
+    m "Not ideal."
+
+    "Finally, as you exit the shower, you reach for your towel and the rail falls out of the wall fixture."
+
+    m "...COOL."
+
+    "You dry off and open up your laptop, typing in the search 'how to start a tenants association' with gusto."
+
+    m "Okay, how many signatures do I need?"
+
+    "*It is recommended to get 50% of tenants signed up to have bargaining power, however, you can start an association with as little as two tenants.*"
+
+    m "Okay… so I just need one person to start?"
+
+    m "Lynda suggested this, maybe she'd be interested… I'll bring it up when I next see her."
+
+    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
     jump lyndainteraction2
 
