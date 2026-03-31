@@ -47,12 +47,36 @@ init:
         xalign 0.75
         yalign 0.5
 
+#DRUNKIFY TEXT
+init python:
+    import random
+
+    def drunkify(text, strength=0.3):
+        words = text.split()
+
+        for i in range(len(words)):
+            if random.random() < strength and len(words[i]) > 3:
+                word = list(words[i])
+                random.shuffle(word)
+                words[i] = "".join(word)
+
+        return " ".join(words)
+
+    def say_drunk(text):
+        if store.drunk_level >= 4:
+            return "{cps=10}" + drunkify(text, 0.5) + "{/cps}"
+        elif store.drunk_level >= 2:
+            return "{cps=18}" + drunkify(text, 0.25) + "{/cps}"
+        else:
+            return text
+
 #VARIABLES#
 
 #Character Variables
 default lynda_rating = 1
 default Money = 1
 default lynda_convince = 0
+default HelpLynda = 0
 
 #Misc Variables
 
@@ -67,12 +91,19 @@ default BuildingPastGood = False
 default CarryBox = False
 default BoxIntense = False
 default LyndaDrink = False
+default drinkchoice = "none"
 
 #Lynda Interaction 3
 default DiligentLaundry = False
 default ChaosLaundry = False
 default BowlMoney = False
 default CoatMoney = False
+
+#Lynda Interaction 4
+default lynda_confession = False
+default lynda_reflection = "none"
+default imposter = "false"
+default 
 
 #Lynda Event 1
 default SinkTimer = 0
@@ -90,6 +121,8 @@ default checked_stairwells = False
 default checked_balcony = False
 default checked_bedroom = False
 default bean_escape = None
+
+
 
 #Skill Variables
 default TechSkill = 1

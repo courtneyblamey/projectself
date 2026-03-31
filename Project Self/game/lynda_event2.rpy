@@ -1,47 +1,47 @@
 label lyndaevent2:
 
-scene pc apartment at bg_fit
+scene bg pc apartment at bg_fit
 
-    "It's a quiet and grey afternoon, you decide to:"
+"It's a quiet and grey afternoon, you decide to..."
 
-    menu:
-        "Bake some cookies":
-            $ Baking = True
+menu:
+    "Bake some cookies":
+        $ Baking = True
 
-            "You put on some tunes and get to baking!"
-            m "Hmm… what kind of cookies do I make…"
+        "You put on some tunes and get to baking!"
+        m "Hmm… what kind of cookies do I make…"
 
-            menu:
-                "Apple pie":
-                    $ CookieType = "apple pie"
-                "Pumpkin pecan":
-                    $ CookieType = "pumpkin pecan"
-                "Double chocolate":
-                    $ CookieType = "double chocolate"
+        menu:
+            "Apple pie":
+                $ CookieType = "apple pie"
+            "Pumpkin pecan":
+                $ CookieType = "pumpkin pecan"
+            "Double chocolate":
+                $ CookieType = "double chocolate"
 
-            "The scent of baked goods slowly fills the air as you pull the tray of cookies out of the oven."
-            "A sudden knock at the door startles you."
+        "The scent of baked goods slowly fills the air as you pull the tray of cookies out of the oven."
+        "A sudden knock at the door startles you."
 
-            jump lyndabean1
+        jump lyndabean1
 
-        "Put on a comfort series":
-            $ TVOn = True
+    "Put on a comfort series":
+        $ TVOn = True
 
-            "You launch yourself onto the couch and bundle up in blankets."
-            m "Ehehehehe."
-            "You kick your feet excitedly as your streaming app boots up."
-            "As the opening title rolls, there's a sudden knock at the door."
+        "You launch yourself onto the couch and bundle up in blankets."
+        m "Ehehehehe."
+        "You kick your feet excitedly as your streaming app boots up."
+        "As the opening title rolls, there's a sudden knock at the door."
 
-            jump lyndabean1
+        jump lyndabean1
 
-        "Curl up and play a game":
-            $ GamingOn = True
+    "Curl up and play a game":
+        $ GamingOn = True
 
-            "You grab your controller and cocoon into some blankets."
-            m "Yes. E x c e l l e n t."
-            "As the console powers on, there's a sudden knock at the door."
+        "You grab your controller and cocoon into some blankets."
+        m "Yes. E x c e l l e n t."
+        "As the console powers on, there's a sudden knock at the door."
 
-            jump lyndabean1
+        jump lyndabean1
 
 label lyndabean1:
 
@@ -279,160 +279,160 @@ label beanoutbuilding:
 
 scene bg outside at bg_fit
 
-    if checked_bushes and checked_bins and checked_cars:
-        "You've checked everywhere outside… Bean must be somewhere else."
-        jump beansearch
+if checked_bushes and checked_bins and checked_cars:
+    "You've checked everywhere outside… Bean must be somewhere else."
+    jump beansearch
 
-    "You head outside of the building, bundling up against the crisp breeze."
+"You head outside of the building, bundling up against the crisp breeze."
 
-    m "Beaaaaan!"
+m "Beaaaaan!"
 
-    "The wind picks up a bit as you wander around the outside of the building."
+"The wind picks up a bit as you wander around the outside of the building."
 
-    if bean_location == "outside":
+if bean_location == "outside":
 
-        "Where do you check?"
+    "Where do you check?"
 
-        menu:
+    menu:
 
-            "Check bushes" if not checked_bushes:
-                $ checked_bushes = True
+        "Check bushes" if not checked_bushes:
+            $ checked_bushes = True
 
-                m "Maybe the bushes?"
+            m "Maybe the bushes?"
 
-                "You approach the group of bushes at the side of the building and begin to peer through the branches."
+            "You approach the group of bushes at the side of the building and begin to peer through the branches."
 
-                m "Bean~?"
-                b "{size=-10}mrow{/size}"
+            m "Bean~?"
+            b "{size=-10}mrow{/size}"
 
-                m "Beaaaan~?"
-                b "m r o w w w"
+            m "Beaaaan~?"
+            b "m r o w w w"
 
-                m "Bean!"
+            m "Bean!"
 
-                show bean at char_center
+            show bean at char_center
 
-                "A pair of eyes peer back at you through the branches. Bean is curled up tight and trembling."
+            "A pair of eyes peer back at you through the branches. Bean is curled up tight and trembling."
 
-                m "Oh, buddy!"
+            m "Oh, buddy!"
 
-                "You take off your scarf and bundle him up in it. He's not game initially, but soon succumbs to the woollen burrito."
+            "You take off your scarf and bundle him up in it. He's not game initially, but soon succumbs to the woollen burrito."
 
-                hide bean with dissolve
+            hide bean with dissolve
 
-                jump foundbean
+            jump foundbean
 
-            "Check garbage bins" if not checked_bins:
-                $ checked_bins = True
+        "Check garbage bins" if not checked_bins:
+            $ checked_bins = True
 
-                m "He does love cardboard, maybe near the bins?"
+            m "He does love cardboard, maybe near the bins?"
 
-                "You head around the back of the building to the bins."
+            "You head around the back of the building to the bins."
 
-                m "Beaaan?"
-                m "Beaaaaaaan!"
+            m "Beaaan?"
+            m "Beaaaaaaan!"
 
-                "After some kissy sounds and searching, there's no sign of Bean."
+            "After some kissy sounds and searching, there's no sign of Bean."
 
-                m "Darn."
+            m "Darn."
 
-                jump beanoutbuilding
+            jump beanoutbuilding
 
-            "Check under cars" if not checked_cars:
-                $ checked_cars = True
+        "Check under cars" if not checked_cars:
+            $ checked_cars = True
 
-                m "Let's check cars."
+            m "Let's check cars."
 
-                "You kneel down and look under the cars parked at the front of the building."
+            "You kneel down and look under the cars parked at the front of the building."
 
-                m "Beanie boyyyy?"
+            m "Beanie boyyyy?"
 
-                "...nothing."
+            "...nothing."
 
-                "You hear some rustling under a red car."
+            "You hear some rustling under a red car."
 
-                m "Bean?"
+            m "Bean?"
 
-                "A bunch of fallen leaves whirl out from under the car and hit you in the face."
+            "A bunch of fallen leaves whirl out from under the car and hit you in the face."
 
-                m "ACK."
-                m "Bleugh."
+            m "ACK."
+            m "Bleugh."
 
-                "You brush your face off and sigh."
+            "You brush your face off and sigh."
 
-                m "Not here…"
+            m "Not here…"
 
-                jump beanoutbuilding
+            jump beanoutbuilding
 
-    else:
+else:
 
-        "Where do you check?"
+    "Where do you check?"
 
-        menu:
-            "Check bushes" if not checked_bushes:
-                $ checked_bushes = True
+    menu:
+        "Check bushes" if not checked_bushes:
+            $ checked_bushes = True
 
-                m "Maybe the bushes?"
+            m "Maybe the bushes?"
 
-                "You approach the group of bushes at the side of the building and begin to peer through the branches."
+            "You approach the group of bushes at the side of the building and begin to peer through the branches."
 
-                m "Bean~?"
+            m "Bean~?"
 
-                "A bunch of litter is stuck amongst the branches."
+            "A bunch of litter is stuck amongst the branches."
 
-                m "Mm, nice."
+            m "Mm, nice."
 
-                "You climb slightly into the bushes to check Bean isn't hiding in one of them."
+            "You climb slightly into the bushes to check Bean isn't hiding in one of them."
 
-                m "Bean??"
+            m "Bean??"
 
-                "There's no sign of Bean here."
+            "There's no sign of Bean here."
 
-                m "Where are you?"
+            m "Where are you?"
 
-                jump beanoutbuilding
+            jump beanoutbuilding
 
-            "Check garbage bins" if not checked_bins:
-                $ checked_bins = True
+        "Check garbage bins" if not checked_bins:
+            $ checked_bins = True
 
-                m "He does love cardboard, maybe near the bins?"
+            m "He does love cardboard, maybe near the bins?"
 
-                "You head around the back of the building to the bins."
+            "You head around the back of the building to the bins."
 
-                m "Beaaan?"
-                m "Beaaaaaaan!"
+            m "Beaaan?"
+            m "Beaaaaaaan!"
 
-                "After some kissy sounds and searching, there's no sign of Bean."
+            "After some kissy sounds and searching, there's no sign of Bean."
 
-                m "Darn."
+            m "Darn."
 
-                jump beanoutbuilding
+            jump beanoutbuilding
 
-            "Check under cars" if not checked_cars:
-                $ checked_cars = True
+        "Check under cars" if not checked_cars:
+            $ checked_cars = True
 
-                m "Let's check cars."
+            m "Let's check cars."
 
-                "You kneel down and look under the cars parked at the front of the building."
+            "You kneel down and look under the cars parked at the front of the building."
 
-                m "Beanie boyyyy?"
+            m "Beanie boyyyy?"
 
-                "...nothing."
+            "...nothing."
 
-                "You hear some rustling under a red car."
+            "You hear some rustling under a red car."
 
-                m "Bean?"
+            m "Bean?"
 
-                "A bunch of fallen leaves whirl out from under the car and hit you in the face."
+            "A bunch of fallen leaves whirl out from under the car and hit you in the face."
 
-                m "ACK."
-                m "Bleugh."
+            m "ACK."
+            m "Bleugh."
 
-                "You brush your face off and sigh."
+            "You brush your face off and sigh."
 
-                m "Not here…"
+            m "Not here…"
 
-                jump beanoutbuilding
+            jump beanoutbuilding
 
 label beaninbuilding:
 
@@ -444,7 +444,7 @@ label beaninbuilding:
 
     menu:
         "Check the lobby" if not checked_lobby:
-            $ checkled_lobby = True
+            $ checked_lobby = True
             jump beanlobby
 
         "Check the laundry room" if not checked_laundry:
@@ -453,211 +453,211 @@ label beaninbuilding:
 
 label beanlobby:
 scene bg lobby at bg_fit
-    if checked_mail and checked_planters and checked_stairwells:
-        "You've checked everything in the lobby… Bean must not be here."
-        jump beaninbuilding
+if checked_mail and checked_planters and checked_stairwells:
+    "You've checked everything in the lobby… Bean must not be here."
+    jump beaninbuilding
 
-    if bean_location == "lobby":
+if bean_location == "lobby":
 
-            "Where do you check?"
+        "Where do you check?"
 
-            menu:
-                "Check the mailbox area" if not checked_mail:
-                    $ checked_mail = True
+        menu:
+            "Check the mailbox area" if not checked_mail:
+                $ checked_mail = True
 
-                    "You investigate the mailbox area."
+                "You investigate the mailbox area."
 
-                    "...it's not likely that Bean climbed into one of the mailboxes."
+                "...it's not likely that Bean climbed into one of the mailboxes."
 
-                    m "Why give me the option then?!"
+                m "Why give me the option then?!"
 
-                    jump beanlobby
+                jump beanlobby
 
-                "Check planters" if not checked_planters:
-                    $ checked_planters = True
+            "Check planters" if not checked_planters:
+                $ checked_planters = True
 
-                    "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
+                "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
 
-                    "You check them out one by one when - a wild Bean appears!"
+                "You check them out one by one when - a wild Bean appears!"
 
-                    show bean at char_center
+                show bean at char_center
 
-                    "Curled up and content, Bean is snoozing in one of the plant pots, with some shreds of cardboard from someone's delivery parcel."
+                "Curled up and content, Bean is snoozing in one of the plant pots, with some shreds of cardboard from someone's delivery parcel."
 
-                    m "Ohhh, you little stinker."
+                m "Ohhh, you little stinker."
 
-                    m "Your mum is worried sick about you."
+                m "Your mum is worried sick about you."
 
-                    "You scoop him up, despite his complaining, and carry him back to Lynda's apartment."
+                "You scoop him up, despite his complaining, and carry him back to Lynda's apartment."
 
-                    hide bean with dissolve
+                hide bean with dissolve
 
-                    jump foundbean
+                jump foundbean
 
-                "Check stairwells" if not checked_stairwells:
-                    $ checked_stairwells = True
+            "Check stairwells" if not checked_stairwells:
+                $ checked_stairwells = True
 
-                    m "Maybe he managed to get into the stairwell…"
+                m "Maybe he managed to get into the stairwell…"
 
-                    "The door creaks open."
+                "The door creaks open."
 
-                    m "Beany boy~?"
+                m "Beany boy~?"
 
-                    "You check around the different exits at each floor, clambering up a couple flights of stairs."
+                "You check around the different exits at each floor, clambering up a couple flights of stairs."
 
-                    m "Ugggggghhh."
+                m "Ugggggghhh."
 
-                    m "Thank god there's only a couple floors."
+                m "Thank god there's only a couple floors."
 
-                    "Stairs are the only form of cardio that you cannot train to be better at."
+                "Stairs are the only form of cardio that you cannot train to be better at."
 
-                    m "Bean~?"
+                m "Bean~?"
 
-                    "Your voice echoes in the stairwell."
+                "Your voice echoes in the stairwell."
 
-                    "No sign of Bean."
+                "No sign of Bean."
 
-                    m "Where the heck are you?"
+                m "Where the heck are you?"
 
-                    jump beanlobby
+                jump beanlobby
 
-    else:
+else:
 
-            "Where do you check?"
+        "Where do you check?"
 
-            menu:
-                "Check the mailbox area" if not checked_mail:
-                    $ checked_mail = True
+        menu:
+            "Check the mailbox area" if not checked_mail:
+                $ checked_mail = True
 
-                    "You investigate the mailbox area."
+                "You investigate the mailbox area."
 
-                    "...it's not likely that Bean climbed into one of the mailboxes."
+                "...it's not likely that Bean climbed into one of the mailboxes."
 
-                    m "Why give me the option then?!"
+                m "Why give me the option then?!"
 
-                    jump beanlobby
+                jump beanlobby
 
-                "Check planters" if not checked_planters:
-                    $ checked_planters = True
+            "Check planters" if not checked_planters:
+                $ checked_planters = True
 
-                    "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
+                "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
 
-                    "You check them out one by one."
+                "You check them out one by one."
 
-                    m "Achoo!"
+                m "Achoo!"
 
-                    "Ironically, most of these are plastic plants."
+                "Ironically, most of these are plastic plants."
 
-                    m "Must be the dust."
+                m "Must be the dust."
 
-                    "No napping cat in any of them."
+                "No napping cat in any of them."
 
-                    m "Where did you sneak off too you little stinker?"
+                m "Where did you sneak off too you little stinker?"
 
-                    jump beanlobby
+                jump beanlobby
 
-                "Check stairwells" if not checked_stairwells:
-                    $ checked_stairwells = True
+            "Check stairwells" if not checked_stairwells:
+                $ checked_stairwells = True
 
-                    m "Maybe he managed to get into the stairwell…"
+                m "Maybe he managed to get into the stairwell…"
 
-                    "The door creaks open."
+                "The door creaks open."
 
-                    m "Beany boy~?"
+                m "Beany boy~?"
 
-                    "You check around the different exits at each floor, clambering up a couple flights of stairs."
+                "You check around the different exits at each floor, clambering up a couple flights of stairs."
 
-                    m "Ugggggghhh."
+                m "Ugggggghhh."
 
-                    m "Thank god there's only a couple floors."
+                m "Thank god there's only a couple floors."
 
-                    "Stairs are the only form of cardio that you cannot train to be better at."
+                "Stairs are the only form of cardio that you cannot train to be better at."
 
-                    m "Bean~?"
+                m "Bean~?"
 
-                    "Your voice echoes in the stairwell."
+                "Your voice echoes in the stairwell."
 
-                    "No sign of Bean."
+                "No sign of Bean."
 
-                    m "Where the heck are you?"
+                m "Where the heck are you?"
 
-                    jump beanlobby
+                jump beanlobby
 
 label beanlaundry:
 scene bg laundry at bg_fit
-    if checked_laundry:
-        "You've already checked the laundry room thoroughly… Bean doesn't seem to be here."
-        jump beaninbuilding
+if checked_laundry:
+    "You've already checked the laundry room thoroughly… Bean doesn't seem to be here."
+    jump beaninbuilding
 
-    "You wander into the laundry room. The smell of floral laundry detergent and dryer sheets wafts in the air."
+"You wander into the laundry room. The smell of floral laundry detergent and dryer sheets wafts in the air."
 
-    m "Well, this is a cosy spot for a mischievous cat."
+m "Well, this is a cosy spot for a mischievous cat."
 
-    if bean_location == "laundry":
+if bean_location == "laundry":
 
-        "A couple of the machines rumble as you search around for Bean."
+    "A couple of the machines rumble as you search around for Bean."
 
-        m "Beaaaan~?"
-        m "Are you hiding in here?"
+    m "Beaaaan~?"
+    m "Are you hiding in here?"
 
-        b "{size=-10}Prrp.{/size}"
+    b "{size=-10}Prrp.{/size}"
 
-        m "Bean?"
+    m "Bean?"
 
-        "You spot a pile of orange fur snuggled up in someone's laundry basket."
+    "You spot a pile of orange fur snuggled up in someone's laundry basket."
 
-        show bean at char_center
+    show bean at char_center
 
-        "Bean is belly up snoring away in some freshly laundered bedsheets. Truly a cat that got the cream… sheets."
+    "Bean is belly up snoring away in some freshly laundered bedsheets. Truly a cat that got the cream… sheets."
 
-        m "Excuse me, sir."
+    m "Excuse me, sir."
 
-        b "Prrrp?"
+    b "Prrrp?"
 
-        m "Sorry to disturb your slumber but *someone* is very worried about you."
+    m "Sorry to disturb your slumber but *someone* is very worried about you."
 
-        "Bean sighs and stretches and begins to snore again."
+    "Bean sighs and stretches and begins to snore again."
 
-        m "Right."
+    m "Right."
 
-        "You scoop Bean up in your arms. He's too lazy to fight back and flops around instead of resisting. Truly orange cat behaviour."
+    "You scoop Bean up in your arms. He's too lazy to fight back and flops around instead of resisting. Truly orange cat behaviour."
 
-        hide bean with dissolve
+    hide bean with dissolve
 
-        jump foundbean
+    jump foundbean
 
-    else:
+else:
 
-        m "Beaaaan~?"
-        m "Are you hiding in here?"
+    m "Beaaaan~?"
+    m "Are you hiding in here?"
 
-        "A couple of the machines rumble as you search around for Bean."
+    "A couple of the machines rumble as you search around for Bean."
 
-        "No sneaky cat napping in any baskets or piles of laundry."
+    "No sneaky cat napping in any baskets or piles of laundry."
 
-        m "Not here, it seems…"
+    m "Not here, it seems…"
 
-        jump beaninbuilding
+    jump beaninbuilding
 
 label beaninapartment:
 scene bg pc apartment at bg_fit 
-    if checked_balcony and checked_bedroom:
-        "You've checked everywhere in your apartment… Bean must not be here."
-        jump beansearch
+if checked_balcony and checked_bedroom:
+    "You've checked everywhere in your apartment… Bean must not be here."
+    jump beansearch
 
-    m "There's no way he managed to sneak in here right? I only popped out a couple times to do some laundry."
+m "There's no way he managed to sneak in here right? I only popped out a couple times to do some laundry."
 
-    "Where do you check?"
+"Where do you check?"
 
-    menu:
+menu:
 
-        "Check balcony" if not checked_balcony:
-            $ checked_balcony = True
-            jump beanbalcony
+    "Check balcony" if not checked_balcony:
+        $ checked_balcony = True
+        jump beanbalcony
 
-        "Check bedroom" if not checked_bedroom:
-            $ checked_bedroom = True
-            jump beanbedroom
+    "Check bedroom" if not checked_bedroom:
+        $ checked_bedroom = True
+        jump beanbedroom
 
 label beanbalcony:
 
@@ -752,87 +752,89 @@ label foundbean:
     "You make your way up to Lynda's apartment with Bean in your arms and knock on her door."
 
 scene bg lynda apartment at bg_fit
-    m "Guess who~?"
+m "Guess who~?"
 
-    show lynda sad at char_center
+show lynda sad at char_center
 
-    "Lynda opens the door - she's clearly been crying."
+"Lynda opens the door - she's clearly been crying."
 
-    show lynda laugh at char_center
+show lynda laugh at char_center
 
-    l "BEAN!!!!"
+l "BEAN!!!!"
 
-    show bean at char_center
+show bean at truecenter:
+    zoom 0.8
 
-    "She grabs him from you and showers him in kisses."
+"She grabs him from you and showers him in kisses."
 
-    l "You stupid, sweet, dumb, silly, beautiful cat!!!"
+l "You stupid, sweet, dumb, silly, beautiful cat!!!"
 
-    show lynda sad at char_center
+show lynda sad at char_center
 
-    "She holds him out at arms length and scolds him. Bean blinks out of sync."
+"She holds him out at arms length and scolds him. Bean blinks out of sync."
 
-    show lynda annoyed at char_center
+show lynda annoyed at char_center
 
-    l "How did you get {i}out{/i}?!"
+l "How did you get {i}out{/i}?!"
 
-    l "Ugh who cares, I'm just glad you're back home."
+l "Ugh who cares, I'm just glad you're back home."
 
-    "Bean jumps from Lynda's arms and struts around the apartment."
+"Bean jumps from Lynda's arms and struts around the apartment."
 
-    hide bean with dissolve
+hide bean with dissolve
 
-    jump beanhome
+jump beanhome
+
 
 label gameoverbeanend:
 
 scene pc apartment at bg_fit
 
-    "SOMETIME LATER"
+"SOMETIME LATER"
 
-    if GamingOn or TVOn:
+if GamingOn or TVOn:
 
-        "You blink and your eyes feel as dry as the Sahara."
+    "You blink and your eyes feel as dry as the Sahara."
 
-        m "Oof. Maybe I should take a break."
+    m "Oof. Maybe I should take a break."
 
-        "You stand up and stretch - a few things pop - and you realise it's dark out."
+    "You stand up and stretch - a few things pop - and you realise it's dark out."
 
-    elif Baking:
+elif Baking:
 
-        "You put away the last batch of cookies into a container."
+    "You put away the last batch of cookies into a container."
 
-        m "Ahh, procrasti-baking… My favourite pastime."
+    m "Ahh, procrasti-baking… My favourite pastime."
 
-        m "Now I just need to figure out what to do with all these cookies… I hadn't thought that bit through."
+    m "Now I just need to figure out what to do with all these cookies… I hadn't thought that bit through."
 
-        "You stretch - a few things pop - and you realise it's dark out."
+    "You stretch - a few things pop - and you realise it's dark out."
 
-    m "I wonder if Lynda's found Bean…"
+m "I wonder if Lynda's found Bean…"
 
-    "You decide to go upstairs and check in on Lynda."
+"You decide to go upstairs and check in on Lynda."
 
-    "You knock on her door, and there's a brief pause before she opens it."
+"You knock on her door, and there's a brief pause before she opens it."
 
-    scene lynda apartment at bg_fit
+scene lynda apartment at bg_fit
 
-    show lynda neutral at char_center
+show lynda neutral at char_center
 
-    l "Oh, hey [player_name]."
+l "Oh, hey [player_name]."
 
-    m "Hey, I just wanted to check if you found Bean?"
+m "Hey, I just wanted to check if you found Bean?"
 
-    "Lynda sighs with a light chuckle."
+"Lynda sighs with a light chuckle."
 
-    l "Yeah, I did in the end. It took a good couple hours of searching. He decided he'd curl up in Jasper's laundry basket in the laundry room. Little shit. He looked at me like I was disturbing him with my snotty tears."
+l "Yeah, I did in the end. It took a good couple hours of searching. He decided he'd curl up in Jasper's laundry basket in the laundry room. Little shit. He looked at me like I was disturbing him with my snotty tears."
 
-    m "That's good! Well, not the snotty tears but, finding Bean."
+m "That's good! Well, not the snotty tears but, finding Bean."
 
-    show lynda unsure at char_center
+show lynda unsure at char_center
 
-    l "Yeah - still don't know how he got out though."
+l "Yeah - still don't know how he got out though."
 
-    jump beanhome
+jump beanhome
 
 label beanhome:
 
@@ -1552,7 +1554,7 @@ label lyndabeanconvince2:
 
 label beanconvincegood:
 
-    scene pc apartment at bg_fit
+    scene bg pc apartment at bg_fit
 
     "You head back downstairs. You're making progress with Lynda, you can feel it."
 
@@ -1565,7 +1567,7 @@ label beanconvincegood:
 
 label beanconvinceneut:
 
-    scene pc apartment at bg_fit
+    scene bg pc apartment at bg_fit
 
     "You head back downstairs. Maybe you can still convince Lynda. She didn't seem uninterested."
 
@@ -1575,7 +1577,7 @@ label beanconvinceneut:
 
 
 label beanconvincebad:
-    scene pc apartment at bg_fit
+    scene bg pc apartment at bg_fit
 
     "You head back downstairs."
 
