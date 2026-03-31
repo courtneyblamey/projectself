@@ -5,6 +5,7 @@
 
 #IMAGES#
 image bg lobby = "lobby_environment.png"
+image bg outside = "bg_doorway.png"
 image bg lynda apartment = "lynda_apartment_environment.png"
 image bg pc apartment = "pc_apartment_environment.png"
 image bg laundry = "laundry_environment.png"
@@ -86,7 +87,6 @@ default checked_laundry = False
 default checked_mail = False
 default checked_planters = False
 default checked_stairwells = False
-default checked_laundry = False
 default checked_balcony = False
 default checked_bedroom = False
 default bean_escape = None
