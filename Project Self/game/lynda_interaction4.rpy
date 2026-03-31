@@ -8,71 +8,71 @@ label lyndainteraction4check:
 
 label lyndanoshow:
 scene bg pc apartment at bg_fit
-    "Another day rolls by. It is a crisp fall morning, and the sunlight cascades upon your windowsi-"
+"Another day rolls by. It is a crisp fall morning, and the sunlight cascades upon your windowsi-"
 
-    "Oh, that's kinda dusty."
+"Oh, that's kinda dusty."
 
-    "You run your finger over the windowsill."
+"You run your finger over the windowsill."
 
-    m "Oh, ew."
-    m "I should probably clean today."
-    m "Good way to kill time before hanging with Lynda later."
+m "Oh, ew."
+m "I should probably clean today."
+m "Good way to kill time before hanging with Lynda later."
 
-    "You set out to make breakfast and your source of caffeine for the morning. Then, the Cleaning Game Plan."
+"You set out to make breakfast and your source of caffeine for the morning. Then, the Cleaning Game Plan."
 
-    if TidySkill == 1:
+if TidySkill == 1:
 
-        m "Okay, first dusting, then vacuum and mop. Next, wash the bedding, and clean the bathroom while the laundry is on."
+    m "Okay, first dusting, then vacuum and mop. Next, wash the bedding, and clean the bathroom while the laundry is on."
 
-        "Your phone pings."
+    "Your phone pings."
 
-        m "Oh, it's Lynda."
+    m "Oh, it's Lynda."
 
-        l "Hi [player_name]. Sorry… something's come up and I can't hang out like we planned.. Lynda."
+    l "Hi [player_name]. Sorry… something's come up and I can't hang out like we planned.. Lynda."
 
-        "You stare at the text, deciding what to respond."
+    "You stare at the text, deciding what to respond."
 
-        menu:
-            "Be disappointed":
-                m "Awh. That's a bummer. I was looking forward to it… Guess it's a cleaning and couch day today."
-                jump lyndanoshowend
+    menu:
+        "Be disappointed":
+            m "Awh. That's a bummer. I was looking forward to it… Guess it's a cleaning and couch day today."
+            jump lyndanoshowend
 
-            "Be understanding":
-                m "All good, it happens! Hope all is okay."
-                jump lyndanoshowend
+        "Be understanding":
+            m "All good, it happens! Hope all is okay."
+            jump lyndanoshowend
 
-            "Be annoyed":
-                $ lynda_rating -= 1
-                m "Oh. Okay. I wish you'd have let me know a little sooner?"
-                jump lyndanoshowend
+        "Be annoyed":
+            $ lynda_rating -= 1
+            m "Oh. Okay. I wish you'd have let me know a little sooner?"
+            jump lyndanoshowend
 
-    else:
+else:
 
-        m "Hmm…"
-        "You gaze around the apartment."
-        m "I have no idea where to start."
+    m "Hmm…"
+    "You gaze around the apartment."
+    m "I have no idea where to start."
 
-        "Your phone pings."
+    "Your phone pings."
 
-        m "Oh, it's Lynda."
+    m "Oh, it's Lynda."
 
-        l "Hi [player_name]. Sorry… something's come up and I can't hang out like we planned.."
+    l "Hi [player_name]. Sorry… something's come up and I can't hang out like we planned.."
 
-        "You stare at the text, deciding what to respond."
+    "You stare at the text, deciding what to respond."
 
-        menu:
-            "Be disappointed":
-                m "Awh. That's a bummer. I was looking forward to it… Guess it's a couch day today."
-                jump lyndanoshowend
+    menu:
+        "Be disappointed":
+            m "Awh. That's a bummer. I was looking forward to it… Guess it's a couch day today."
+            jump lyndanoshowend
 
-            "Be understanding":
-                m "All good, it happens! Hope all is okay?"
-                jump lyndanoshowend
+        "Be understanding":
+            m "All good, it happens! Hope all is okay?"
+            jump lyndanoshowend
 
-            "Be annoyed":
-                $ lynda_rating -= 1
-                m "Oh. Okay. I wish you'd have let me know a little sooner?"
-                jump lyndanoshowend
+        "Be annoyed":
+            $ lynda_rating -= 1
+            m "Oh. Okay. I wish you'd have let me know a little sooner?"
+            jump lyndanoshowend
 
 
 label lyndanoshowend:
@@ -106,64 +106,64 @@ label lyndainteraction4:
 
 label lyndabartime:
 scene bg bar at bg_fit
-    "You arrive at the bar where you agreed to meet Lynda for a drink."
+"You arrive at the bar where you agreed to meet Lynda for a drink."
 
-    "She is already sitting at the bar with a glass of wine."
+"She is already sitting at the bar with a glass of wine."
 
-    show lynda laugh at char_center
+show lynda laugh at char_center
 
-    l "[player_name]! Over here!"
-    "She waves at you."
+l "[player_name]! Over here!"
+"She waves at you."
 
-    l "Come, come, grab a seat."
+l "Come, come, grab a seat."
 
-    "She pats the barstool next to her and you sit down."
+"She pats the barstool next to her and you sit down."
 
-    show lynda neutral at char_center
+show lynda neutral at char_center
 
-    if drink_choice == "wine":
+if drink_choice == "wine":
 
-        l "I hope its alright, I ordered you a glass too."
+    l "I hope its alright, I ordered you a glass too."
 
-        "Lynda points to the freshly poured glass of wine."
+    "Lynda points to the freshly poured glass of wine."
 
-        m "Oh, thanks!"
+    m "Oh, thanks!"
 
-        "You take a sip. Lynda has good taste in wines, clearly, as it goes down *smooth*."
+    "You take a sip. Lynda has good taste in wines, clearly, as it goes down *smooth*."
 
-    else:
+else:
 
-        l "I wasn't sure what you'd like so I'll let you order for yourself."
+    l "I wasn't sure what you'd like so I'll let you order for yourself."
 
-        m "All good!"
+    m "All good!"
 
-        "The bartender saunters over to take your order."
+    "The bartender saunters over to take your order."
 
-        menu:
-            "A beer":
-                m "I'll take a beer, please."
-                m "Something light."
-                "The bartender pours you an amber beer."
-                $ Alcohol = True
-                jump lyndabar1
+    menu:
+        "A beer":
+            m "I'll take a beer, please."
+            m "Something light."
+            "The bartender pours you an amber beer."
+            $ Alcohol = True
+            jump lyndabar1
 
-            "A glass of wine":
-                m "Same as hers, thanks."
-                "The bartender pours a glass."
-                $ Alcohol = True
-                jump lyndabar1
+        "A glass of wine":
+            m "Same as hers, thanks."
+            "The bartender pours a glass."
+            $ Alcohol = True
+            jump lyndabar1
 
-            "A mocktail":
-                m "Oh, I'll take a mocktail, please."
-                $ Alcohol = False
-                jump lyndabar1
+        "A mocktail":
+            m "Oh, I'll take a mocktail, please."
+            $ Alcohol = False
+            jump lyndabar1
 
-            "A glass of water":
-                m "Just a water, thanks."
-                l "Really?"
-                m "Yeah."
-                $ Alcohol = False
-                jump lyndabar1
+        "A glass of water":
+            m "Just a water, thanks."
+            l "Really?"
+            m "Yeah."
+            $ Alcohol = False
+            jump lyndabar1
 
 label lyndabar1:
 
@@ -486,32 +486,32 @@ label lyndadrunkbar2:
 
 label lyndadrunkbar3:
 show lynda laugh at char_center
-    if lynda_rating >= 4:
-        jump lyndaconfession
+if lynda_rating >= 4:
+    jump lyndaconfession
 
-    "[say_drunk('You both continue talking for a while.')]"
+"[say_drunk('You both continue talking for a while.')]"
 
-    l "[say_drunk('This has been fun... but I should go.')]"
+l "[say_drunk('This has been fun... but I should go.')]"
 
-    l "[say_drunk('I am not used to being out on a school night.')]"
+l "[say_drunk('I am not used to being out on a school night.')]"
 
-    "Lynda flags down the bartender."
+"Lynda flags down the bartender."
 
-    l "[say_drunk('This is on me... do not argue.')]"
+l "[say_drunk('This is on me... do not argue.')]"
 
-    m "[say_drunk('But-')]"
+m "[say_drunk('But-')]"
 
-    l "[say_drunk('Nope.')]"
+l "[say_drunk('Nope.')]"
 
-    "She taps her card."
+"She taps her card."
 
-    l "[say_drunk('Let us do this again sometime?')]"
+l "[say_drunk('Let us do this again sometime?')]"
 
-    m "[say_drunk('Yeah... yeah that sounds good.')]"
+m "[say_drunk('Yeah... yeah that sounds good.')]"
 
-    "You both grab your coats and head out."
+"You both grab your coats and head out."
 
-    jump lyndagoodend4
+jump lyndagoodend4
 
 label lyndabar3:
 
@@ -553,23 +553,23 @@ label lyndabar3:
 
 label lyndaparktime:
 scene bg park at bg_fit
-    "You arrive at the park, picnic basket in hand (well, a tote bag with a pithy catchphrase on it - the contemporary picnic basket), and look out for a good spot."
+"You arrive at the park, picnic basket in hand (well, a tote bag with a pithy catchphrase on it - the contemporary picnic basket), and look out for a good spot."
 
-    "Luckily, even though there's a chill in the air, the sun is beaming across the park."
+"Luckily, even though there's a chill in the air, the sun is beaming across the park."
 
-    m "Okayyy, where to set up?"
+m "Okayyy, where to set up?"
 
-    menu:
-        "A spot near the pond":
-            jump lyndapond
+menu:
+    "A spot near the pond":
+        jump lyndapond
 
-        "A spot near some trees":
-            jump lyndatrees
+    "A spot near some trees":
+        jump lyndatrees
 
-        "A spot in the gazebo":
-            $ lynda_rating += 1
-            $ Gazebo = True
-            jump lyndagazebo
+    "A spot in the gazebo":
+        $ lynda_rating += 1
+        $ Gazebo = True
+        jump lyndagazebo
 
 label lyndapond:
 
@@ -843,63 +843,63 @@ label lyndapark2:
 
 label lyndacafetime:
 scene bg cafe at bg_fit
-    "You arrive at the neighbourhood cafe."
+"You arrive at the neighbourhood cafe."
 
-    "The walls are littered with event posters, business cards, and some local artist prints to purchase."
+"The walls are littered with event posters, business cards, and some local artist prints to purchase."
 
-    "The smell of freshly ground coffee beans wafts by the counter."
+"The smell of freshly ground coffee beans wafts by the counter."
 
-    "There is a large selection of sweet and savoury pastries stored in a display section."
+"There is a large selection of sweet and savoury pastries stored in a display section."
 
-    "It all looks good."
-    
-    show lynda laugh at char_center
+"It all looks good."
 
-    l "[player_name]! Over here!"
+show lynda laugh at char_center
 
-    "You spot Lynda seated at a small table and make your way over."
+l "[player_name]! Over here!"
 
-    show lynda neutral at char_center
+"You spot Lynda seated at a small table and make your way over."
 
-    "She already has a drink in hand."
+show lynda neutral at char_center
 
-    "You order yourself..."
+"She already has a drink in hand."
 
-    menu:
-        "A latte":
-            $ DrinkChoice = "latte"
+"You order yourself..."
 
-            m "I'll take a latte, please."
+menu:
+    "A latte":
+        $ DrinkChoice = "latte"
 
-            "The barista nods and starts steaming milk."
+        m "I'll take a latte, please."
 
-            "A moment later, a warm latte is placed in front of you, foam art and all."
+        "The barista nods and starts steaming milk."
 
-            jump lyndacafe1
+        "A moment later, a warm latte is placed in front of you, foam art and all."
 
-
-        "A black coffee":
-            $ DrinkChoice = "coffee"
-
-            m "Just a black coffee, please."
-
-            "The barista pours a fresh cup."
-
-            "The aroma is wonderful."
-
-            jump lyndacafe1
+        jump lyndacafe1
 
 
-        "Just a tea":
-            $ DrinkChoice = "tea"
+    "A black coffee":
+        $ DrinkChoice = "coffee"
 
-            m "I'll just have a tea, please."
+        m "Just a black coffee, please."
 
-            "The barista gestures to cute list of different options."
+        "The barista pours a fresh cup."
 
-            "You pick something that sounds vaguely calming."
+        "The aroma is wonderful."
 
-            jump lyndacafe1
+        jump lyndacafe1
+
+
+    "Just a tea":
+        $ DrinkChoice = "tea"
+
+        m "I'll just have a tea, please."
+
+        "The barista gestures to cute list of different options."
+
+        "You pick something that sounds vaguely calming."
+
+        jump lyndacafe1
 
 label lyndacafe1:
 
@@ -941,7 +941,7 @@ label lyndacafe1:
 
     m "Especially when they're so cute."
 
-    show lynda annoyed at at char_center
+    show lynda annoyed at char_center
 
     l "Even when one of them escapes like an ungrateful asshole."
 
@@ -980,7 +980,7 @@ label lyndacafe1:
 label techcafe:
     m "So, compared to the Lynda who was fighting with cables and wires a couple weeks ago, you now have a pet camera hooked up *and* connected to your phone?"
 
-    show lynda unsure at at char_center
+    show lynda unsure at char_center
 
     "Lynda flaps her hand at you."
 
@@ -1380,83 +1380,83 @@ label lyndaconfess_disappoint:
 label lyndagoodend4:
 scene bg pc apartment at bg_fit
 
-    "You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
+"You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
 
-    "It seems getting Lynda to join the association is going well. Hopefully, she'll jump on board officially soon. You want to get this association up and running sooner rather than later."
+"It seems getting Lynda to join the association is going well. Hopefully, she'll jump on board officially soon. You want to get this association up and running sooner rather than later."
 
-    "It's been lovely getting to know Lynda."
+"It's been lovely getting to know Lynda."
 
-    "Even if there's a sadness behind her eyes at times."
+"Even if there's a sadness behind her eyes at times."
 
-    menu:
-        "I think she just needs to trust her instincts.":
-            $ lynda_reflection = "instincts"
+menu:
+    "I think she just needs to trust her instincts.":
+        $ lynda_reflection = "instincts"
 
-            m "Lynda really has so much more figured out than she realises. I wonder why she just can't see that…"
+        m "Lynda really has so much more figured out than she realises. I wonder why she just can't see that…"
 
-        "I think she should be kinder to herself.":
-            $ lynda_reflection = "kinder"
+    "I think she should be kinder to herself.":
+        $ lynda_reflection = "kinder"
 
-            m "We're all our own worst enemies. Lynda seems particularly hard on herself at times. Like nothing she does meets her own expectations. I wonder what her co-workers think of her? She seemed to think she lucked into her job, but she does so much for it."
+        m "We're all our own worst enemies. Lynda seems particularly hard on herself at times. Like nothing she does meets her own expectations. I wonder what her co-workers think of her? She seemed to think she lucked into her job, but she does so much for it."
 
-        "I think she could benefit from more time away from work.":
-            $ lynda_reflection = "work"
+    "I think she could benefit from more time away from work.":
+        $ lynda_reflection = "work"
 
-            m "Lynda seems to work 9-5 and then 5-9 on things. I get she's in some kind of senior role, but the amount of time she puts into prepping for things seems a little unhealthy… I'm surprised she said yes to spending time together."
+        m "Lynda seems to work 9-5 and then 5-9 on things. I get she's in some kind of senior role, but the amount of time she puts into prepping for things seems a little unhealthy… I'm surprised she said yes to spending time together."
 
-    "You fiddle with a tassel on one of the couch throws."
+"You fiddle with a tassel on one of the couch throws."
 
-    "..."
+"..."
 
-    "Are you like Lynda sometimes?"
+"Are you like Lynda sometimes?"
 
-    menu:
-        "Yes":
-            $ imposter = True
+menu:
+    "Yes":
+        $ imposter = True
 
-        "No":
-            $ imposter = False
+    "No":
+        $ imposter = False
 
-    jump lyndaevent3
+jump lyndaevent3
 
 label lyndabadend4:
 scene bg pc apartment at bg_fit
-    "You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
+"You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
 
-    "It might be time to call it quits on trying to persuade Lynda to join the association. Nothing you've done has swayed her, regardless of exploding sinks and cat escapades."
+"It might be time to call it quits on trying to persuade Lynda to join the association. Nothing you've done has swayed her, regardless of exploding sinks and cat escapades."
 
-    "Lynda has a lot going on underneath the surface, it seems."
+"Lynda has a lot going on underneath the surface, it seems."
 
-    menu:
-        "I think she just needs to trust her instincts.":
-            $ lynda_reflection = "instincts"
+menu:
+    "I think she just needs to trust her instincts.":
+        $ lynda_reflection = "instincts"
 
-            m "Lynda really has so much more figured out than she realises. I wonder why she just can't see that…"
+        m "Lynda really has so much more figured out than she realises. I wonder why she just can't see that…"
 
-        "I think she should be kinder to herself.":
-            $ lynda_reflection = "kinder"
+    "I think she should be kinder to herself.":
+        $ lynda_reflection = "kinder"
 
-            m "We're all our own worst enemies. Lynda seems particularly hard on herself at times. Like nothing she does meets her own expectations. I wonder what her co-workers think of her? She seemed to think she lucked into her job, but she does so much for it."
+        m "We're all our own worst enemies. Lynda seems particularly hard on herself at times. Like nothing she does meets her own expectations. I wonder what her co-workers think of her? She seemed to think she lucked into her job, but she does so much for it."
 
-        "I think she could benefit from more time away from work.":
-            $ lynda_reflection = "work"
+    "I think she could benefit from more time away from work.":
+        $ lynda_reflection = "work"
 
-            m "Lynda seems to work 9-5 and then 5-9 on things. I get she's in some kind of senior role, but the amount of time she puts into prepping for things seems a little unhealthy… I'm surprised she said yes to spending time together."
+        m "Lynda seems to work 9-5 and then 5-9 on things. I get she's in some kind of senior role, but the amount of time she puts into prepping for things seems a little unhealthy… I'm surprised she said yes to spending time together."
 
-    "You fiddle with a tassel on one of the couch throws."
+"You fiddle with a tassel on one of the couch throws."
 
-    "..."
+"..."
 
-    "Are you like Lynda sometimes?"
+"Are you like Lynda sometimes?"
 
-    menu:
-        "Yes":
-            $ imposter = True
+menu:
+    "Yes":
+        $ imposter = True
 
-        "No":
-            $ imposter = False
-    
-    "This is the end of the current game demo build. More on the way!"
-    jump lyndaevent3
+    "No":
+        $ imposter = False
+
+"This is the end of the current game demo build. More on the way!"
+jump lyndaevent3
 
     

@@ -103,7 +103,7 @@ default CoatMoney = False
 default lynda_confession = False
 default lynda_reflection = "none"
 default imposter = "false"
-default 
+default drunk_level = 0
 
 #Lynda Event 1
 default SinkTimer = 0
