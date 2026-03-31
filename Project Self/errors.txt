@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lynda_event2.rpy", line 791: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "SOMETIME LATER"
-    ^
+File "game/script.rpy", line 106: expected 'word' not found.
+    default 
+            ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Mar 30 22:03:06 2026
+Mon Mar 30 23:46:37 2026
