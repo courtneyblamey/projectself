@@ -2,9 +2,41 @@
 errors listed below, and try again.
 
 
+File "game/lynda_event2.rpy", line 250: choice menuitem expects a non-empty block.
+    "Where should you look?":
+                             ^
+
+File "game/lynda_event2.rpy", line 286: choice menuitem expects a non-empty block.
+    "Where do you check?":
+                          ^
+
+File "game/lynda_event2.rpy", line 356: choice menuitem expects a non-empty block.
+    "Where do you check?":
+                          ^
+
+File "game/lynda_event2.rpy", line 430: choice menuitem expects a non-empty block.
+    "Where should you check?":
+                              ^
+
+File "game/lynda_event2.rpy", line 447: choice menuitem expects a non-empty block.
+    "Where do you check?":
+                          ^
+
+File "game/lynda_event2.rpy", line 507: choice menuitem expects a non-empty block.
+    "Where do you check?":
+                          ^
+
+File "game/lynda_event2.rpy", line 629: choice menuitem expects a non-empty block.
+    "Where do you check?":
+                          ^
+
+File "game/lynda_event2.rpy", line 786: choice menuitem expects a non-empty block.
+    "What do you say?":
+                       ^
+
 File "game/lynda_interaction3.rpy", line 239: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
     menu:
     ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Mar 30 19:57:14 2026
+Mon Mar 30 20:45:30 2026

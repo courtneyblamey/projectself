@@ -537,6 +537,8 @@ label lyndaassociation1:
 
     if lynda_rating >= 1 and SinkTimer > 5:
 
+        $ lynda_convince += 2
+
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
 
         show lynda neutral at char_center
@@ -548,6 +550,9 @@ label lyndaassociation1:
         l "I do think it's a good idea."
 
     elif lynda_rating >= 1:
+
+        $ lynda_convince += 1
+        
         show lynda neutral at char_center
 
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
