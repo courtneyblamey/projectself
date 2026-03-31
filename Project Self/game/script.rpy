@@ -51,22 +51,45 @@ init:
 #Character Variables
 default lynda_rating = 1
 default Money = 1
+default lynda_convince = 0
 
 #Misc Variables
-default CarryBox = False
-default BoxIntense = False
-default LyndaDrink = False
-default BuildingPastGood = False
-default DiligentLaundry = False
-default ChaosLaundry = False
-default BowlMoney = False
-default CoatMoney = False
+
+#Lynda Interaction 1
 default read_laundry = False
 default read_disposal = False
 default read_pipes = False
 default read_noise = False
-default AttentionSkill = 0
+default BuildingPastGood = False
+
+#Lynda Interaction 2
+default CarryBox = False
+default BoxIntense = False
+default LyndaDrink = False
+
+#Lynda Interaction 3
+default DiligentLaundry = False
+default ChaosLaundry = False
+default BowlMoney = False
+default CoatMoney = False
+
+#Lynda Event 1
 default SinkTimer = 0
+
+#Lynda Event 2
+default bean_location = None
+default checked_bushes = False
+default checked_bins = False
+default checked_cars = False
+default checked_lobby = False
+default checked_laundry = False
+default checked_mail = False
+default checked_planters = False
+default checked_stairwells = False
+default checked_laundry = False
+default checked_balcony = False
+default checked_bedroom = False
+default bean_escape = None
 
 #Skill Variables
 default TechSkill = 1
@@ -74,6 +97,7 @@ default TidySkill = 1
 default HandsonSkill = 1
 default StrengthSkill = 1
 default ShareSkill = 1
+default AttentionSkill = 1
 
 default player_name = "Maria"
 
