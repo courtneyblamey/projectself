@@ -66,7 +66,7 @@ label changesearch:
 
 "You grab the basket and head downstairs to the laundry room."
 
-scene bg laundry
+scene bg laundry at bg_fit
 with dissolve
 
 "As you reach the door, you notice someone filling the dryer."
@@ -202,20 +202,20 @@ label lyndaokay:
 
                             "She looks lost in thought."
 
-                            "Anna keeps saying I need to get out more, so that I'm not so cooped up and feeling like this."
+                            l "Anna keeps saying I need to get out more, so that I'm not so cooped up and feeling like this."
 
                             jump invitelynda
                         else: 
                             show lynda neutral at char_center
                             "Lynda picks at some loose skin on her lip, lost in thought."
 
-                            "Anna keeps saying I need to get out more, but I'm so busy with work stuff at the moment."
+                            l "Anna keeps saying I need to get out more, but I'm so busy with work stuff at the moment."
 
                             jump invitelynda
                     "Maybe I've pried enough...":
                         "Maybe that's enough questions for this evening."
 
-                        "Anna keeps saying I need to get out more, but I'm so busy with work stuff at the moment."
+                        l "Anna keeps saying I need to get out more, but I'm so busy with work stuff at the moment."
 
                         jump invitelynda
 
@@ -234,7 +234,7 @@ label lyndaokay:
 
 label invitelynda:
 
-"Maybe I could suggest a hangout to help her feel less trapped at home?"
+    "Maybe I could suggest a hangout to help her feel less trapped at home?"
 
     menu:
         "Offer a coffee hang.":
@@ -288,8 +288,11 @@ label invitelynda:
             m "Sure!"
 
             jump endlyndainteraction3
-            
+
 label endlyndainteraction3:
+    hide lynda unsure
+    hide lynda laugh
+    hide lynda neutral
     "Lynda wiggles her fingers goodbye to you as she heads out of the laundry room. You don't see her again when you go to move over your own laundry."
 
     "You head back upstairs yourself while your load runs and get to work making an info poster."

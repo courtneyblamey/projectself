@@ -1,5 +1,7 @@
 label lyndaevent2:
 
+scene pc apartment at bg_fit
+
     "It's a quiet and grey afternoon, you decide to:"
 
     menu:
@@ -46,7 +48,7 @@ label lyndabean1:
     "You open your door to a very stressed out Lynda."
 
     if lynda_rating > 2:
-
+        show lynda sad at char_center
         l "Oh, thank god you're home!"
         m "Lynda, you okay?"
         l "No, no not really. Bean is missing."
@@ -70,11 +72,11 @@ label lyndabean1:
 
             l "Can you help me look?"
             m "Of course!"
-
+            show lynda neutral at char_center
             l "Thank you thank you thank you. I'm going to check the apartment one last time and then look around the upstairs area."
 
             "She dusts the crumbs off of herself and pats you on the arm."
-
+            show lynda sad at char_center
             l "Wait, no, I'm sorry, I feel like I'm intruding on your afternoon."
 
             jump findbeanchoice
@@ -88,10 +90,12 @@ label lyndabean1:
 
             l "Can you help me look?"
             m "Of course!"
-
+            show lynda neutral at char_center
             l "Thank you thank you thank you. I'm going to check the apartment one last time and then look around the upstairs area."
 
             "Some characters begin to argue on the TV."
+
+            show lynda sad at char_center
 
             l "Oh! I'm sorry, I realise I'm intruding on your afternoon."
 
@@ -105,9 +109,9 @@ label lyndabean1:
 
             m "Lemme just…"
             "You turn it down."
-
+            show lynda neutral at char_center
             m "Sorry, new game in a series I love, you were saying?"
-
+            show lynda sad at char_center
             l "No I'm sorry! I feel like I'm intruding on your afternoon."
 
             jump findbeanchoice
@@ -120,7 +124,7 @@ label lyndabean1:
 
             m "Want one?"
             "You offer a cookie to Lynda."
-
+            show lynda neutral at char_center
             l "Umm… no it's okay, but thanks."
 
             l "I don't know how Bean escaped… I've checked everywhere in the apartment in case he's just hiding or zonked out somewhere sleeping, but he's nowhere."
@@ -129,7 +133,7 @@ label lyndabean1:
             m "Of course!"
 
             l "I really appreciate it. I'm going to check the apartment one last time and then look around the upstairs area."
-
+            show lynda sad at char_center
             l "Wait, no, I'm sorry, I feel like I'm intruding on your afternoon."
 
             jump findbeanchoice
@@ -137,13 +141,14 @@ label lyndabean1:
         elif TVOn:
 
             l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and-"
+            show lynda neutral at char_center
             l "Oh I'm catching up on that season too."
 
             l "Sorry, distracted - I don't know how Bean escaped…"
-
+            show lynda sad at char_center
             l "Can you help me look?"
             m "Of course!"
-
+            show lynda neutral at char_center
             l "Thank you thank you thank you."
 
             "Some characters begin to argue on the TV."
@@ -180,7 +185,7 @@ label findbeanchoice:
             jump gameoverbean
 
 label gameoverbean:
-
+    show lynda sad at char_center
     $ HelpLynda -= 2
 
     $ lynda_rating -=2
@@ -197,12 +202,12 @@ label gameoverbean:
         "This season has had so much hype around it, and right now two of your favourite characters are getting into a heated argume- OH THEY'RE KISSING."
 
     m "You're sure Bean isn't just hiding in the apartment?"
-
+    show lynda unsure at char_center
     l "I'll go look again… if you see or hear him, would you look?"
     m "Sure, yeah."
 
     "Lynda walks out and shuts the door behind her."
-
+    hide lynda unsure
     jump gameoverbeanend
 
 label yeahbutbean:
@@ -218,11 +223,11 @@ label noitsbean:
     jump lyndabean2
 
 label lyndabean2:
-
+    show lynda annoyed at char_center
     l "I just don't know how he got out!"
 
     l "He's normally so lazy that at any time I'll find him passed out in blankets or my bed, but today when I finished prepping he was nowhere."
-
+    show lynda unsure at char_center
     m "A sudden burst of adventure, maybe?"
 
     l "Maybe… but he's still my dopey boy and I want him home."
@@ -230,8 +235,9 @@ label lyndabean2:
     m "Of course! I can look around if you want to check your place again?"
 
     l "Sure."
-
+    show lynda neutral at char_center
     "Time to split the party and find this furry escape artist."
+    hide lynda neutral
 
     jump beansearch
 
@@ -246,29 +252,32 @@ label beansearch:
             "bedroom"
         ])
 
-    menu:
-        "Where should you look?":
+"Where should you look?"
 
-        "Inside the building":
-            $ checked_lobby = False
-            $ checked_mail = False
-            $ checked_planters = False
-            $ checked_stairwellswells = False
-            $ checked_laundry = False
-            jump beaninbuilding
+menu:
 
-        "Outside the building":
-            $ checked_bushes = False
-            $ checked_bins = False
-            $ checked_cars = False
-            jump beanoutbuilding
+    "Inside the building":
+        $ checked_lobby = False
+        $ checked_mail = False
+        $ checked_planters = False
+        $ checked_stairwells = False
+        $ checked_laundry = False
+        jump beaninbuilding
 
-        "Check your apartment":
-            $ checked_balcony = False
-            $ checked_bedroom = False
-            jump beaninapartment
+    "Outside the building":
+        $ checked_bushes = False
+        $ checked_bins = False
+        $ checked_cars = False
+        jump beanoutbuilding
+
+    "Check your apartment":
+        $ checked_balcony = False
+        $ checked_bedroom = False
+        jump beaninapartment
 
 label beanoutbuilding:
+
+scene bg outside at bg_fit
 
     if checked_bushes and checked_bins and checked_cars:
         "You've checked everywhere outside… Bean must be somewhere else."
@@ -282,8 +291,9 @@ label beanoutbuilding:
 
     if bean_location == "outside":
 
+        "Where do you check?"
+
         menu:
-            "Where do you check?":
 
             "Check bushes" if not checked_bushes:
                 $ checked_bushes = True
@@ -293,18 +303,22 @@ label beanoutbuilding:
                 "You approach the group of bushes at the side of the building and begin to peer through the branches."
 
                 m "Bean~?"
-                b "mrow"
+                b "{size=-10}mrow{/size}"
 
                 m "Beaaaan~?"
                 b "m r o w w w"
 
                 m "Bean!"
 
+                show bean at char_center
+
                 "A pair of eyes peer back at you through the branches. Bean is curled up tight and trembling."
 
                 m "Oh, buddy!"
 
                 "You take off your scarf and bundle him up in it. He's not game initially, but soon succumbs to the woollen burrito."
+
+                hide bean with dissolve
 
                 jump foundbean
 
@@ -352,9 +366,9 @@ label beanoutbuilding:
 
     else:
 
-        menu:
-            "Where do you check?":
+        "Where do you check?"
 
+        menu:
             "Check bushes" if not checked_bushes:
                 $ checked_bushes = True
 
@@ -425,153 +439,157 @@ label beaninbuilding:
     if checked_lobby and checked_laundry:
         "You've checked everywhere inside the building… Bean must be somewhere else."
         jump beansearch
+    
+    "Where should you check?"
 
     menu:
-        "Where should you check?":
-
         "Check the lobby" if not checked_lobby:
+            $ checkled_lobby = True
             jump beanlobby
 
         "Check the laundry room" if not checked_laundry:
+            $ checked_laundry = True
             jump beanlaundry
 
 label beanlobby:
-
+scene bg lobby at bg_fit
     if checked_mail and checked_planters and checked_stairwells:
         "You've checked everything in the lobby… Bean must not be here."
         jump beaninbuilding
 
     if bean_location == "lobby":
 
-        menu:
-            "Where do you check?":
+            "Where do you check?"
 
-            "Check the mailbox area" if not checked_mail:
-                $ checked_mail = True
+            menu:
+                "Check the mailbox area" if not checked_mail:
+                    $ checked_mail = True
 
-                "You investigate the mailbox area."
+                    "You investigate the mailbox area."
 
-                "...it's not likely that Bean climbed into one of the mailboxes."
+                    "...it's not likely that Bean climbed into one of the mailboxes."
 
-                m "Why give me the option then?!"
+                    m "Why give me the option then?!"
 
-                jump beanlobby
+                    jump beanlobby
 
-            "Check planters" if not checked_planters:
-                $ checked_planters = True
+                "Check planters" if not checked_planters:
+                    $ checked_planters = True
 
-                "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
+                    "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
 
-                "You check them out one by one when - a wild Bean appears!"
+                    "You check them out one by one when - a wild Bean appears!"
 
-                "Curled up and content, Bean is snoozing in one of the plant pots, with some shreds of cardboard from someone's delivery parcel."
+                    show bean at char_center
 
-                m "Ohhh, you little stinker."
+                    "Curled up and content, Bean is snoozing in one of the plant pots, with some shreds of cardboard from someone's delivery parcel."
 
-                m "Your mum is worried sick about you."
+                    m "Ohhh, you little stinker."
 
-                "You scoop him up, despite his complaining, and carry him back to Lynda's apartment."
+                    m "Your mum is worried sick about you."
 
-                jump foundbean
+                    "You scoop him up, despite his complaining, and carry him back to Lynda's apartment."
 
-            "Check stairwells" if not checked_stairwells:
-                $ checked_stairwells = True
+                    hide bean with dissolve
 
-                m "Maybe he managed to get into the stairwell…"
+                    jump foundbean
 
-                "The door creaks open."
+                "Check stairwells" if not checked_stairwells:
+                    $ checked_stairwells = True
 
-                m "Beany boy~?"
+                    m "Maybe he managed to get into the stairwell…"
 
-                "You check around the different exits at each floor, clambering up a couple flights of stairs."
+                    "The door creaks open."
 
-                m "Ugggggghhh."
+                    m "Beany boy~?"
 
-                m "Thank god there's only a couple floors."
+                    "You check around the different exits at each floor, clambering up a couple flights of stairs."
 
-                "Stairs are the only form of cardio that you cannot train to be better at."
+                    m "Ugggggghhh."
 
-                m "Bean~?"
+                    m "Thank god there's only a couple floors."
 
-                "Your voice echoes in the stairwell."
+                    "Stairs are the only form of cardio that you cannot train to be better at."
 
-                "No sign of Bean."
+                    m "Bean~?"
 
-                m "Where the heck are you?"
+                    "Your voice echoes in the stairwell."
 
-                jump beanlobby
+                    "No sign of Bean."
+
+                    m "Where the heck are you?"
+
+                    jump beanlobby
 
     else:
 
-        menu:
-            "Where do you check?":
+            "Where do you check?"
 
-            "Check the mailbox area" if not checked_mail:
-                $ checked_mail = True
+            menu:
+                "Check the mailbox area" if not checked_mail:
+                    $ checked_mail = True
 
-                "You investigate the mailbox area."
+                    "You investigate the mailbox area."
 
-                "...it's not likely that Bean climbed into one of the mailboxes."
+                    "...it's not likely that Bean climbed into one of the mailboxes."
 
-                m "Why give me the option then?!"
+                    m "Why give me the option then?!"
 
-                jump beanlobby
+                    jump beanlobby
 
-            "Check planters" if not checked_planters:
-                $ checked_planters = True
+                "Check planters" if not checked_planters:
+                    $ checked_planters = True
 
-                "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
+                    "There's a few planters in the lobby. Some are easily large enough to hide a furry escapee."
 
-                "You check them out one by one."
+                    "You check them out one by one."
 
-                m "Achoo!"
+                    m "Achoo!"
 
-                "Ironically, most of these are plastic plants."
+                    "Ironically, most of these are plastic plants."
 
-                m "Must be the dust."
+                    m "Must be the dust."
 
-                "No napping cat in any of them."
+                    "No napping cat in any of them."
 
-                m "Where did you sneak off too you little stinker?"
+                    m "Where did you sneak off too you little stinker?"
 
-                jump beanlobby
+                    jump beanlobby
 
-            "Check stairwells" if not checked_stairwells:
-                $ checked_stairwells = True
+                "Check stairwells" if not checked_stairwells:
+                    $ checked_stairwells = True
 
-                m "Maybe he managed to get into the stairwell…"
+                    m "Maybe he managed to get into the stairwell…"
 
-                "The door creaks open."
+                    "The door creaks open."
 
-                m "Beany boy~?"
+                    m "Beany boy~?"
 
-                "You check around the different exits at each floor, clambering up a couple flights of stairs."
+                    "You check around the different exits at each floor, clambering up a couple flights of stairs."
 
-                m "Ugggggghhh."
+                    m "Ugggggghhh."
 
-                m "Thank god there's only a couple floors."
+                    m "Thank god there's only a couple floors."
 
-                "Stairs are the only form of cardio that you cannot train to be better at."
+                    "Stairs are the only form of cardio that you cannot train to be better at."
 
-                m "Bean~?"
+                    m "Bean~?"
 
-                "Your voice echoes in the stairwell."
+                    "Your voice echoes in the stairwell."
 
-                "No sign of Bean."
+                    "No sign of Bean."
 
-                m "Where the heck are you?"
+                    m "Where the heck are you?"
 
-                jump beanlobby
+                    jump beanlobby
 
 label beanlaundry:
-
+scene bg laundry at bg_fit
     if checked_laundry:
         "You've already checked the laundry room thoroughly… Bean doesn't seem to be here."
         jump beaninbuilding
 
-    $ checked_laundry = True
-
-    "You wander into the laundry room. The lingering smell of floral laundry detergent and dryer sheets wafts in the air."
+    "You wander into the laundry room. The smell of floral laundry detergent and dryer sheets wafts in the air."
 
     m "Well, this is a cosy spot for a mischievous cat."
 
@@ -582,11 +600,13 @@ label beanlaundry:
         m "Beaaaan~?"
         m "Are you hiding in here?"
 
-        b "Prrp."
+        b "{size=-10}Prrp.{/size}"
 
         m "Bean?"
 
         "You spot a pile of orange fur snuggled up in someone's laundry basket."
+
+        show bean at char_center
 
         "Bean is belly up snoring away in some freshly laundered bedsheets. Truly a cat that got the cream… sheets."
 
@@ -601,6 +621,8 @@ label beanlaundry:
         m "Right."
 
         "You scoop Bean up in your arms. He's too lazy to fight back and flops around instead of resisting. Truly orange cat behaviour."
+
+        hide bean with dissolve
 
         jump foundbean
 
@@ -618,15 +640,16 @@ label beanlaundry:
         jump beaninbuilding
 
 label beaninapartment:
-
+scene bg pc apartment at bg_fit 
     if checked_balcony and checked_bedroom:
         "You've checked everywhere in your apartment… Bean must not be here."
         jump beansearch
 
     m "There's no way he managed to sneak in here right? I only popped out a couple times to do some laundry."
 
+    "Where do you check?"
+
     menu:
-        "Where do you check?":
 
         "Check balcony" if not checked_balcony:
             $ checked_balcony = True
@@ -646,7 +669,9 @@ label beanbalcony:
 
         "You open the balcony door and a flash of orange streaks across your apartment."
 
-        b "MROWWW!!!"
+        b "{size=+10}MROWWW!!!{/size}"
+
+        show bean at char_center
 
         "A very spooked Bean hides under your coffee table."
 
@@ -668,6 +693,8 @@ label beanbalcony:
 
         m "Let's get you back home."
 
+        hide bean with dissolve
+
         jump foundbean
 
     else:
@@ -688,6 +715,8 @@ label beanbedroom:
 
         "You flick on your bedroom light to see if Bean has somehow made his way into your apartment."
 
+        show bean at char_center
+
         "Right in the middle is a very content, but now rudely awakened, orange blob of fur."
 
         b "Mrow?"
@@ -703,6 +732,8 @@ label beanbedroom:
         m "C'mon, let's get you back home."
 
         "Luckily, as an orange cat Bean offers little resistance to being scooped up by a relative stranger."
+
+        hide bean with dissolve
 
         jump foundbean
 
@@ -720,25 +751,42 @@ label foundbean:
 
     "You make your way up to Lynda's apartment with Bean in your arms and knock on her door."
 
+scene bg lynda apartment at bg_fit
     m "Guess who~?"
+
+    show lynda sad at char_center
 
     "Lynda opens the door - she's clearly been crying."
 
+    show lynda laugh at char_center
+
     l "BEAN!!!!"
+
+    show bean at char_center
 
     "She grabs him from you and showers him in kisses."
 
     l "You stupid, sweet, dumb, silly, beautiful cat!!!"
 
+    show lynda sad at char_center
+
     "She holds him out at arms length and scolds him. Bean blinks out of sync."
 
-    l "How did you get *out*?!"
+    show lynda annoyed at char_center
+
+    l "How did you get {i}out{/i}?!"
 
     l "Ugh who cares, I'm just glad you're back home."
+
+    "Bean jumps from Lynda's arms and struts around the apartment."
+
+    hide bean with dissolve
 
     jump beanhome
 
 label gameoverbeanend:
+
+scene pc apartment at bg_fit
 
     "SOMETIME LATER"
 
@@ -766,6 +814,10 @@ label gameoverbeanend:
 
     "You knock on her door, and there's a brief pause before she opens it."
 
+    scene lynda apartment at bg_fit
+
+    show lynda neutral at char_center
+
     l "Oh, hey [player_name]."
 
     m "Hey, I just wanted to check if you found Bean?"
@@ -776,6 +828,8 @@ label gameoverbeanend:
 
     m "That's good! Well, not the snotty tears but, finding Bean."
 
+    show lynda unsure at char_center
+
     l "Yeah - still don't know how he got out though."
 
     jump beanhome
@@ -783,19 +837,26 @@ label gameoverbeanend:
 label beanhome:
 
     menu:
-        "What do you say?":
 
         "You can always leave out food and something that smells like you.":
 
             m "I've read before that leaving out food and something that smells like home helps guide them back."
 
+            show lynda neutral at char_center
+
             l "Oh, that's good to know. Hopefully he won't be breaking out again anytime soon."
+
+            show bean at char_left
 
             b "Meow."
 
             l "Yeah, you."
 
+            hide bean with dissolve
+
             "You both chuckle and bid each other good night."
+
+            hide lynda neutral
 
             jump beanconvinceend
 
@@ -806,6 +867,8 @@ label beanhome:
 
             m "I mean, he doesn't have a collar, that's something you should probably look into getting for him."
 
+            show lynda annoyed at char_center
+
             l "Yeah, do you have a cat?"
 
             m "No…"
@@ -813,6 +876,8 @@ label beanhome:
             l "Then you don't know the struggle of putting anything on them. It is like wrestling a coat onto a toddler."
 
             m "Ah, gotcha."
+
+            show bean at char_left
 
             b "Mrowww."
 
@@ -828,6 +893,10 @@ label beanhome:
 
             m "Night!"
 
+            hide bean with dissolve
+
+            hide lynda annoyed
+
             jump beanconvinceend
 
 
@@ -837,11 +906,15 @@ label beanhome:
 
             m "I could check and see where he maybe got out?"
 
+            show lynda unsure at char_center
+
             l "Honestly, sure, I cannot for the life of me figure out how."
 
             "You head into Lynda's apartment."
 
             "Bean and Maple stalk you as you move around, looking for any signs of escape."
+
+            hide lynda unsure
 
             if AttentionSkill >= 2:
 
@@ -851,15 +924,21 @@ label beanhome:
 
                     m "Uh, Lynda?"
 
+                    show lynda neutral at char_center
+
                     l "Yeah?"
 
                     m "Did you mean to leave the door open?"
+
+                    show lynda sad at char_center
 
                     l "What?!"
 
                     "She strolls over and goes to shut and latch it."
 
                     "It pops open."
+
+                    show lynda annoyed at char_center
 
                     l "Oh, you're kidding me."
 
@@ -877,13 +956,17 @@ label beanhome:
 
                     m "Uh, Lynda?"
 
+                    show lynda neutral at char_center
+
                     l "Yeah?"
 
                     m "Has that always had a, uh, Bean sized hole in it?"
 
-                    l "You're *kidding*."
+                    l "You're {i}kidding{/i}."
 
                     "Lynda moves over to investigate."
+
+                    show lynda annoyed at char_center
 
                     l "Urgh! This was the loose panel I messaged the damn management about weeks ago!!"
 
@@ -897,6 +980,8 @@ label beanhome:
 
                     "After peering around the apartment, you're unable to find where Bean got out."
 
+                    show lynda unsure at char_center
+
                     l "Any luck?"
 
                     m "No… sorry, I thought I could help with that at least."
@@ -905,7 +990,11 @@ label beanhome:
 
                     m "Hope your presentation goes okay tomorrow."
 
+                    show lynda laugh at char_center
+
                     l "Thanks [player_name]."
+
+                    hide lynda laugh
 
                     "You roll out and Lynda shuts the door behind you."
 
@@ -913,9 +1002,13 @@ label beanhome:
 
                     m "Yeah?"
 
+                    show lynda neutral at char_center
+
                     l "Hmm? I didn't say anythi- why is this open?"
 
                     "She goes to shut it again. *click* it creaks ajar."
+
+                    show lynda_annoyed at char_center
 
                     l "Oh, you're kidding me."
 
@@ -933,6 +1026,8 @@ label beanhome:
 
                     "After peering around the apartment, you're unable to find where Bean got out."
 
+                    show lynda neutral at char_center
+
                     l "Any luck?"
 
                     m "No… sorry, I thought I could help with that at least."
@@ -945,11 +1040,15 @@ label beanhome:
 
                     "As you turn to leave a gust of wind blows through Lynda's apartment."
 
+                    show lynda unsure at char_center
+
                     l "Oh my, I must have left a window open!"
 
                     "She saunters over and stops."
 
                     l "Oh for- I know how Bean got out…"
+
+                    show lynda annoyed at char_center
 
                     "Lynda points to a missing mesh panel in the window pane."
 
@@ -967,6 +1066,7 @@ label lyndabeanconvince1:
         "Convince Lynda":
             
             m "That's not good."
+
             m "This is why I think we really should start a tenancy association. There are clearly issues around the whole building."
 
             # -------------------------
@@ -976,13 +1076,21 @@ label lyndabeanconvince1:
 
                 if lynda_convince >= 2:
 
+                    $ lynda_convince +=2
+
+                    show lynda neutral at char_center
+
                     "Lynda faffs with the door latch."
 
                     l "Y'know, the argument is kinda making itself at this point."
 
                     "The latch pops out properly."
 
+                    show lynda laugh at char_center
+
                     l "Ah-HA. Fixed it."
+
+                    show lynda neutral at char_center
 
                     l "But seriously, I am still considering it. I am just not sure what I could contribute to it, honestly."
 
@@ -994,20 +1102,28 @@ label lyndabeanconvince1:
 
                     l "I think I'm getting a handle on some of the jargon and acronyms."
 
+                    show lynda unsure at char_center
+
                     l "I think…"
 
                     l "I've got pages of notes so…"
+
+                    show lynda laugh at char_center
 
                     l "Anyway, good night!"
 
                     m "Night, Lynda!"
 
-                    $ lynda_convince += 2
+                    hide lynda laugh
 
                     jump beanconvincegood
 
 
                 elif lynda_convince == 1:
+
+                    $ lynda_convince += 1
+
+                    show lynda neutral at char_center
 
                     "Lynda faffs with the door latch."
 
@@ -1015,26 +1131,36 @@ label lyndabeanconvince1:
 
                     m "It doesn't have to be right now. It'll take a little time to be official anyway."
 
+                    show lynda unsure at char_center
+
                     l "Oh, fair point."
 
                     l "Let me think some more on it."
 
                     l "For now, I gotta get back to researching for my meeting tomorrow."
 
+                    show lynda laugh at char_center
+
                     l "Anyway, good night!"
 
                     m "Night, Lynda!"
 
-                    $ lynda_convince += 2
+                    hide lynda laugh
 
                     jump beanconvincegood
 
 
                 else:
 
+                    $ lynda_convince += 2
+                    
                     "Lynda faffs with the door latch."
 
+                    show lynda annoyed at char_center
+
                     l "Last time you brought this up it annoyed the hell out of me… but I am starting to see your point."
+
+                    show lynda neutral at char_center
 
                     l "For now, I gotta get back to researching for my meeting tomorrow."
 
@@ -1042,7 +1168,7 @@ label lyndabeanconvince1:
 
                     m "Night, Lynda!"
 
-                    $ lynda_convince += 2
+                    hide lynda neutral
 
                     jump beanconvincegood
 
@@ -1054,24 +1180,34 @@ label lyndabeanconvince1:
 
                 if lynda_convince >= 2:
 
+                    show lynda unsure at char_center
+
                     l "I hear you, I hear you. I just need things to settle at work and then we can talk, 'kay?"
 
                     l "Anyway, I gotta crack on with some more work now that Bean's secured."
 
+                    show lynda neutral at char_center
+
                     m "Yeah, of course. Night, Lynda!"
 
                     $ lynda_convince += 1
+
+                    hide lynda neutral
 
                     jump beanconvinceneut
 
 
                 elif lynda_convince == 1:
 
+                    show lynda annoyed at char_center
+
                     l "Yeah, I just don't know about timing right now, but we can talk about it another time, 'kay?"
 
                     l "Anyway, I gotta crack on with some more work now that Bean's secured."
 
                     m "Yeah, of course. Night, Lynda!"
+
+                    hide lynda annoyed 
 
                     $ lynda_convince += 1
 
@@ -1082,9 +1218,15 @@ label lyndabeanconvince1:
 
                     "Lynda sighs."
 
+                    show lynda unsure at char_center
+
                     l "I can understand where you're coming from."
 
+                    show lynda annoyed at char_center
+
                     l "More than last time."
+
+                    show lynda neutral at char_center
 
                     m "Eheh… sorry."
 
@@ -1093,6 +1235,8 @@ label lyndabeanconvince1:
                     l "For now, I gotta figure out how to sort this out and then get back to prepping for tomorrow."
 
                     m "Yeah, of course. Night Lynda!"
+
+                    hide lynda neutral
 
                     $ lynda_convince += 1
 
@@ -1106,6 +1250,8 @@ label lyndabeanconvince1:
 
                 if lynda_convince >= 2:
 
+                    show lynda annoyed at char_center
+
                     l "You know, I got where you were coming from before, but this really isn't going to make a difference."
 
                     l "Respectfully, I love that you have the free time to deal with this, I just don't."
@@ -1118,10 +1264,14 @@ label lyndabeanconvince1:
 
                     l "I'll see you 'round, [player_name]."
 
+                    hide lynda annoyed
+
                     jump beanconvincebad
 
 
                 elif lynda_convince == 1:
+
+                    show lynda annoyed at char_center
 
                     l "While I understand your ambition, between the sink and now Bean escaping, I'm starting to get very over this apartment complex in general."
 
@@ -1133,10 +1283,14 @@ label lyndabeanconvince1:
 
                     l "I'll see you 'round, [player_name]."
 
+                    hide lynda annoyed
+
                     jump beanconvincebad
 
 
                 else:
+
+                    show lynda annoyed at char_center
 
                     l "Oh my GOD [player_name], will you let it be? Can't you see, once again, this is not the time?"
 
@@ -1150,6 +1304,8 @@ label lyndabeanconvince1:
                     m "Sorry."
 
                     l "I'll see you 'round, [player_name]."
+
+                    hide lynda annoyed
 
                     jump beanconvincebad
 
@@ -1177,6 +1333,8 @@ label lyndabeanconvince2:
 
                     "Lynda faffs with the window."
 
+                    show lynda unsure at char_center
+
                     l "Y'know, the argument is kinda making itself at this point."
 
                     l "But seriously, I am still considering it. I am just not sure what I could contribute to it, honestly."
@@ -1187,15 +1345,21 @@ label lyndabeanconvince2:
 
                     l "For now, I gotta get back to researching for my meeting tomorrow."
 
+                    show lynda neutral at char_center
+
                     l "I think I'm getting a handle on some of the jargon and acronyms."
 
                     l "I think…"
 
                     l "I've got pages of notes so…"
 
+                    show lynda laugh at char_center
+
                     l "Anyway, good night!"
 
                     m "Night, Lynda!"
+
+                    hide lynda laugh
 
                     $ lynda_convince += 2
 
@@ -1206,9 +1370,13 @@ label lyndabeanconvince2:
 
                     "Lynda faffs with the window."
 
+                    show lynda neutral at char_center
+
                     l "I know, I know, I'm just so busy. I don't think I have time right now."
 
                     m "It doesn't have to be right now. It'll take a little time to be official anyway."
+
+                    show lynda unsure at char_center
 
                     l "Oh, fair point."
 
@@ -1220,6 +1388,8 @@ label lyndabeanconvince2:
 
                     m "Night, Lynda!"
 
+                    hide lynda unsure
+
                     $ lynda_convince += 2
 
                     jump beanconvincegood
@@ -1228,6 +1398,8 @@ label lyndabeanconvince2:
                 else:
 
                     "Lynda faffs with the window."
+
+                    show lynda neutral
 
                     l "Last time you brought this up it annoyed the hell out of me… but I am starting to see your point."
 
@@ -1249,11 +1421,15 @@ label lyndabeanconvince2:
 
                 if lynda_convince >= 2:
 
+                    show lynda neutral at char_center
+
                     l "I hear you, I hear you. I just need things to settle at work and then we can talk, 'kay?"
 
                     l "Anyway, I gotta crack on with some more work now that Bean's secured."
 
                     m "Yeah, of course. Night, Lynda!"
+
+                    hide lynda neutral
 
                     $ lynda_convince += 1
 
@@ -1261,12 +1437,15 @@ label lyndabeanconvince2:
 
 
                 elif lynda_convince == 1:
+                    show lynda unsure at char_center
 
                     l "Yeah, I just don't know about timing right now, but we can talk about it another time, 'kay?"
 
                     l "Anyway, I gotta crack on with some more work now that Bean's secured."
 
                     m "Yeah, of course. Night, Lynda!"
+
+                    hide lynda unsure
 
                     $ lynda_convince += 1
 
@@ -1277,6 +1456,8 @@ label lyndabeanconvince2:
 
                     "Lynda sighs."
 
+                    show lynda unsure at char_center
+
                     l "I can understand where you're coming from."
 
                     l "More than last time."
@@ -1285,9 +1466,13 @@ label lyndabeanconvince2:
 
                     l "We can talk about it some other time."
 
+                    show lynda neutral at char_center
+
                     l "For now, I gotta figure out how to sort this out and then get back to prepping for tomorrow."
 
                     m "Yeah, of course. Night Lynda!"
+
+                    hide lynda neutral
 
                     $ lynda_convince += 1
 
@@ -1301,6 +1486,8 @@ label lyndabeanconvince2:
 
                 if lynda_convince >= 2:
 
+                    show lynda annoyed at char_center
+
                     l "You know, I got where you were coming from before, but this really isn't going to make a difference."
 
                     l "Respectfully, I love that you have the free time to deal with this, I just don't."
@@ -1313,10 +1500,14 @@ label lyndabeanconvince2:
 
                     l "I'll see you 'round, [player_name]."
 
+                    hide lynda annoyed
+
                     jump beanconvincebad
 
 
                 elif lynda_convince == 1:
+
+                    show lynda annoyed at char_center
 
                     l "While I understand your ambition, between the sink and now Bean escaping, I'm starting to get very over this apartment complex in general."
 
@@ -1328,10 +1519,14 @@ label lyndabeanconvince2:
 
                     l "I'll see you 'round, [player_name]."
 
+                    hide lynda annoyed
+
                     jump beanconvincebad
 
 
                 else:
+
+                    show lynda annoyed at char_center
 
                     l "Oh my GOD [player_name], will you let it be? Can't you see, once again, this is not the time?"
 
@@ -1346,14 +1541,18 @@ label lyndabeanconvince2:
 
                     l "I'll see you 'round, [player_name]."
 
+                    hide lynda annoyed
+
                     jump beanconvincebad
 
 
         "Don't push it":
             m "…Maybe another time."
             jump beanconvinceneut
-            
+
 label beanconvincegood:
+
+    scene pc apartment at bg_fit
 
     "You head back downstairs. You're making progress with Lynda, you can feel it."
 
@@ -1366,6 +1565,8 @@ label beanconvincegood:
 
 label beanconvinceneut:
 
+    scene pc apartment at bg_fit
+
     "You head back downstairs. Maybe you can still convince Lynda. She didn't seem uninterested."
 
     "Time to settle in for the night."
@@ -1374,6 +1575,7 @@ label beanconvinceneut:
 
 
 label beanconvincebad:
+    scene pc apartment at bg_fit
 
     "You head back downstairs."
 
