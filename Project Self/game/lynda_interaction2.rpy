@@ -175,9 +175,11 @@ menu:
         menu:
             "No, I'm good for now.":
                 $ LyndaDrink = False
+                $ drinkchoice = "none"
                 m "No, I think I'm okay for now, but thanks."
                 jump lyndaopenbox
             "Yeah, some water would be great!":
+                $ drinkchoice = "water"
                 m "Just some water for now, thanks."
                 show lynda laugh at char_center
                 "Lynda smiles from behind a heavily painted white cabinet door."
@@ -185,6 +187,7 @@ menu:
                 jump lyndaopenbox
             "I'd love some tea.":
                 $ LyndaDrink = True
+                $ drinkchoice = "tea"
                 m "I'd love some tea. actually."
                 show lynda laugh at char_center 
                 l "Sure thing! Let me get it brewed for you and we'll get into it."
@@ -192,6 +195,7 @@ menu:
             "Some wine, perchance?":
                 $ lynda_rating += 1
                 $ LyndaDrink = True
+                $ drinkchoice = "wine"
                 m "I know great friends bring wine, but maybe you have some already to share?"
                 show lynda wink at char_center
                 "Lynda peers from behind a heavily painted white cabinet door, wine glasses in hand."

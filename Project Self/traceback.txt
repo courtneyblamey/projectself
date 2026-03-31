@@ -1,32 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "game/script.rpy", line 89, in execute_default
-    default checked_laundry = False
-Exception: store.checked_laundry is being given a default a second time.
+  File "game/lynda_event2.rpy", line 1595, in script
+    jump lyndainteraction4check
+ScriptError: could not find label 'lyndainteraction4check'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/script.rpy", line 89, in execute_default
-    default checked_laundry = False
-Exception: store.checked_laundry is being given a default a second time.
+  File "game/lynda_event2.rpy", line 1595, in script
+    jump lyndainteraction4check
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'lyndainteraction4check'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Project Self 1.0
-Mon Mar 30 21:03:08 2026
+Mon Mar 30 23:04:40 2026

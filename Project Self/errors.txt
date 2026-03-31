@@ -2,33 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lynda_event2.rpy", line 5: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "It's a quiet and grey afternoon, you decide to:"
-    ^
-
-File "game/lynda_event2.rpy", line 282: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if checked_bushes and checked_bins and checked_cars:
-    ^
-
-File "game/lynda_event2.rpy", line 456: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if checked_mail and checked_planters and checked_stairwells:
-    ^
-
-File "game/lynda_event2.rpy", line 588: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if checked_laundry:
-    ^
-
-File "game/lynda_event2.rpy", line 644: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    if checked_balcony and checked_bedroom:
-    ^
-
-File "game/lynda_event2.rpy", line 755: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    m "Guess who~?"
-    ^
-
 File "game/lynda_event2.rpy", line 791: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
     "SOMETIME LATER"
     ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Mon Mar 30 21:57:44 2026
+Mon Mar 30 22:03:06 2026
