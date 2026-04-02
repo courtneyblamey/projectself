@@ -169,3 +169,47 @@ WHITEBOARD IMAGE 9
 <img width="1168" height="116" alt="Screenshot 2026-03-06 at 5 14 55 PM" src="https://github.com/user-attachments/assets/6c6f63a5-e154-4b15-a11b-e49455c80fd1" />
 DISCORD IMAGE 1
 
+
+### Demo Build + Design Conversations Feedback
+
+#### 02-04-2026
+
+#### Demo Build
+I put the pedal to the metal over the last two weeks to produce a demo build for FDG 2026. I've had a few scattered scratch pad thoughts, so here's my larger synthesis of them.
+
+One of the things that struck me as I turned the raw script into code was the reminder that I am, in fact, making a *visual* novel. This meant when translating the dialogue into Ren'Py I was more conscientious about overdescribing Lynda's physicality at times. Additionally, I can now see why visual novels need such a variety of emotions on their character assets. Having to use a laughing asset for all "joyful" moments makes me wish I had more assets with nuanced emotions (but since the artist very kindly did this for free in their spare time, I would not ask for more!) 
+
+In debugging, I've been reminded of the importance of variable naming conventions and keeping them consistent across coding (e.g. drinkchoice vs. drink_choice crashed the game) - something I need to revisit and make uniform as I go further anyway. I also kept finding variables without defaults, so I combed my code for all variables and organised them by category and scene title to create a clearer architecture for myself. 
+
+Finally, ahead of the design meeting, I had to remind myself that since I've "lived" with this story and game for so long, it has lost its impact for me entirely. I'm whipping through scenes to test interactions and outputs, skipping certain moments just to jump ahead, but that won't be the case for players and playtesters - it will be their first time interacting with it. Might be a bit obvious to say, but it was something that struck me in the moments when I felt bored by the game content or self-doubting the game.
+
+There's certain finicky polishing I want to do before this goes to the committee:
+- add sound
+- add splash page
+- cleaner transitions between scenes
+- nicer itch.io landing page
+- checking .md style and replacing with Ren'Py style (for italics)
+
+Because, as much as this is a vertical slice and not a complete game, I want it to have a level of polish to show a certain professionalism to the committee, and also to external folks if this *does* end up on a portfolio in the future.
+
+I feel like this section is missing the "so what" to a certain degree... but anyway.
+
+Importantly, this build is lacking an ending. That is because I don't like what I have currently. So, I brought it to discuss with the design conversations group!
+
+#### Design Conversations Feedback
+There were key themes that appeared out of this conversation:
+1. Visual Novel genre
+2. Player expectations
+3. Fourth wall moments
+4. Thoughts for the ending
+
+I'll attach images of my note scribbles here also at the end.
+
+For context: one of my biggest design issues is that I d o n o t l i k e t h e e n d i n g. Since the ending is where the "aha" moment resides right now, where the player is confronted with their (potential) kindness towards Lynda and queried if they offer themselves the same level of kindness, it needs to *work*. This is what I presented as the design problematic to the crew.
+
+**Visual Novel Genre**
+I was asked, in essence, why a visual novel? For me, it was down to ease of coding, pre-existing examples of subverted expectations in other VN games, and access to an engine *made* for exactly that genre with lots of documentation and tutorials. As someone newly returning to coding, it offered a low skill ceiling to re-enter and make something. I listed games like Hatoful Boyfriend and Doki-Doki Lit Club as games that did something funky with the VN format. The follow up was, how am I subverting it? One of the main ways is that many VNs are dating simulators. The dating sim was initially something I was going to engage with more closely through mechanics of a "love meter", "gifting", and so on. But the realisation of trying to "date" you inner child? That was a no no to try and translate. So, instead I pivoted away from dating, and instead into the idea of this tenant union. Something metaphorical for the mending of self-esteem and taking care of the building together with all your struggles working alongside you. Not letting players date the characters feels like a subversion. Equally, this fourth wall break of "oh you've been really nice to this fictional character, but can you return yourself the favour?" is a moment of subversion too. Where the player is not simply a player-character with the goal of a tenant union, but has in fact been tracked this whole time for the decisions they made and *confronted* with them. It's not "did I get the good ending?" but rather "was I kinder to an NPC than I am to myself?" Going to pause here because I want to ruminate on the next couple of points on the bus ride home.
+
+- ending isn't satisfactory to me yet (feels flippant due to abruptness - thanks Cameron!, doesn't weave through enough of the player reflection opportunities, tenant association feels like a by-product or "oh right" goal)
+- Lynda is described as clingy but also still feels like pseudo-dating to others.
+- 
