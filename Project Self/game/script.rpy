@@ -104,11 +104,16 @@ default lynda_confession = False
 default lynda_reflection = "none"
 default imposter = "false"
 default drunk_level = 0
+default hangout_location = "none"
 
 #Lynda Event 1
 default SinkTimer = 0
 
 #Lynda Event 2
+default CookieType = "none"
+default Baking = False
+default TVOn = False
+default GamingOn = False
 default bean_location = None
 default checked_bushes = False
 default checked_bins = False

@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/lynda_event2.rpy", line 1595, in script
-    jump lyndainteraction4check
-ScriptError: could not find label 'lyndainteraction4check'.
+  File "game/lynda_interaction4.rpy", line 1420, in script
+    jump lyndaevent3
+ScriptError: could not find label 'lyndaevent3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/lynda_event2.rpy", line 1595, in script
-    jump lyndainteraction4check
+  File "game/lynda_interaction4.rpy", line 1420, in script
+    jump lyndaevent3
   File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1705, in execute
     rv = renpy.game.script.lookup(target)
   File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'lyndainteraction4check'.
+ScriptError: could not find label 'lyndaevent3'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Project Self 1.0
-Mon Mar 30 23:04:40 2026
+Thu Apr  2 11:05:40 2026

@@ -252,27 +252,32 @@ label beansearch:
             "bedroom"
         ])
 
-"Where should you look?"
-
-menu:
-
-    "Inside the building":
         $ checked_lobby = False
         $ checked_mail = False
         $ checked_planters = False
         $ checked_stairwells = False
         $ checked_laundry = False
-        jump beaninbuilding
 
-    "Outside the building":
         $ checked_bushes = False
         $ checked_bins = False
         $ checked_cars = False
+
+        $ checked_balcony = False
+        $ checked_bedroom = False
+
+m "DEBUG: [bean_location]"
+
+"Where should you look?"
+
+menu:
+
+    "Inside the building":
+        jump beaninbuilding
+
+    "Outside the building":
         jump beanoutbuilding
 
     "Check your apartment":
-        $ checked_balcony = False
-        $ checked_bedroom = False
         jump beaninapartment
 
 label beanoutbuilding:
@@ -585,9 +590,6 @@ else:
 
 label beanlaundry:
 scene bg laundry at bg_fit
-if checked_laundry:
-    "You've already checked the laundry room thoroughly… Bean doesn't seem to be here."
-    jump beaninbuilding
 
 "You wander into the laundry room. The smell of floral laundry detergent and dryer sheets wafts in the air."
 

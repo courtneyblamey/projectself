@@ -121,7 +121,7 @@ l "Come, come, grab a seat."
 
 show lynda neutral at char_center
 
-if drink_choice == "wine":
+if drinkchoice == "wine":
 
     l "I hope its alright, I ordered you a glass too."
 
