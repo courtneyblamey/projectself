@@ -315,7 +315,8 @@ if bean_location == "outside":
 
             m "Bean!"
 
-            show bean at char_center
+            show bean at truecenter:
+                zoom 0.8
 
             "A pair of eyes peer back at you through the branches. Bean is curled up tight and trembling."
 
@@ -485,7 +486,8 @@ if bean_location == "lobby":
 
                 "You check them out one by one when - a wild Bean appears!"
 
-                show bean at char_center
+                show bean at truecenter:
+                    zoom 0.8
 
                 "Curled up and content, Bean is snoozing in one of the plant pots, with some shreds of cardboard from someone's delivery parcel."
 
@@ -608,7 +610,8 @@ if bean_location == "laundry":
 
     "You spot a pile of orange fur snuggled up in someone's laundry basket."
 
-    show bean at char_center
+    show bean at truecenter:
+        zoom 0.8
 
     "Bean is belly up snoring away in some freshly laundered bedsheets. Truly a cat that got the cream… sheets."
 
@@ -673,7 +676,8 @@ label beanbalcony:
 
         b "{size=+10}MROWWW!!!{/size}"
 
-        show bean at char_center
+        show bean at truecenter:
+            zoom 0.8
 
         "A very spooked Bean hides under your coffee table."
 
@@ -717,7 +721,8 @@ label beanbedroom:
 
         "You flick on your bedroom light to see if Bean has somehow made his way into your apartment."
 
-        show bean at char_center
+        show bean at truecenter:
+            zoom 0.8
 
         "Right in the middle is a very content, but now rudely awakened, orange blob of fur."
 
