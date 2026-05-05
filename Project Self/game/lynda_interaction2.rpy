@@ -2,8 +2,11 @@ label lyndainteraction2:
     
     scene bg lobby at bg_fit
     with dissolve
+    "THE NEXT DAY"
 
     "As you are headed back home you spot Lynda wrangling a pair of boxes through the building's front door."
+
+    m "Aha. Target acquired."
 
     "You quicken your approach to meet her at the door and go to hold it open."
 

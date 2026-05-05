@@ -231,6 +231,8 @@ if BuildingPastGood:
 
     "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
 
+    "It was a bit of a rush move, you got a role at Corporation Ltd., and an ex-colleague of yours recommended the building for cheap rent and a lease transfer. But now, you're moved in, ready to roll."
+
     m "Shower first. Fresh sheets, new apartment, clean pyjamas. The perfect rest trifecta."
 
     "You undress and crank the shower on."
@@ -299,6 +301,8 @@ else:
     hide lynda neutral
 
     "You both head off to your apartments for the night."
+    
+    scene bg apartment at bg_fit
 
     "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
 
