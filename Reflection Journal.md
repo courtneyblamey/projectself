@@ -210,6 +210,26 @@ For context: one of my biggest design issues is that I d o n o t l i k e t h e e
 **Visual Novel Genre**
 I was asked, in essence, why a visual novel? For me, it was down to ease of coding, pre-existing examples of subverted expectations in other VN games, and access to an engine *made* for exactly that genre with lots of documentation and tutorials. As someone newly returning to coding, it offered a low skill ceiling to re-enter and make something. I listed games like Hatoful Boyfriend and Doki-Doki Lit Club as games that did something funky with the VN format. The follow up was, how am I subverting it? One of the main ways is that many VNs are dating simulators. The dating sim was initially something I was going to engage with more closely through mechanics of a "love meter", "gifting", and so on. But the realisation of trying to "date" you inner child? That was a no no to try and translate. So, instead I pivoted away from dating, and instead into the idea of this tenant union. Something metaphorical for the mending of self-esteem and taking care of the building together with all your struggles working alongside you. Not letting players date the characters feels like a subversion. Equally, this fourth wall break of "oh you've been really nice to this fictional character, but can you return yourself the favour?" is a moment of subversion too. Where the player is not simply a player-character with the goal of a tenant union, but has in fact been tracked this whole time for the decisions they made and *confronted* with them. It's not "did I get the good ending?" but rather "was I kinder to an NPC than I am to myself?" Going to pause here because I want to ruminate on the next couple of points on the bus ride home.
 
-- ending isn't satisfactory to me yet (feels flippant due to abruptness - thanks Cameron!, doesn't weave through enough of the player reflection opportunities, tenant association feels like a by-product or "oh right" goal)
-- Lynda is described as clingy but also still feels like pseudo-dating to others.
-- 
+**Player Expectations**
+It was a long bus ride. See the "I wanna date them" line above for the initial player expectation I'm dealing with. Lynda is described as clingy but also still feels like pseudo-dating to others. Her asking you to help find her cat was cited as an overstep, which I think I can remedy with some better writing (e.g. "I know I'm asking a lot".) Which, speaking of, the tenant's association is working sort of but not really? There's no wobbling over whether this is the right approach to solve the problem or not, it is just teed up as the motivator to befriend the tenants. I think in a more established intro, I would have folks sign up, to then not turn up to a meeting. Oh wait. *OH WAIT* Maybe it isn't about signing up but actually contributing to the meetings? Most folks are signed up and then no one shows?
+
+BREAKTHROUGH IN REFLECTION????
+
+So then the premise is you have the names, but not participation (and retroactively, you have to be willing to participate to deal with your self-esteem??)
+
+**Fourth Wall Moments**
+Some suggestions were the to tangibly impact the player, the messaging needs to go beyond the "walls" of the game. Whether in the code, with variables named after symptoms of impostor syndrome, or that it literally hacks into your computer with some kind of CBT (cognitive behavioural training) app. That it needs to be jarring to be memorable. **Something that pings in my "light-hearted" research question.** Something that upends "I think I know the experience I'm having", however, another piece of feedback was to offer players a safe space in the "it was all a dream" territory. Additionally, the moment when players are asked "Are you like Lynda", because there are no prior reflection moments, it feels flippant.
+
+**The Ending??**
+Right now, the ending isn't satisfactory to me yet (feels flippant due to abruptness, doesn't weave through enough of the player reflection opportunities, tenant association feels like a by-product or "oh right" goal). Some folks suggested having more moments of projection or doubt about the association so that it feels more worthy a motivator. Having it be that no-one shows up to the first meeting (I feel) is a good launching point for players to get folks on their side. And, in line with other feedback, allow for more politicking and "what can I do for you?" vs. genuine care for Lynda.
+
+Hopefully, this breakthrough will allow the next era of keyboard smashing and sending to playtesters go relatively smoothly!!!
+
+### Reinforcing Player Goals
+
+#### 07-05-2026
+
+#### Player Motivation is Tricky
+
+Currently, I'm editing the dialogue exchanges to account for the new revelation that Lynda's character is signed up but didn't turn up to the meeting. Now, I have the issue that the desire to connect with Lynda is *overshadowed* by the tenant association. There could be the typical binary choices that carry valence for *how* to encourage her, i.e., lean into the building issues rather than her personal struggles. Balancing Lynda-as-tenant and Lynda-as-potential-friendship without the player being made to feel shitty about it being a purely transactional relationship has slowed my progress on how to orient the edits. I've made some good starts, but now I'm pondering in the moment about it... I'll be back.
+
