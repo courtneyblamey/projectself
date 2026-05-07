@@ -225,3 +225,11 @@ Right now, the ending isn't satisfactory to me yet (feels flippant due to abrupt
 
 Hopefully, this breakthrough will allow the next era of keyboard smashing and sending to playtesters go relatively smoothly!!!
 
+### Reinforcing Player Goals
+
+#### 07-05-2026
+
+#### Player Motivation is Tricky
+
+Currently, I'm editing the dialogue exchanges to account for the new revelation that Lynda's character is signed up but didn't turn up to the meeting. Now, I have the issue that the desire to connect with Lynda is *overshadowed* by the tenant association. There could be the typical binary choices that carry valence for *how* to encourage her, i.e., lean into the building issues rather than her personal struggles. Balancing Lynda-as-tenant and Lynda-as-potential-friendship without the player being made to feel shitty about it being a purely transactional relationship has slowed my progress on how to orient the edits. I've made some good starts, but now I'm pondering in the moment about it... I'll be back.
+
