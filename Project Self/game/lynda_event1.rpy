@@ -541,13 +541,43 @@ label lyndaassociation1:
 
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
 
+        m "I know you signed up but..."
+
         show lynda neutral at char_center
+
+        l "Yeah sorry, I got busy that night trying to-"
+        
+        l "I won't bore you with the details. Just trying to right a wrong at work."
 
         l "I really do appreciate the sentiment [player_name]... let me think on it, okay?"
 
+        menu:
+            "Right a wrong?":
+                m "What do you mean right a wrong? Did the tech not work out?"
+
+                l "Oh, no, you're sweet for asking. It was a silly order I got wrong so I stayed up late to fix it and make sure it never happens again."
+
+                show lynda unsure at char_center
+
+                l "Ugh, even thinking about it now."
+
+                "Lynda shakes her head."
+
+                l "It just made me look foolish in front of my team."
+                
+                menu:
+                    "It's okay to make mistakes.":
+                        $ EndMistake = "It's okay to make mistakes."
+                    "I'm sure it wasn't as bad as you think!":
+                        $ EndMistake = "I'm sure it wasn't as bad as you think!"
+                    "Sometimes it can't be helped.":
+                        $ EndMistake = "Sometimes it can't be helped."
+            "Sure, okay.":
+                m "Sure, I'll let you think on it."
+
         show lynda unsure at char_center
 
-        l "I do think it's a good idea."
+        l "I do think the association is a good idea."
 
     elif lynda_rating >= 1:
 
@@ -555,11 +585,41 @@ label lyndaassociation1:
         
         show lynda neutral at char_center
 
-        m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
+        m "I know you signed up but..."
+
+        show lynda neutral at char_center
+
+        l "Yeah sorry, I got busy that night trying to-"
+        
+        l "I won't bore you with the details. Just trying to right a wrong at work."
+
+        l "You make a good point. Just… let me think about it, okay? I just have so much on right now."
+
+        menu:
+            "Right a wrong?":
+                m "What do you mean right a wrong? Did the tech not work out?"
+
+                l "Oh, no, you're sweet for asking. It was a silly order I got wrong so I stayed up late to fix it and make sure it never happens again."
+
+                show lynda unsure at char_center
+
+                l "Ugh, even thinking about it now."
+
+                "Lynda shakes her head."
+
+                l "It just made me look foolish in front of my team."
+                
+                menu:
+                    "It's okay to make mistakes.":
+                        $ EndMistake = "It's okay to make mistakes."
+                    "I'm sure it wasn't as bad as you think!":
+                        $ EndMistake = "I'm sure it wasn't as bad as you think!"
+                    "Sometimes it can't be helped.":
+                        $ EndMistake = "Sometimes it can't be helped."
+            "Sure, okay.":
+                m "Sure, I'll let you think on it."
 
         show lynda unsure at char_center
-
-        l "Yeah, I know. You make a good point. Just… let me think about it, okay? I just have so much on right now."
 
         m "I understand."
 
@@ -567,6 +627,8 @@ label lyndaassociation1:
         show lynda neutral at char_center 
         
         m "You know… I mentioned that tenancy association before. This is the kind of thing that it could help with."
+
+        m "If you came to a meeting-"
 
         show lynda annoyed at char_center
 

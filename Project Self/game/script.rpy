@@ -92,12 +92,14 @@ default CarryBox = False
 default BoxIntense = False
 default LyndaDrink = False
 default drinkchoice = "none"
+default EndCredit = False
 
 #Lynda Interaction 3
 default DiligentLaundry = False
 default ChaosLaundry = False
 default BowlMoney = False
 default CoatMoney = False
+default InviteLynda = "none"
 
 #Lynda Interaction 4
 default lynda_confession = False
@@ -108,6 +110,7 @@ default hangout_location = "none"
 
 #Lynda Event 1
 default SinkTimer = 0
+default EndMistake = "none"
 
 #Lynda Event 2
 default CookieType = "none"

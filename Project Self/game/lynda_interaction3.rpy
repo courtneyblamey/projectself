@@ -51,7 +51,7 @@ label changesearch:
     "You search around the apartment for some change."
 
     m "I know I saw a pile of quarters somewhere around here..."
-    #this code uses a list to remove choices once you've selected them!
+    #reminder this code uses a list to remove choices once you've selected them!
     $ menu1 = []
     menu laundry_money:
         set menu1
@@ -234,7 +234,13 @@ label lyndaokay:
 
 label invitelynda:
 
-    "Maybe I could suggest a hangout to help her feel less trapped at home?"
+    menu:
+        "Maybe I could suggest a hangout to help her feel less trapped at home?":
+            $ InviteLynda = "Genuine"
+            jump invitelynda2
+        "This is a good opporunity to hang with her!":
+            $ InviteLynda = "Association"
+            jump invitelynda2
 
     menu:
         "Offer a coffee hang.":

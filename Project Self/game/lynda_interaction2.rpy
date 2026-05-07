@@ -119,6 +119,7 @@ menu:
             menu:
                 "I'm not, but we can suffer together?":
                     $ TechSkill += 1
+                    m "{i}This might be a good way to endear myself to Lynda and get her to join the meetings...{/i}"
                     m "I'm not amazing with it but we can suffer together in it?"
                     show lynda neutral at char_center
                     "Lynda's eyes light up."
@@ -128,10 +129,12 @@ menu:
                     $ TechSkill =+ 2
                     m "Actually, I do know a decent amount about tech."
                     "Lynda's shoulders seem to relax as she smiles at you."
+                    m"{i}And I can ask you about the tenants association while I'm being oh-so helpful{/i}."
                     show lynda unsure at char_center
                     l "Would you help me out in setting this thing up?"
                     m "Of course! Lead the way!"
                 "I will break whatever you hand me.":
+                    m "{i}Oh god, I can't help here, I'll net negative this relationship before it has even started{/i}."
                     m "Candidly, I will break whatever this is in record time."
                     "Lynda's shoulders slump in defeat."
                     l 'Damn it. Okay.'
@@ -306,6 +309,7 @@ menu:
                 
                 label lyndalearn:
                     $ lynda_rating += 1
+                    $ EndCredit = "True"
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
                     show lynda sad at char_center
                     "Lynda's face drops for a moment."
@@ -361,6 +365,7 @@ menu:
                 
                 label lyndapride:
                     $ lynda_rating += 1
+                    $ EndCredit = "True"
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
                     show lynda sad at char_center
                     "Lynda's face drops for a moment."
@@ -388,5 +393,10 @@ menu:
                 jump lyndalastbox
 
 label lyndalastbox:
+    if CarryBox:
+        m "Hmm, didn't get any insights on how to get her to join the meetings..."
+        m "I think I got a little glimpse into who she is though."
+    else:
+        m "I'm sure Lynda has it handled, what's a bit of tech anyway!"
     "You head off to your apartment for the night."
     jump lyndaevent1
