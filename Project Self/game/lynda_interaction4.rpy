@@ -509,7 +509,7 @@ l "[say_drunk('Let us do this again sometime?')]"
 
 m "[say_drunk('Yeah... yeah that sounds good.')]"
 
-"You both grab your coats and head out."
+"You both grab your coats and wobble out."
 
 jump lyndagoodend4
 
@@ -780,7 +780,7 @@ label camerahackpark:
 
     l "And me fighting with an exploding sink."
 
-    l "Hmm, I could charge for that level of entertainment."
+    l "Hmm, I {i}could{/i} charge for that level of entertainment."
     show lynda neutral at char_center
     jump lyndapark2
 label cutefacespark:
@@ -1087,9 +1087,15 @@ label lyndaconfession:
 
     show lynda unsure at char_center
 
-    l "I know… I just know you've been working hard to get folks to sign up to the association, and I don't want you to waste your time with me if I'm not even going to be here."
+    l "I know… I just know you've been working hard to get folks to attend the next meeting, and I don't want you to waste your time with me if I'm not even going to be here in a couple months."
 
     l "My partner and I are looking at properties and have been for a while. I just didn't have the heart to tell you."
+
+    l "I know the last meeting no one showed up."
+
+    m "My note that said the total opposite was a giveaway?"
+
+    l "We're all gossips in this building."
 
     show lynda sad at char_center
 
@@ -1123,7 +1129,7 @@ label lyndaconfess_press:
 
     l "[player_name] I-"
 
-    m "Were you ever going to sign it?"
+    m "Were you ever going to come to the meetings?"
 
     show lynda annoyed at char_center
 
@@ -1161,7 +1167,7 @@ label lyndaconfess_press:
 
     show lynda sad at char_center
 
-    l "-was a low blow from someone I considered a friend."
+    l "-was a low blow from someone I considered a new friend."
 
     hide lynda sad with dissolve
 
@@ -1221,7 +1227,7 @@ label lyndaconfess_chase:
 
     l "Deep down, I still feel like I've lucked my way into everything."
 
-    l "When a new challenge comes along, honestly, I'm paralysed. And this tenancy committee is so outside of what I know and I feel like I'm barely keeping up at work as it is."
+    l "When a new challenge comes along, honestly, I'm paralysed. And this tenancy thing is so outside of what I know and I feel like I'm barely keeping up at work as it is."
 
     m "Lynda…"
 
@@ -1235,7 +1241,7 @@ label lyndaconfess_chase:
 
     "You rest a hand on her arm."
 
-    m "I didn't mean to add pressure on you. Let's just forget about the association for now, okay?"
+    m "I didn't mean to add pressure on you. Let's just forget about it for now, okay?"
 
     m "Let's just take a walk back home?"
 
@@ -1243,9 +1249,13 @@ label lyndaconfess_chase:
 
     m "I know there's a good ice cream place along the way!"
 
+    l "I will think about coming to the next meeting, even if it is just to show some support before I go."
+
+    m "I appreciate it."
+
     show lynda neutral at char_center
 
-    l "That sounds nice."
+    l "Now, that ice cream sounds nice."
 
     "You link arms."
 
@@ -1253,7 +1263,7 @@ label lyndaconfess_chase:
 
     show lynda laugh at char_center
 
-    l "And ice cream is on me for being an emotional wreck again, hahaha."
+    l "And ice cream is on me for being an emotional wreck {i}again{/i}, hahaha."
 
     m "Sounds like a plan."
 
@@ -1317,6 +1327,8 @@ label lyndaconfess_understand:
 
     m "S'okay."
 
+    l "I will think about coming to the next meeting. Even to just show some support and help rally others."
+
     l "Wanna swing by an ice cream place and get a cone? My treat for being a bad friend."
 
     m "Now who's being persuasive?"
@@ -1339,9 +1351,12 @@ label lyndaconfess_disappoint:
 
     show lynda neutral at char_center
 
-    l "My point is, I know a lot of the time you've spent with me has been to convince me to join the association. But, it is kinda nice that a friendship has come from it."
+    l "My point is, I know a lot of the time you've spent with me has been to convince me to join the next meeting. But, it is kinda nice that a sort of friendship has come from it."
 
-    m "You make it sound like I was only nice to you to get you to join!"
+    if InviteLynda = "Genuine":
+        m "You make it sound like I was only nice to you to get you to join!"
+    else:
+        m "I was worried I was being too transparent..."
 
     show lynda sad at char_center
 
@@ -1360,6 +1375,8 @@ label lyndaconfess_disappoint:
     l "Again, I'm sorry."
 
     m "No, it's fiiiine."
+
+    l "Look, I really will try and come to the next meeting. Even if it is to just help rally the others."
 
     l "Wanna swing by an ice cream place and get a cone? My treat to ease my guilt and your disappointment?"
 
@@ -1382,11 +1399,11 @@ scene bg pc apartment at bg_fit
 
 "You close your apartment door behind you and kick off your shoes. With a solid leap, you plant yourself on the couch."
 
-"It seems getting Lynda to join the association is going well. Hopefully, she'll jump on board officially soon. You want to get this association up and running sooner rather than later."
+m "{i}Well, Lynda might not be around long enough for her to be a consistent presence at the meeting. But just having her come to one might encourage the others. She has a good rapport with them.{/i}"
 
-"It's been lovely getting to know Lynda."
+m "{i}It's been lovely getting to know Lynda.{/i}"
 
-"Even if there's a sadness behind her eyes at times."
+m "{i}Even if there's a sadness behind her eyes at times.{/i}"
 
 menu:
     "I think she just needs to trust her instincts.":
@@ -1456,7 +1473,6 @@ menu:
     "No":
         $ imposter = False
 
-"This is the end of the current game demo build. More on the way!"
 jump lyndaevent3
 
     

@@ -1,9 +1,7 @@
 label lyndaevent3:
-    if EndCredit:
-        m "I told Lynda she shouldn't doubt her knowledge."
-    if EndMistake:
-        "You told Lynda [EndMistake]."
-
-label lyndainvitationending
-    "You invited Lynda out for [InviteLynda] reasons."
-
+if lynda_rating =<2:
+    jump lyndaevent3bad
+elif lynda_rating =>5:
+    jump lyndaevent3neut
+elif lynda_rating =>8:
+    jump lyndaevent3good

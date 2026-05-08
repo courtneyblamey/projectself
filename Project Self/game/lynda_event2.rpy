@@ -53,12 +53,13 @@ label lyndabean1:
         m "Lynda, you okay?"
         l "No, no not really. Bean is missing."
         m "What?!"
+        l "Bean is just {i}gone{/i}."
 
         "Lynda walks into your apartment, pacing frantically."
 
         if Baking:
 
-            l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and- Oh my god it smells amazing in here."
+            l "I was trying to study up on some tech jargon before an all hands in meeting tomorrow and I went to feed him and- Oh my god it smells amazing in here."
 
             m "Want one?"
             "You offer a cookie to Lynda."
@@ -83,7 +84,7 @@ label lyndabean1:
 
         elif TVOn:
 
-            l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and-"
+            l "I was trying to study up on some tech jargon before an all hands in meeting tomorrow and I went to feed him and-"
             l "Oh I'm catching up on that season too."
 
             l "Sorry, distracted - I don't know how Bean escaped… I've checked everywhere in the apartment in case he's just hiding or zonked out somewhere sleeping, but he's nowhere."
@@ -103,7 +104,7 @@ label lyndabean1:
 
         elif GamingOn:
 
-            l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and-"
+            l "I was trying to study up on some tech jargon before an all hands in meeting tomorrow and I went to feed him and-"
 
             "The start menu is blaring music in the background."
 
@@ -140,7 +141,7 @@ label lyndabean1:
 
         elif TVOn:
 
-            l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and-"
+            l "I was doing something for work tomorrow and I went to feed him and-"
             show lynda neutral at char_center
             l "Oh I'm catching up on that season too."
 
@@ -159,7 +160,7 @@ label lyndabean1:
 
         elif GamingOn:
 
-            l "I was trying to study up on some tech before an all hands in meeting tomorrow and I went to feed him and-"
+            l "I was doing something for work tomorrow and I went to feed him and-"
 
             "The start menu is blaring music in the background."
 
@@ -173,7 +174,7 @@ label lyndabean1:
             jump findbeanchoice
 
 label findbeanchoice:
-
+    #i'm really back and forth about whether to put a binary choice here for "cat as emotional blackmail" and "Lynda seems genuinely worried."
     menu:
         "Yeah, a little, but it's okay!":
             jump yeahbutbean
@@ -709,7 +710,7 @@ label beanbalcony:
 
         "You open the balcony door and peer out and around."
 
-        m "No sign of him here… and I *don't* have to eat a shoe. Double win?"
+        m "No sign of him here… and I {i}don't{/i} have to eat a shoe. Double win?"
 
         jump beaninapartment
 
@@ -796,6 +797,7 @@ jump beanhome
 label gameoverbeanend:
 
 scene pc apartment at bg_fit
+with dissolve
 
 "SOMETIME LATER"
 
@@ -1069,15 +1071,28 @@ label beanhome:
 
 label lyndabeanconvince1:
 
-    "A door that won't lock is a pretty convincing argument for Lynda to join the association…"
+    "A door that won't lock is a pretty convincing argument for Lynda to come to the next meeting..."
 
     menu:
-        "Convince Lynda":
-            
+        "Lean into the building issues":
+
             m "That's not good."
+            m "This is why I think the tenants association matters. There are clearly issues around the whole building."
+            jump lyndabeanconvinceinterim
 
-            m "This is why I think we really should start a tenancy association. There are clearly issues around the whole building."
+        "Lean into Bean's safety":
 
+            m "I'd like to think Bean won't get out again but..."
+            m "This is where the tenant's meetings matter. I'm sure you're not the only one experiencing this."
+            jump lyndabeanconvinceinterim 
+
+        
+        "Lean into it not being her fault.":
+
+            m "This isn't your fault - the building managers should really be responding to our reports faster..."
+            jump lyndabeanconvinceinterim
+
+            label lyndabeanconvinceinterim:
             # -------------------------
             # POSITIVE RELATIONSHIP
             # -------------------------
@@ -1103,7 +1118,7 @@ label lyndabeanconvince1:
 
                     l "But seriously, I am still considering it. I am just not sure what I could contribute to it, honestly."
 
-                    m "It's more about numbers than anything. To show enough of us care and will fight."
+                    m "It's more about presence than anything. To show enough of us care and will fight."
 
                     l "I hear you."
 
@@ -1138,7 +1153,7 @@ label lyndabeanconvince1:
 
                     l "I know, I know, I'm just so busy. I don't think I have time right now."
 
-                    m "It doesn't have to be right now. It'll take a little time to be official anyway."
+                    m "Well, our next meeting is next month, so you have some time."
 
                     show lynda unsure at char_center
 
@@ -1284,6 +1299,8 @@ label lyndabeanconvince1:
 
                     l "While I understand your ambition, between the sink and now Bean escaping, I'm starting to get very over this apartment complex in general."
 
+                    m "This is where a meeting is good, though."
+
                     "Lynda sighs deeply."
 
                     l "I gotta get on with some things."
@@ -1305,7 +1322,7 @@ label lyndabeanconvince1:
 
                     l "I am up to my eyeballs in work things, trying to learn everything I can in prep for every meeting."
 
-                    l "Joining a tenancy association is the LOWEST thing on my priority list."
+                    l "Joining a meeting for a building that is falling apart is the LOWEST thing on my priority list."
 
                     l "So, no, thank you."
 
@@ -1328,11 +1345,25 @@ label lyndabeanconvince2:
     "A loose mesh and now window… hole? is a pretty convincing argument for Lynda to join the association…"
 
     menu:
-        "Convince Lynda":
+        "Lean into the building issues":
 
             m "That's not good."
-            m "This is why I think we really should start a tenancy association. There are clearly issues around the whole building."
+            m "This is why I think the tenants association matters. There are clearly issues around the whole building."
+            jump lyndabeanconvinceinterim
 
+        "Lean into Bean's safety":
+
+            m "I'd like to think Bean won't get out again but..."
+            m "This is where the tenant's meetings matter. I'm sure you're not the only one experiencing this."
+            jump lyndabeanconvinceinterim 
+
+        
+        "Lean into it not being her fault.":
+
+            m "This isn't your fault - the building managers should really be responding to our reports faster..."
+            jump lyndabeanconvinceinterim
+
+            label lyndabeanconvinceinterim:
             # -------------------------
             # POSITIVE RELATIONSHIP
             # -------------------------
@@ -1348,7 +1379,7 @@ label lyndabeanconvince2:
 
                     l "But seriously, I am still considering it. I am just not sure what I could contribute to it, honestly."
 
-                    m "It's more about numbers than anything. To show enough of us care and will fight."
+                    m "It's more about presence than anything. To show enough of us care and will fight."
 
                     l "I hear you."
 
@@ -1383,7 +1414,7 @@ label lyndabeanconvince2:
 
                     l "I know, I know, I'm just so busy. I don't think I have time right now."
 
-                    m "It doesn't have to be right now. It'll take a little time to be official anyway."
+                    m "It doesn't have to be right now. Our next meeting is next month, so you have some time."
 
                     show lynda unsure at char_center
 
@@ -1520,6 +1551,8 @@ label lyndabeanconvince2:
 
                     l "While I understand your ambition, between the sink and now Bean escaping, I'm starting to get very over this apartment complex in general."
 
+                    m "But the meetings can help solve this!"
+
                     "Lynda sighs deeply."
 
                     l "I gotta get on with some things."
@@ -1541,7 +1574,7 @@ label lyndabeanconvince2:
 
                     l "I am up to my eyeballs in work things, trying to learn everything I can in prep for every meeting."
 
-                    l "Joining a tenancy association is the LOWEST thing on my priority list."
+                    l "Joining these meetings is the LOWEST thing on my priority list."
 
                     l "So, no, thank you."
 
@@ -1553,7 +1586,6 @@ label lyndabeanconvince2:
                     hide lynda annoyed
 
                     jump beanconvincebad
-
 
         "Don't push it":
             m "…Maybe another time."
@@ -1576,7 +1608,7 @@ label beanconvinceneut:
 
     scene bg pc apartment at bg_fit
 
-    "You head back downstairs. Maybe you can still convince Lynda. She didn't seem uninterested."
+    "You head back downstairs. Maybe you can still convince Lynda. She didn't seem {i}completely{/i} uninterested."
 
     "Time to settle in for the night."
 
@@ -1588,9 +1620,11 @@ label beanconvincebad:
 
     "You head back downstairs."
 
-    m "...well, that was rough. Lynda seemed particularly annoyed at me."
+    m "...well, that was rough. Lynda seemed pretty annoyed at me."
 
     m "I hope she still wants to go out like we planned."
+
+    m "I'll make up for this evening there..."
 
     "Time to settle in for the night."
 
