@@ -174,8 +174,12 @@ label start:
 
     "Nice to meet you, [player_name]."
 
-    "This demo is a vertical slice of a larger visual novel. You'll be interacting solely with Lynda throughout this slice, but some of the writing includes allusions to interactions with the other tenants."
+    "This demo is a vertical slice of a larger visual novel. You'll be interacting solely with Lynda throughout this slice, and experience the events and interactions connected to her story arc, however some of the writing includes allusions to interactions with the other tenants. Typically, these would be interspersed between moments with Lynda."
+    "As a result, time stamps have been added to make the flow of time more obvious!"
 
+    "This demo will likely take less than an hour to play through. You can always save to keep your progress or try different routes."
+
+    "Thank you for taking the time to play!"
 
     jump lyndainteraction1
 

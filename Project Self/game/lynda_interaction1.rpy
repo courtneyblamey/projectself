@@ -3,6 +3,10 @@ label lyndainteraction1:
     with dissolve
     play music "audio/58. DJ Possum.mp3" fadein 1.5
     
+    "It has been a busy week."
+    "You've just moved into a new apartment, started a new role at Corporation Ltd., dyed your hair a new colour, and to top it all off - you wrapped your last therapy session for a while last week."
+    "You were not sad to say goodbye to your last place. Even with a realtively proactive tenant's association, the building company was very disinterested in resolving issues."
+    "Hopefully, some stability is on its way soon. You've always tried to make things work, whenever necessary."
     "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs."
     "There's a notice board in the entrance littered with 'for sale' furniture posters, business cards, and a couple hand-scrawled notes."
 
@@ -233,7 +237,7 @@ if BuildingPastGood:
 
     "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
 
-    "It was a bit of a rush move, you got a role at Corporation Ltd., and an ex-colleague of yours recommended the building for cheap rent and a lease transfer. But now, you're moved in, ready to roll."
+    "It was a bit of a rush move, you moved for your new job, and an ex-colleague of yours recommended the building for cheap rent and a lease transfer. But now, you're moved in, ready to roll."
 
     m "Shower first. Fresh sheets, new apartment, clean pyjamas. The perfect rest trifecta."
 
