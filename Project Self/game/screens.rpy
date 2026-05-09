@@ -95,26 +95,6 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen say(who, what):
-    style_prefix "say"
-
-    window:
-        id "window"
-
-        if who is not None:
-
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
-
-        text what id "what"
-
-
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
 
 
 ## Make the namebox available for styling through the Character object.
@@ -230,6 +210,23 @@ style choice_button is default:
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
 
+screen say(who, what):
+    style_prefix "say"
+
+    window:
+        id "window"
+
+        if who is not None:
+
+            window:
+                id "namebox"
+                style "namebox"
+                text who id "who"
+
+        text what id "what"
+
+    if not renpy.variant("small"):
+        add SideImage() xalign 0.0 yalign 1.0
 
 ## Quick Menu screen ###########################################################
 ##
@@ -237,6 +234,7 @@ style choice_button_text is default:
 ## menus.
 
 screen quick_menu():
+    variant None
 
     ## Ensure this appears on top of other screens.
     zorder 100
@@ -248,6 +246,7 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
+            yoffset -30
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
@@ -1524,6 +1523,7 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
+            yoffset -30
 
             textbutton _("Back") action Rollback()
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)

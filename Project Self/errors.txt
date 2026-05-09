@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lynda_event3.rpy", line 447: expected ':' not found.
-    label polite no:
-                 ^
+File "game/screens.rpy", line 103: end of line expected.
+    if not renpy.variant("small"):
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Fri May  8 20:59:02 2026
+Sat May  9 16:01:59 2026

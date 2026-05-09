@@ -89,7 +89,7 @@ label notice_after:
 
     show lynda neutral at char_center
 
-    "She looks to be in her late 40s, with some hints of grey in her hair wrapped up into a messy bun, though it looks so done with intention that it looks tidy."
+    "She looks to be in her late 40s, with some hints of grey in her tousled hair, though it looks so done with intention that it looks tidy."
 
     "A set of well-manicured nails peek overtop the laundry basket handle and a gentle smell of laundry detergent hangs in the air."
 
