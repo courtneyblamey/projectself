@@ -238,7 +238,7 @@ label invitelynda:
         "Maybe I could suggest a hangout to help her feel less trapped at home?":
             $ InviteLynda = "Genuine"
             jump invitelynda2
-        "This is a good opporunity to hang with her!":
+        "This is a good opportunity to hang with her!":
             $ InviteLynda = "Association"
             jump invitelynda2
 
@@ -247,6 +247,7 @@ label invitelynda2:
     menu:
         "Offer a coffee hang.":
             $ lynda_rating =+1
+            $ hangout_location = "cafe"
             m "Do you wanna grab coffee sometime?"
 
             show lynda laugh at char_center
@@ -260,8 +261,9 @@ label invitelynda2:
 
             jump endlyndainteraction3
 
-        "Offer a picnic in the park":
+        "Offer a picnic in the park.":
             $ lynda_rating =-1
+            $ hangout_location = "park"
             m "Are you a fan of picnics?"
             show lynda neutral at char_center
             l "Uhhh…"
@@ -277,6 +279,7 @@ label invitelynda2:
 
         "Offer drinks at a local bar.":
             $ lynda_rating += 2
+            $ hangout_location = "bar"
             m "Do you want to grab a casual drink sometime?"
             show lynda laugh at char_center
             "Lynda's eyes light up."
@@ -319,7 +322,8 @@ label endlyndainteraction3:
         "You throw the load into the dryer and return upstairs while it finishes the dry cycle. You grab it once it is done and watch some TV while folding it before heading off to bed."
         jump lyndaevent2
     elif lynda_rating < 5 and DiligentLaundry:
-        "You move over the current load and prep the next one, which you do one more time for the delicates, before bringing the last load upstairs. You lay out your delicates to dry, realising you should have done them first, and fold the remaining laundry while watching TV. Eventually, you sort it all away and flomp into bed for the night."
+        "You move over the current load and prep the next one, which you do one more time for the delicates, before bringing the last load upstairs." 
+        "You lay out your delicates to dry, realising you should have done them first, and fold the remaining laundry while watching TV. Eventually, you sort it all away and flomp into bed for the night."
         jump lyndaevent2
     else:
         jump lyndaevent2

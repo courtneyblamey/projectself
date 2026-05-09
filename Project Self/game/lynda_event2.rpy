@@ -70,7 +70,7 @@ label lyndabean1:
 
             l "I domphn't know howmph Bean eshcaped."
             l "Sorry *ahem*, I don't know how Bean escaped… I've checked everywhere in the apartment in case he's just hiding or zonked out somewhere sleeping, but he's nowhere."
-
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
             l "Can you help me look?"
             m "Of course!"
             show lynda neutral at char_center
@@ -88,7 +88,7 @@ label lyndabean1:
             l "Oh I'm catching up on that season too."
 
             l "Sorry, distracted - I don't know how Bean escaped… I've checked everywhere in the apartment in case he's just hiding or zonked out somewhere sleeping, but he's nowhere."
-
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
             l "Can you help me look?"
             m "Of course!"
             show lynda neutral at char_center
@@ -114,20 +114,20 @@ label lyndabean1:
             m "Sorry, new game in a series I love, you were saying?"
             show lynda sad at char_center
             l "No I'm sorry! I feel like I'm intruding on your afternoon."
-
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
             jump findbeanchoice
 
     else:
 
         if Baking:
-
+            show lynda sad at char_center
             l "I was doing something for work tomorrow and I went to feed him and- wow something smells good."
 
             m "Want one?"
             "You offer a cookie to Lynda."
             show lynda neutral at char_center
             l "Umm… no it's okay, but thanks."
-
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
             l "I don't know how Bean escaped… I've checked everywhere in the apartment in case he's just hiding or zonked out somewhere sleeping, but he's nowhere."
 
             l "I'm sorry to ask but could you help me look?"
@@ -140,12 +140,13 @@ label lyndabean1:
             jump findbeanchoice
 
         elif TVOn:
-
+            show lynda sad at char_center
             l "I was doing something for work tomorrow and I went to feed him and-"
             show lynda neutral at char_center
             l "Oh I'm catching up on that season too."
 
             l "Sorry, distracted - I don't know how Bean escaped…"
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
             show lynda sad at char_center
             l "Can you help me look?"
             m "Of course!"
@@ -159,7 +160,7 @@ label lyndabean1:
             jump findbeanchoice
 
         elif GamingOn:
-
+            show lynda sad at char_center
             l "I was doing something for work tomorrow and I went to feed him and-"
 
             "The start menu is blaring music in the background."
@@ -170,10 +171,12 @@ label lyndabean1:
             m "Sorry, new game in a series I love, you were saying?"
 
             l "No I'm sorry! I feel like I'm intruding on your afternoon."
+            l "I went to feed him and he didn't come sprinting at the sound of the can opening."
 
             jump findbeanchoice
 
 label findbeanchoice:
+    show lynda sad at char_center
     #i'm really back and forth about whether to put a binary choice here for "cat as emotional blackmail" and "Lynda seems genuinely worried."
     l "I feel awful, I was just so buried in my work... I don't even know how long he's been gone for."
     m "{i} Lynda works so much. She looks exhausted and worried.{/i}"

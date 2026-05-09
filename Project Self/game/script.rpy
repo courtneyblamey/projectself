@@ -161,13 +161,21 @@ default player_name = "Maria"
 label start:
     "Before we begin..."
 
-    $ player_name = renpy.input("What's your name?")
+    $ player_name = renpy.input("What's your name? (max 12 characters.)", length=20)
     $ player_name = player_name.strip()
 
-    if player_name == "":
-        $ player_name = "Maria"
+    if len(player_name) == 0:
+        "Please enter a name."
+        jump start
+
+    if len(player_name) > 12:
+        "Please enter a shorter name (max 12 characters)."
+        jump start
 
     "Nice to meet you, [player_name]."
+
+    "This demo is a vertical slice of a larger visual novel. You'll be interacting solely with Lynda throughout this slice, but some of the writing includes allusions to interactions with the other tenants."
+
 
     jump lyndainteraction1
 

@@ -66,7 +66,7 @@ label scroll_sequence:
         "Scroll":
             pass
 
-    "You hearing thumping upstairs from Lynda's apartment."
+    "You hear thumping upstairs from Lynda's apartment."
 
     m "Oh, she must be home."
 

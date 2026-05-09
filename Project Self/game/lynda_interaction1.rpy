@@ -63,7 +63,8 @@ label notice_pipes:
 
 label notice_noise:
 
-    "{i}Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building. This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.{/i}"
+    "{i}Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building."
+    "This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.{/i}"
 
     "A slight concern rises in your stomach."
 
@@ -339,7 +340,7 @@ else:
 
     "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
-    jump lyndainteraction2
+    jump lynda_interim
 
 
 

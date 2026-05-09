@@ -25,18 +25,18 @@ label lyndainteraction2:
 menu:
 
     "Give the door a shove.":
-        jump doorshove
+        jump doorkick
 
-        label doorshove:
+        label doorkick:
 
             $ lynda_rating += 1
             "With some gumption, you give the door a swift boot. It pops back with force and slams against the doorway causing an echo down the corridor. BUT it is open. You see a shoe print on the (luckily) glazed glass."
             jump postdoor
 
     "Kick the door.":
-        jump doorkick
+        jump doorshove
 
-        label doorkick:
+        label doorshove:
 
             "You give the door a hefty shove and it scrapes against the ground in protest before finally giving - swinging back on its hinges."
 
@@ -63,7 +63,7 @@ menu:
 
         label postdoor:
             show lynda annoyed at char_center
-            l "That door keeps getting stuck... I hope it doesn't properly jam one of thse days."
+            l "That door keeps getting stuck... I hope it doesn't properly jam one of these days."
             "She shrugs and moves further into the lobby."
             show lynda neutral at char_center
             m "What have you got there?"
@@ -186,7 +186,7 @@ menu:
                 jump lyndaopenbox
             "Yeah, some water would be great!":
                 $ drinkchoice = "water"
-                m "Just some water for now, thanks."
+                m "Just some water for now, thanks!"
                 show lynda laugh at char_center
                 "Lynda smiles from behind a heavily painted white cabinet door."
                 l "On it!"
