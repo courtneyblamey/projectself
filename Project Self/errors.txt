@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/lynda_event2.rpy", line 268: expected statement.
-    m: "DEBUG: [bean_location]"
-     ^
+File "game/lynda_ending.rpy", line 71: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a ' at the end of the first line.)
+    Validated how she felt. Sometimes just hearing someone echo back to you that you're facing a tough situation helps.
+
+File "game/lynda_event3.rpy", line 214: choice menuitem expects a non-empty block.
+    "Wine":
+           ^
+
+File "game/lynda_event3.rpy", line 443: expected ':' not found.
+    label polite no:
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Apr  2 10:57:51 2026
+Fri May  8 20:03:21 2026

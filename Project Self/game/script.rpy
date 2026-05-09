@@ -25,6 +25,8 @@ image anna concern = "Anna_Concerned.png"
 image anna happy = "Anna_Happy.png"
 image anna neutral = "Anna_Neutral.png"
 
+image black_overlay = Solid("#000")
+
 init:
     transform bg_fit:
         fit "contain"

@@ -796,7 +796,7 @@ jump beanhome
 
 label gameoverbeanend:
 
-scene pc apartment at bg_fit
+scene bg pc apartment at bg_fit
 with dissolve
 
 "SOMETIME LATER"
@@ -825,7 +825,7 @@ m "I wonder if Lynda's found Bean…"
 
 "You knock on her door, and there's a brief pause before she opens it."
 
-scene lynda apartment at bg_fit
+scene bg lynda apartment at bg_fit
 
 show lynda neutral at char_center
 
@@ -1078,21 +1078,21 @@ label lyndabeanconvince1:
 
             m "That's not good."
             m "This is why I think the tenants association matters. There are clearly issues around the whole building."
-            jump lyndabeanconvinceinterim
+            jump lyndadoorinterim
 
         "Lean into Bean's safety":
 
             m "I'd like to think Bean won't get out again but..."
             m "This is where the tenant's meetings matter. I'm sure you're not the only one experiencing this."
-            jump lyndabeanconvinceinterim 
+            jump lyndadoorinterim 
 
         
         "Lean into it not being her fault.":
 
             m "This isn't your fault - the building managers should really be responding to our reports faster..."
-            jump lyndabeanconvinceinterim
+            jump lyndadoorinterim
 
-            label lyndabeanconvinceinterim:
+            label lyndadoorinterim:
             # -------------------------
             # POSITIVE RELATIONSHIP
             # -------------------------
@@ -1349,21 +1349,21 @@ label lyndabeanconvince2:
 
             m "That's not good."
             m "This is why I think the tenants association matters. There are clearly issues around the whole building."
-            jump lyndabeanconvinceinterim
+            jump lyndawindowinterim
 
         "Lean into Bean's safety":
 
             m "I'd like to think Bean won't get out again but..."
             m "This is where the tenant's meetings matter. I'm sure you're not the only one experiencing this."
-            jump lyndabeanconvinceinterim 
+            jump lyndawindowinterim 
 
         
         "Lean into it not being her fault.":
 
             m "This isn't your fault - the building managers should really be responding to our reports faster..."
-            jump lyndabeanconvinceinterim
+            jump lyndawindowinterim
 
-            label lyndabeanconvinceinterim:
+            label lyndawindowinterim:
             # -------------------------
             # POSITIVE RELATIONSHIP
             # -------------------------

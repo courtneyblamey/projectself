@@ -242,6 +242,8 @@ label invitelynda:
             $ InviteLynda = "Association"
             jump invitelynda2
 
+label invitelynda2:
+    
     menu:
         "Offer a coffee hang.":
             $ lynda_rating =+1

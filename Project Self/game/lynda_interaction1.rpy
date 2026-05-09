@@ -302,7 +302,7 @@ else:
 
     "You both head off to your apartments for the night."
     
-    scene bg apartment at bg_fit
+    scene bg pc apartment at bg_fit
 
     "You close your new apartment door behind you and take in your new space again. Some of your boxes still need unpacking but the bed is made and you're feeling ready to sleep."
 
