@@ -49,6 +49,10 @@ init:
         xalign 0.75
         yalign 0.5
 
+init:
+    transform fade_out_black:
+        linear 1.0 alpha 0.0
+
 #DRUNKIFY TEXT
 init python:
     import random
@@ -102,11 +106,14 @@ default ChaosLaundry = False
 default BowlMoney = False
 default CoatMoney = False
 default InviteLynda = "none"
+default lynda_blab = False
+default lynda_blame = False
+default lynda_validate = False
 
 #Lynda Interaction 4
 default lynda_confession = False
 default lynda_reflection = "none"
-default imposter = "false"
+default imposter = False
 default drunk_level = 0
 default hangout_location = "none"
 
@@ -130,7 +137,8 @@ default checked_planters = False
 default checked_stairwells = False
 default checked_balcony = False
 default checked_bedroom = False
-default bean_escape = None
+default bean_escape = "none"
+default lynda_overwork = False
 
 
 

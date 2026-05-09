@@ -1,22 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/lynda_event3.rpy", line 131, in script
-    jump gameendingbad
-ScriptError: could not find label 'gameendingbad'.
+  File "game/lynda_ending.rpy", line 135, in script
+    if lynda_blame:
+  File "game/lynda_ending.rpy", line 137, in <module>
+    elif lynda_overwork:
+NameError: name 'lynda_overwork' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/lynda_event3.rpy", line 131, in script
-    jump gameendingbad
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1705, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'gameendingbad'.
+  File "game/lynda_ending.rpy", line 135, in script
+    if lynda_blame:
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1849, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/lynda_ending.rpy", line 137, in <module>
+    elif lynda_overwork:
+NameError: name 'lynda_overwork' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Project Self 1.0
-Fri May  8 15:41:44 2026
+Fri May  8 21:24:50 2026

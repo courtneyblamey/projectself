@@ -155,7 +155,7 @@ label lyndaokay:
             "You can blab more, it's okay.":
                 $ lynda_rating += 2
 
-                $ lynda_blab = "True"
+                $ lynda_blab = True
 
                 m "You can blab more, I don't mind."
 
@@ -222,7 +222,7 @@ label lyndaokay:
             "I get it, it's tough.":
                 $ lynda_rating =+ 1
 
-                $ lynda_validate = "True"
+                $ lynda_validate = True
 
                 m "I get it. It's tough."
                 show lynda sad at char_center
@@ -243,7 +243,7 @@ label invitelynda:
             jump invitelynda2
 
 label invitelynda2:
-    
+
     menu:
         "Offer a coffee hang.":
             $ lynda_rating =+1

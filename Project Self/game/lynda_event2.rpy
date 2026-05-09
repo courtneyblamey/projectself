@@ -175,6 +175,34 @@ label lyndabean1:
 
 label findbeanchoice:
     #i'm really back and forth about whether to put a binary choice here for "cat as emotional blackmail" and "Lynda seems genuinely worried."
+    l "I feel awful, I was just so buried in my work... I don't even know how long he's been gone for."
+    m "{i} Lynda works so much. She looks exhausted and worried.{/i}"
+    menu:
+        "Have you rested recently?":
+            $ lynda_overwork = True
+            m "Hey, uh, have you taken a break recently? You've been working a lot."
+            show lynda sad at char_center
+            l "I was about to stop for the day and {i}now{/i} I'm not feeling very restful."
+            m "No, of course."
+            l "Sorry, I am intruding on your own restful afternoon - I should learn from your example!"
+            jump findbeanchoice2
+        "I think you're working too much...":
+            $ lynda_overwork = True
+            m "I say this as nicely as possible."
+            m "You work too much."
+            show lynda annoyed at char_center
+            l "Ugh, I know."
+            show lynda sad at char_center
+            l "Right now, I gotta find my fur boy."
+            show lynda annoyed at char_center
+            l "My idiot fur boy."
+            jump findbeanchoice2
+        "Maybe I'll keep that thought to myself.":
+            show lynda neutral at char_center
+            m "{i}Ooh, this is called a filter!{/i}"
+            jump findbeanchoice2
+label findbeanchoice2:
+    m "{i}Is she intruding on my plans...?{/i}"
     menu:
         "Yeah, a little, but it's okay!":
             jump yeahbutbean
@@ -1090,6 +1118,7 @@ label lyndabeanconvince1:
         "Lean into it not being her fault.":
 
             m "This isn't your fault - the building managers should really be responding to our reports faster..."
+            $ lynda_blame = True
             jump lyndadoorinterim
 
             label lyndadoorinterim:
@@ -1359,7 +1388,7 @@ label lyndabeanconvince2:
 
         
         "Lean into it not being her fault.":
-
+            $ lynda_blame = True
             m "This isn't your fault - the building managers should really be responding to our reports faster..."
             jump lyndawindowinterim
 

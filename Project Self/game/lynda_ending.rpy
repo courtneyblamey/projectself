@@ -1,8 +1,7 @@
 
 
 label gameendingbad:
-    hide black_overlay:
-        linear 1.0 alpha 0.0
+    hide black_overlay 
     scene bg pc apartment at bg_fit
     with dissolve
     "A FEW WEEKS LATER."
@@ -75,9 +74,7 @@ label gameendinggood:
 
 label lyndareflectiontime:
     "Our choices matter. We're often told this in games especially. So let's tale a moment to reflect."
-    show black_overlay onlayer overlay:
-        alpha 0.0
-        linear 1.0 alpha 1.0
+    show black_overlay onlayer master at fade_in_black
     "Do I ever doubt my skills?"
     menu:
         "Yes":
@@ -144,12 +141,12 @@ label yesharder:
 
 label noharder:
 "When Bean escaped, Lynda felt wholly responsible for his escapade." 
-    if lynda_blame:
-        "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
-    elif lynda_overwork:
-        "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
-    else:
-        jump lyndareflectionend
+if lynda_blame:
+    "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
+elif lynda_overwork:
+    "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
+else:
+    jump lyndareflectionend
 
 label lyndareflectionend:
     if imposter:

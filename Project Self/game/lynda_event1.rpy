@@ -611,10 +611,13 @@ label lyndaassociation1:
                 
                 menu:
                     "It's okay to make mistakes.":
+                        "It's okay to make mistakes."
                         $ EndMistake = "It's okay to make mistakes."
                     "I'm sure it wasn't as bad as you think!":
+                        "I'm sure it wasn't as bad as you think!"
                         $ EndMistake = "I'm sure it wasn't as bad as you think!"
                     "Sometimes it can't be helped.":
+                        "Sometimes it can't be helped."
                         $ EndMistake = "Sometimes it can't be helped."
             "Sure, okay.":
                 m "Sure, I'll let you think on it."

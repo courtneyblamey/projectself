@@ -309,7 +309,7 @@ menu:
                 
                 label lyndalearn:
                     $ lynda_rating += 1
-                    $ EndCredit = "True"
+                    $ EndCredit = True
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
                     show lynda sad at char_center
                     "Lynda's face drops for a moment."
@@ -365,7 +365,7 @@ menu:
                 
                 label lyndapride:
                     $ lynda_rating += 1
-                    $ EndCredit = "True"
+                    $ EndCredit = True
                     m "You know, I think you actually know more than you're giving yourself credit, Lynda."
                     show lynda sad at char_center
                     "Lynda's face drops for a moment."
