@@ -132,9 +132,8 @@ label lyndabadendmenu:
             "The door shuts firmly in your face."
             hide lynda annoyed
             hide anna concern
-            show black_overlay onlayer overlay:
-                alpha 0.0
-                linear 1.0 alpha 1.0
+            scene bg black at bg_fit
+            with dissolve
             menu:
                 "Fuck this":
                     m "I'm over this. I can't convince anyone to sign up, its like no one cares or maybe {i}maybe{/i} they just aren't willing to spend the energy to care."
@@ -206,8 +205,9 @@ label lyndaevent3neut:
     show lynda neutral at char_right
     "You head into her apartment, following her and Anna."
     if LyndaDrink:
-        l "I remember from our tech escapades, [drink_choice] right?"
+        l "I remember from our tech escapades, [drinkchoice] right?"
         m "Yeah! Thanks."
+        jump lyndaevent3drink
     else:
         l "What can I get you? I got wine, tea, water…"
     menu:
@@ -219,56 +219,83 @@ label lyndaevent3neut:
             jump lyndaevent3drink
     label lyndaevent3drink:
         "Lynda preps your drink and sets it on the table in front of you."
-        show anna concern at char_left
-        a "So, what's this mysterious piece of mail?"
-        l "Ohh, it's nothing, we can talk about it later."
-        a "What did you get another parking ticket?"
-        show lynda laugh at char_right
-        l "That was one time!"
-        show anna happy at char_left
-        a "In my car!"
-        "They both laugh and Lynda playfully taps Anna on the head with the envelope."
-        a "Oh! Is it the condo listings?"
-        show lynda annoyed at char_right
-        l "ANNA."
-        show anna annoyed at char_left
-        a "What?!"
-        "Lynda glances over at you sheepishly."
-        m "Condo listings?"
-        show anna concern at char_left
-        a "Why do I feel like I've mistepped here?"
-        l "Because you {i}have{/i} my love."
-        show lynda neutral at char_right
-        l "[player_name] has been trying to set up a tenants association to deal with the building issues."
-        show anna happy at char_left
-        a "Oh, that's so good of you!"
-        l "I was one of those who signed up."
-        show anna concern at char_left
-        a "...Ah."
-        show lynda sad at char_right
-        l "And then didn't go to the first meeting."
-        show anna annoyed at char_left
-        a "Ahhh...."
-        show lynda neutral at char_right
-        show anna neutral at char_left
-        m "You weren't the only one to be fair..."
-        m "Wait, so you're leaving?"
-        show lynda sad at char_right
-        l "I'm sorry, [player_name], you've been so into getting it set up and I know I'm the first one you spoke to about it and I encouraged you and the whole time I've-"
-        l "I am sorry."
-        show anna concern at char_left
-        a "Nothing is finalised, mind, we're just looking through some options."
-        l "I do think it is a noble cause."
-        show lynda neutral at char_right
-        show anna neutral at char_left
-        m "{i}Maybe I can make one final attempt to convince her even to help me until she leaves?{/i}"
-        menu:
-            "Appeal to her skills as a manager":
-                jump lyndamanager
-            "Appeal to her being inconvenienced in the building":
-                jump lyndainconvenient
-            "Appeal to your friendship":
-                jump lyndafriendship
+        if lynda_confession:
+            show anna happy at char_left
+            a "Ooh, the condo brochure?"
+            "Anna looks to you."
+            show anna neutral at char_left
+            a "We still love print media in this house."
+            show lynda wink at char_right
+            l "That's the one."
+            show lynda netural at char_right
+            l "I told [player_name] about the move."
+            show anna concern at char_left
+            a "Sorry about the tenant association hit from Lynda leaving."
+            m "No, I understand."
+            show anna neutral at char_left
+            l "Well, I wanted to tell you after going through the brochure with Anna, but, it doesn't feel right to leave you in a lurch. Especially since I am kindaaa the one who warned you about the building in the first place."
+            l "So, while I am still planning to move, I will sign on for now, and help you corral some of the others onto the team."
+            show lynda laugh at char_right
+            m "You will?!"
+            l "Yeah! Anna and I are both in agreement that I can probably encourage folks since I've been here a while, where you're new to the building, and so on."
+            show anna happy at char_left
+            a "Plus, we don't necessarily know how long it'll take to find a place and set it up."
+            show lynda neutral at char_right
+            show anna neutral at char_left
+            l "Exactly. So, we've got some time!"
+            m "This means a lot to me, thank you, Lynda."
+            jump lyndasaysyes
+        else:
+            show anna concern at char_left
+            a "So, what's this mysterious piece of mail?"
+            l "Ohh, it's nothing, we can talk about it later."
+            a "What did you get another parking ticket?"
+            show lynda laugh at char_right
+            l "That was one time!"
+            show anna happy at char_left
+            a "In my car!"
+            "They both laugh and Lynda playfully taps Anna on the head with the envelope."
+            a "Oh! Is it the condo listings?"
+            show lynda annoyed at char_right
+            l "ANNA."
+            show anna annoyed at char_left
+            a "What?!"
+            "Lynda glances over at you sheepishly."
+            m "Condo listings?"
+            show anna concern at char_left
+            a "Why do I feel like I've mistepped here?"
+            l "Because you {i}have{/i} my love."
+            show lynda neutral at char_right
+            l "[player_name] has been trying to set up a tenants association to deal with the building issues."
+            show anna happy at char_left
+            a "Oh, that's so good of you!"
+            l "I was one of those who signed up."
+            show anna concern at char_left
+            a "...Ah."
+            show lynda sad at char_right
+            l "And then didn't go to the first meeting."
+            show anna annoyed at char_left
+            a "Ahhh...."
+            show lynda neutral at char_right
+            show anna neutral at char_left
+            m "You weren't the only one to be fair..."
+            m "Wait, so you're leaving?"
+            show lynda sad at char_right
+            l "I'm sorry, [player_name], you've been so into getting it set up and I know I'm the first one you spoke to about it and I encouraged you and the whole time I've-"
+            l "I am sorry."
+            show anna concern at char_left
+            a "Nothing is finalised, mind, we're just looking through some options."
+            l "I do think it is a noble cause."
+            show lynda neutral at char_right
+            show anna neutral at char_left
+            m "{i}Maybe I can make one final attempt to convince her even to help me until she leaves?{/i}"
+            menu:
+                "Appeal to her skills as a manager":
+                    jump lyndamanager
+                "Appeal to her being inconvenienced in the building":
+                    jump lyndainconvenient
+                "Appeal to your friendship":
+                    jump lyndafriendship
 
 label lyndamanger:
     m "I could really use your skills, even if it's just before you move, you don't even have to sign up. Just help me get some of the other folks on board."
@@ -313,7 +340,7 @@ label lyndafriendship:
         jump lyndasaysyes
     else: 
         show lynda unsure at char_right
-        l "I'm sorry <playername>, I wish I could do more, but I think you're better off just chatting with the other folks in the building."
+        l "I'm sorry [player_name], I wish I could do more, but I think you're better off just chatting with the other folks in the building."
         show lynda neutral at char_right
         show anna neutral at char_left
         jump lyndasaysno

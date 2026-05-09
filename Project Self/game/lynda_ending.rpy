@@ -73,8 +73,9 @@ label gameendinggood:
 
 
 label lyndareflectiontime:
-    "Our choices matter. We're often told this in games especially. So let's tale a moment to reflect."
-    show black_overlay onlayer master at fade_in_black
+    "Our choices matter. We're often told this in games especially. So let's take a moment to reflect."
+    scene bg black at bg_fit
+    with dissolve
     "Do I ever doubt my skills?"
     menu:
         "Yes":

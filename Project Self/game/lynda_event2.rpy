@@ -294,7 +294,7 @@ label beansearch:
         $ checked_balcony = False
         $ checked_bedroom = False
 
-m "DEBUG: [bean_location]"
+# m "DEBUG: [bean_location]"
 
 "Where should you look?"
 

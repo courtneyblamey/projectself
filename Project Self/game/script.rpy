@@ -4,6 +4,7 @@
 # name of the character.
 
 #IMAGES#
+image bg black = "bg_black.png"
 image bg lobby = "lobby_environment.png"
 image bg outside = "bg_doorway.png"
 image bg lynda apartment = "lynda_apartment_environment.png"
