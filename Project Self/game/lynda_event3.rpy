@@ -212,8 +212,12 @@ label lyndaevent3neut:
         l "What can I get you? I got wine, tea, water…"
     menu:
         "Wine":
+            jump lyndaevent3drink
         "Tea":
+            jump lyndaevent3drink
         "Water":
+            jump lyndaevent3drink
+    label lyndaevent3drink
     "Lynda preps your drink and sets it on the table in front of you."
     show anna concern at char_left
     a "So, what's this mysterious piece of mail?"

@@ -1,6 +1,7 @@
 label lyndainteraction1:
     scene bg lobby at bg_fit
     with dissolve
+    play music "audio/58. DJ Possum.mp3" fadein 1.5
     
     "You re-enter the building after an evening walk, making most of the remaining daylight at dusk and prepare to climb the stairs."
     "There's a notice board in the entrance littered with 'for sale' furniture posters, business cards, and a couple hand-scrawled notes."

@@ -78,35 +78,96 @@ label lyndareflectiontime:
     show black_overlay onlayer overlay:
         alpha 0.0
         linear 1.0 alpha 1.0
+    "Do I ever doubt my skills?"
+    menu:
+        "Yes":
+            jump doubtskills
+        "No":
+            jump nodoubtskills
+    
+label doubtskills:
+    if EndCredit:
+        "When Lynda doubted her skills you told her 'I think you know more than you realise.'"
+    else:
+        jump struggle
 
+label nodoubtskills:
+    if EndCredit:
+        "When Lynda doubted her skills you told her 'I think you know more than you realise.'"
+        "It helped her feel more secure in her own knowledge about things."
+        jump struggle
+    else:
+        jump struggle
 
-"Do I ever doubt my skills?"
-If $ lynda_knowledge = "True"
-When Lynda doubted her skills you told her "I think you know more than you realise."
+label struggle:
+    "Do I talk with people when I'm struggling?"
+    menu:
+        "Yes":
+            jump talkstruggle
+        "No":
+            jump notalkstruggle
+    
+label talkstruggle:
+    if lynda_blab:
+        "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
+        "You offered an ear for her, just like you ask of others."
+    elif lynda_validate:
+        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. Just as others validate yours."
+    else:
+        jump harder
 
-"Do I talk with people when I'm struggling?"
+label notalkstruggle:
+    if lynda_blab:
+        "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
+        "You offered an ear for her. It's okay to ask that of others."
+    elif lynda_validate:
+        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. You are likely rarely alone in how you're feeling."
+    else:
+        jump harder
 
-When Lynda was struggling with the long-distance nature of her relationship meaning she lacked support in her feelings you 
-if $ lynda_blab = "True"
-Let her talk it out. You offered an ear to her problems.
-if $ lynda_validate = "True"
-Validated how she felt. Sometimes just hearing someone echo back to you that you're facing a tough situation helps.
+label harder:
+    "Am I harder on myself than I should be?"
+    menu:
+        "Yes":
+            jump yesharder
+        "No":
+            jump noharder
 
-"Am I harder on myself than I should be?"
+label yesharder:
+    "When Bean escaped, Lynda felt wholly responsible for his escapade." 
+    if lynda_blame:
+        "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
+    elif lynda_overwork:
+        "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
+    else:
+        jump lyndareflectionend
 
-When Bean escaped, Lynda felt wholly responsible for his escapade. 
-if $ lynda_blame = "True"
-You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself.
-if $ lynda_overwork = "True"
-You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit.
+label noharder:
+"When Bean escaped, Lynda felt wholly responsible for his escapade." 
+    if lynda_blame:
+        "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
+    elif lynda_overwork:
+        "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
+    else:
+        jump lyndareflectionend
 
-"Sometimes, it is easier to give advice than take it."
+label lyndareflectionend:
+    if imposter:
+        "You identified with Lynda."
+    else:
+        "You did not necessarily see yourself in Lynda."
+        "After this, does that still hold true?"
+    "Sometimes, it is easier to give advice than take it."
 
-"But I hope, for a moment, that you can see your kindness towards Lynda, someone who isn't real, as things you can say to yourself. To grant yourself the same level of kindness."
+    "But I hope, for a moment, that you can see your kindness towards Lynda, someone who isn't real, as things you can say to yourself. To grant yourself the same level of kindness."
 
-"If you didn't pick these options, that doesn't mean you're a bad person or unempathetic! Perhaps you were curious what certain options might bring you, or maybe you just didn't vibe with Lynda."
+    "If you didn't pick these options, perhaps you were curious what certain options might bring you, or maybe you just didn't vibe with Lynda."
 
-"Thank you for playing this vertical slice of Project Self. There's more on the horizon!"
+    "However it went, I'm grateful you took a moment to reflect. Thank you for playing."
+
+    "This was for No One in Particular."
+
+    return
 
 
 
