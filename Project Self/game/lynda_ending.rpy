@@ -92,13 +92,13 @@ label yesdoubtskills:
         "When Lynda doubted her skills dealing with the tech she brought from work you told her 'I think you know more than you realise.'"
         "That stayed with Lynda. She gained a little more confidence in what she could do."
         "As for you, what made you reassure her skills? Perhaps she was being too hard on herself? Or denied herself of what her capability is?"
-        "How about..."
+        "Next question..."
         #confidence marker for lynda in next iteration?
         jump struggle
     else:
         "Both Lynda and yourself experience the same worries. Lynda wasn't sure she could get enough of a hold on the technological side of her role."
         "What do you feel unsure of? Have others said things to make you feel such a way? Or does the pressure come from within?"
-        "How about..."
+        "Next question..."
         jump struggle
 
 label nodoubtskills:
@@ -106,11 +106,11 @@ label nodoubtskills:
         "When Lynda doubted her skills dealing with the tech she brought from work you told her 'I think you know more than you realise.'"
         "It helped her feel more secure in her own knowledge about things."
         "What from your own confidence made you reassure her skills? Perhaps she was being too hard on herself? Or denied herself of what her capability is?"
-        "How about..."
+        "Next question..."
         jump struggle
     else:
         "Wonderful! What helps you feel assured in your skills? Is it tangible expertise, like degrees or projects? Or is it comments from others? Or does it come from within?"
-        "How about..."
+        "Next question..."
         jump struggle
 
 label struggle:
@@ -125,14 +125,14 @@ label talkstruggle:
     if lynda_blab:
         "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
         "You offered an ear for her, just like you ask of others."
-        "How about..."
+        "Next question..."
         jump harder
     elif lynda_validate:
         "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. Just as others, hopefully, validate yours."
-        "How about..."
+        "Next question..."
         jump harder
     else:
-        "How about..."
+        "Next question..."
         jump harder
 
 label notalkstruggle:
@@ -140,15 +140,20 @@ label notalkstruggle:
         "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
         "You offered an ear for her."
         "It's okay to ask that of others when you feel overwhelmed."
-        "How about..."
+        "Next question..."
         jump harder
     elif lynda_validate:
         "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles." 
+        "What is it the makes you not want to share with others? Is it trust or vulnerability?"
         "You are likely rarely alone in how you're feeling. You might even find advice where you least expect it."
-        "How about..."
+        "Next question..."
         jump harder
     else:
-        "How about..."
+        "What is it the makes you not want to share with others? Is it trust or vulnerability?"
+        "Or do you not want to do that emotional work for others, so sharing feels unfair?"
+        "It is okay to not always share how you're doing or feeling. But sometimes not having an outlet can make things feel so lonely."
+        "You don't have to be alone in things."
+        "Next question..."
         jump harder
 
 label harder:
@@ -160,21 +165,29 @@ label harder:
             jump noharder
 
 label yesharder:
-    "When Bean escaped, Lynda felt wholly responsible for his escapade." 
     if lynda_blame:
+        "When Bean escaped, Lynda felt wholly responsible for his escapade." 
         "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
+        jump lyndareflectionend
     elif lynda_overwork:
+        "When Bean escaped, Lynda felt wholly responsible for his escapade." 
         "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
+        jump lyndareflectionend
     else:
+        "Giving ourselves permission to be gentler to ourselves is hard."
+        "Sometimes it can be as small as ending a work day a little earlier, or externalising our inner critic to hear it aloud, but it is no easy task."
         jump lyndareflectionend
 
 label noharder:
-"When Bean escaped, Lynda felt wholly responsible for his escapade." 
-if lynda_blame:
-    "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
-elif lynda_overwork:
-    "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
-else:
+    "When Bean escaped, Lynda felt wholly responsible for his escapade." 
+    if lynda_blame:
+        "You reminded her to not blame herself. Some things are beyond our control, and beating yourself up over a misstep is not kind to yourself."
+        jump lyndareflectionend
+    elif lynda_overwork:
+        "You pointed out she worked too much. Not as a critique, but as a concern. Lynda spends a lot of time overpreparing for work meetings and presentations, and you helped her realise she could ease off a little bit."
+        jump lyndareflectionend
+    else:
+        "Finding the balance of not being our own worst critic, while also accepting of criticism is no easy feat. Check in with those around you."
     jump lyndareflectionend
 
 label lyndareflectionend:
@@ -190,7 +203,9 @@ label lyndareflectionend:
 
     "And sometimes... the weight of the world and others can rest on us in ways we don't expect."
 
-    "But I hope, for a moment, that you can see your kind words towards Lynda, someone who isn't real, as things you can say to yourself. To grant yourself the same generosity and care."
+    "I never really know how to end things."
+
+    "But I hope, for a moment, that you can see your kind words towards Lynda, someone who isn't real, as things you can say to yourself or to others around you. To grant yourself and others the same generosity and care."
 
     "Maybe you didn't pick those options, perhaps you were curious what certain options might bring you, or maybe you just didn't vibe with Lynda."
 
