@@ -1,6 +1,7 @@
 label lyndaevent2:
 
 scene bg pc apartment at bg_fit
+with Dissolve(2.0)
 
 "It's a quiet and grey afternoon, you decide to..."
 
@@ -315,6 +316,7 @@ menu:
 label beanoutbuilding:
 
 scene bg outside at bg_fit
+with dissolve
 
 if checked_bushes and checked_bins and checked_cars:
     "You've checked everywhere outside… Bean must be somewhere else."
@@ -491,6 +493,7 @@ label beaninbuilding:
 
 label beanlobby:
 scene bg lobby at bg_fit
+with dissolve
 if checked_mail and checked_planters and checked_stairwells:
     "You've checked everything in the lobby… Bean must not be here."
     jump beaninbuilding
@@ -624,6 +627,7 @@ else:
 
 label beanlaundry:
 scene bg laundry at bg_fit
+with dissolve
 
 "You wander into the laundry room. The smell of floral laundry detergent and dryer sheets wafts in the air."
 
@@ -678,6 +682,7 @@ else:
 
 label beaninapartment:
 scene bg pc apartment at bg_fit 
+with dissolve
 if checked_balcony and checked_bedroom:
     "You've checked everywhere in your apartment… Bean must not be here."
     jump beansearch
@@ -791,6 +796,7 @@ label foundbean:
     "You make your way up to Lynda's apartment with Bean in your arms and knock on her door."
 
 scene bg lynda apartment at bg_fit
+with dissolve
 m "Guess who~?"
 
 show lynda sad at char_center
@@ -857,6 +863,7 @@ m "I wonder if Lynda's found Bean…"
 "You knock on her door, and there's a brief pause before she opens it."
 
 scene bg lynda apartment at bg_fit
+with dissolve
 
 show lynda neutral at char_center
 
@@ -1350,6 +1357,8 @@ label lyndabeanconvince1:
 
                     show lynda annoyed at char_center
 
+                    with vpunch
+
                     l "Oh my GOD [player_name], will you let it be? Can't you see, once again, this is not the time?"
 
                     l "I am up to my eyeballs in work things, trying to learn everything I can in prep for every meeting."
@@ -1601,6 +1610,7 @@ label lyndabeanconvince2:
                 else:
 
                     show lynda annoyed at char_center
+                    with vpunch
 
                     l "Oh my GOD [player_name], will you let it be? Can't you see, once again, this is not the time?"
 
@@ -1626,6 +1636,7 @@ label lyndabeanconvince2:
 label beanconvincegood:
 
     scene bg pc apartment at bg_fit
+    with dissolve
 
     "You head back downstairs. You're making progress with Lynda, you can feel it."
 
@@ -1639,6 +1650,7 @@ label beanconvincegood:
 label beanconvinceneut:
 
     scene bg pc apartment at bg_fit
+    with dissolve
 
     "You head back downstairs. Maybe you can still convince Lynda. She didn't seem {i}completely{/i} uninterested."
 
@@ -1649,6 +1661,7 @@ label beanconvinceneut:
 
 label beanconvincebad:
     scene bg pc apartment at bg_fit
+    with dissolve
 
     "You head back downstairs."
 
@@ -1664,5 +1677,6 @@ label beanconvincebad:
 
 
 label beanconvinceend:
-
+    hide bg pc apartment
+    with Dissolve(2.0)
     jump lyndainteraction4check

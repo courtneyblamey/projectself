@@ -10,7 +10,7 @@ elif lynda_rating >= 8:
 # LOW RELATIONSHIP ENDING
 label lyndaevent3bad:
     scene bg lobby at bg_fit
-    with dissolve
+    with Dissolve(2.0)
     "On your way back in from a walk you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."
@@ -171,6 +171,7 @@ label lyndabadendmenu:
 
 label lyndaevent3neut:
     scene bg lobby at bg_fit
+    with Dissolve(2.0)
     "On your way back in from a walk you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."
@@ -348,6 +349,7 @@ label lyndafriendship:
 
 label lyndaevent3good:
     scene bg lobby at bg_fit
+    with Dissolve(2.0)
     "On your way back in from a walk, you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."
@@ -465,10 +467,13 @@ l "You don't even know. There's a reason I live off of takeout when she's not ar
 "At the point you think you're going to burst, Anna hands you a tupperware filled with leftovers to take home."
 hide lynda neutral at char_right
 hide anna neutral at char_left
-scene bg pc apartment at bg_fit with dissolve
+scene bg pc apartment at bg_fit 
+with dissolve
 "You wish them a good night and head downstairs. A pang of sadness hits knowing you're down one point of support."
 m "I'll just have to convince the others."
 m "But for now, I digest all this food in a blanket pile."
+hide bg pc apartment
+with dissolve
 jump gameendingneut
 
 label politeno:
@@ -497,6 +502,8 @@ scene bg pc apartment at bg_fit
 with dissolve
 m "Guess I'll need to convince some of the others."
 "You get into your apartment, reheat your leftovers, and lock in on binge watching something."
+hide bg pc apartment
+with dissolve
 jump gameendingneut
 
 
@@ -515,5 +522,7 @@ label lyndasaysyes:
     "Anna serves an amazing pasta dish with accompanying salads and then homemade cookies and ice cream."
     "At the point you think you're going to burst, Anna hands you a tupperware filled with leftovers to take home."
     "You wish them a good night and head downstairs, feeling full of optimism - and food."
+    hide bg lynda apartment
+    with dissolve
     jump gameendinggood
 

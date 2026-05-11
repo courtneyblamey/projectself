@@ -1,10 +1,10 @@
 label lyndainteraction2:
     
     scene bg lobby at bg_fit
-    with dissolve
+    with Dissolve(2.0)
     "THE NEXT DAY"
 
-    "As you are headed back home you spot Lynda wrangling a pair of boxes through the building's front door."
+    "As you are headed back home from work you spot Lynda wrangling a pair of boxes through the building's front door."
 
     m "Aha. Target acquired."
 
@@ -24,7 +24,7 @@ label lyndainteraction2:
 
 menu:
 
-    "Give the door a shove.":
+    "Kick the door.":
         jump doorkick
 
         label doorkick:
@@ -33,7 +33,7 @@ menu:
             "With some gumption, you give the door a swift boot. It pops back with force and slams against the doorway causing an echo down the corridor. BUT it is open. You see a shoe print on the (luckily) glazed glass."
             jump postdoor
 
-    "Kick the door.":
+    "Give the door a shove.":
         jump doorshove
 
         label doorshove:
@@ -399,4 +399,6 @@ label lyndalastbox:
     else:
         m "I'm sure Lynda has it handled, what's a bit of tech anyway!"
     "You head off to your apartment for the night."
+    hide bg lynda apartment 
+    with Dissolve(1.0)
     jump lyndaevent1

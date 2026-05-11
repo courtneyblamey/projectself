@@ -1,32 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/lynda_ending.rpy", line 77, in script
-    show black_overlay onlayer master at fade_in_black
-  File "game/lynda_ending.rpy", line 77, in <module>
-    show black_overlay onlayer master at fade_in_black
-NameError: name 'fade_in_black' is not defined
+  File "game/lynda_interim.rpy", line 23, in script
+    m "That's 50% of folks signed up!"
+TypeError: %o format: an integer is required, not TagQuotingDict
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/lynda_ending.rpy", line 77, in script
-    show black_overlay onlayer master at fade_in_black
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1076, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 1076, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/lynda_ending.rpy", line 77, in <module>
-    show black_overlay onlayer master at fade_in_black
-NameError: name 'fade_in_black' is not defined
+  File "game/lynda_interim.rpy", line 23, in script
+    m "That's 50% of folks signed up!"
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\court\Desktop\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 121, in say
+    what = what % tag_quoting_dict
+TypeError: %o format: an integer is required, not TagQuotingDict
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Project Self 1.0
-Fri May  8 21:54:25 2026
+Mon May 11 16:23:42 2026

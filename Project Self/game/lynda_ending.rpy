@@ -3,7 +3,7 @@
 label gameendingbad:
     hide black_overlay 
     scene bg pc apartment at bg_fit
-    with dissolve
+    with Dissolve(3.0)
     "A FEW WEEKS LATER."
     "As you enjoy your morning coffee you hear some commotion outside. You peer out the window to see a moving truck slowly filling up with furniture. A cat tower, wine rack, and antique box sit waiting to be added."
     "Today must be the day Lynda moves out."
@@ -13,7 +13,7 @@ label gameendingbad:
 
 label gameendingneut:
     scene bg pc apartment at bg_fit
-    with dissolve
+    with Dissolve(3.0)
     "A FEW WEEKS LATER."
     "As you enjoy your morning coffee you hear some commotion outside. You peer out the window to see a moving truck slowly filling up with furniture. A cat tower, wine rack, and antique box sit waiting to be added."
     "Today must be the day Lynda moves out."
@@ -24,7 +24,7 @@ label gameendingneut:
 
 label gameendinggood:
     scene bg lobby at bg_fit
-    with dissolve
+    with Dissolve(3.0)
     "A FEW WEEKS LATER."
     show lynda neutral at char_center
     l "Yeah, just stack them here for now!"
@@ -38,7 +38,7 @@ label gameendinggood:
     show lynda neutral at char_center
     m "Oh, this one needs taping shut!"
     l "Oh! Actually!"
-    "Lynda trots over."
+    "Lynda jogs over."
     show lynda wink at char_center
     l "That's for you!"
     show lynda neutral at char_center
@@ -64,7 +64,8 @@ label gameendinggood:
     "Lynda squeezes your arm."
     l "Best of luck with it all [player_name]."
     "You wave bye to Lynda and Anna as they head out."
-    scene bg pc apartment at bg_fit with dissolve
+    scene bg pc apartment at bg_fit 
+    with dissolve
     "As you get back into your apartment, you get to tidying up from the first meeting with actual attendees from last night. Even if it was just Lynda."
     "But that's proof you can get others on board."
     m "Guess it's time to chat with the other tenants."
@@ -72,32 +73,48 @@ label gameendinggood:
 
 
 label lyndareflectiontime:
-    "Our choices matter. We're often told this in games especially. So let's take a moment to reflect."
+    play music "audio/Pamela Yuen - Dream Diary.mp3" fadeout 2.0 fadein 2.0
     scene bg black at bg_fit
-    with dissolve
-    "Do I ever doubt my skills?"
+    with Dissolve(5.0)
+    "Our choices matter. We're often told this in games especially. So let's take a moment to reflect."
+    "If the following section becomes too much for you, please feel free to save and exit the game."
+    "Some big questions for you [player_name]:"
+    
+    "Do you ever doubt my skills?"
     menu:
         "Yes":
-            jump doubtskills
+            jump yesdoubtskills
         "No":
             jump nodoubtskills
     
-label doubtskills:
+label yesdoubtskills:
     if EndCredit:
-        "When Lynda doubted her skills you told her 'I think you know more than you realise.'"
+        "When Lynda doubted her skills dealing with the tech she brought from work you told her 'I think you know more than you realise.'"
+        "That stayed with Lynda. She gained a little more confidence in what she could do."
+        "As for you, what made you reassure her skills? Perhaps she was being too hard on herself? Or denied herself of what her capability is?"
+        "How about..."
+        #confidence marker for lynda in next iteration?
+        jump struggle
     else:
+        "Both Lynda and yourself experience the same worries. Lynda wasn't sure she could get enough of a hold on the technological side of her role."
+        "What do you feel unsure of? Have others said things to make you feel such a way? Or does the pressure come from within?"
+        "How about..."
         jump struggle
 
 label nodoubtskills:
     if EndCredit:
-        "When Lynda doubted her skills you told her 'I think you know more than you realise.'"
+        "When Lynda doubted her skills dealing with the tech she brought from work you told her 'I think you know more than you realise.'"
         "It helped her feel more secure in her own knowledge about things."
+        "What from your own confidence made you reassure her skills? Perhaps she was being too hard on herself? Or denied herself of what her capability is?"
+        "How about..."
         jump struggle
     else:
+        "Wonderful! What helps you feel assured in your skills? Is it tangible expertise, like degrees or projects? Or is it comments from others? Or does it come from within?"
+        "How about..."
         jump struggle
 
 label struggle:
-    "Do I talk with people when I'm struggling?"
+    "Do you talk with people when you're struggling?"
     menu:
         "Yes":
             jump talkstruggle
@@ -108,22 +125,34 @@ label talkstruggle:
     if lynda_blab:
         "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
         "You offered an ear for her, just like you ask of others."
+        "How about..."
+        jump harder
     elif lynda_validate:
-        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. Just as others validate yours."
+        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. Just as others, hopefully, validate yours."
+        "How about..."
+        jump harder
     else:
+        "How about..."
         jump harder
 
 label notalkstruggle:
     if lynda_blab:
         "When Lynda was struggling with the long-distance nature of her relationship you gave her the chance to blab! Sometimes blabbing about feelings can help us externalise things."
-        "You offered an ear for her. It's okay to ask that of others."
+        "You offered an ear for her."
+        "It's okay to ask that of others when you feel overwhelmed."
+        "How about..."
+        jump harder
     elif lynda_validate:
-        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles. You are likely rarely alone in how you're feeling."
+        "When Lynda was struggling with the long-distance nature of her relationship you validated her struggles." 
+        "You are likely rarely alone in how you're feeling. You might even find advice where you least expect it."
+        "How about..."
+        jump harder
     else:
+        "How about..."
         jump harder
 
 label harder:
-    "Am I harder on myself than I should be?"
+    "Are you harder on myself than you should be?"
     menu:
         "Yes":
             jump yesharder
@@ -152,17 +181,36 @@ label lyndareflectionend:
     if imposter:
         "You identified with Lynda."
     else:
-        "You did not necessarily see yourself in Lynda."
+        "You did not necessarily identify aspects of yourself in Lynda."
         "After this, does that still hold true?"
+
     "Sometimes, it is easier to give advice than take it."
 
-    "But I hope, for a moment, that you can see your kindness towards Lynda, someone who isn't real, as things you can say to yourself. To grant yourself the same level of kindness."
+    "Sometimes, it is easy to forget that we're not so alone in our feelings. Even though it can feel like it at times."
 
-    "If you didn't pick these options, perhaps you were curious what certain options might bring you, or maybe you just didn't vibe with Lynda."
+    "And sometimes... the weight of the world and others can rest on us in ways we don't expect."
 
-    "However it went, I'm grateful you took a moment to reflect. Thank you for playing."
+    "But I hope, for a moment, that you can see your kind words towards Lynda, someone who isn't real, as things you can say to yourself. To grant yourself the same generosity and care."
+
+    "Maybe you didn't pick those options, perhaps you were curious what certain options might bring you, or maybe you just didn't vibe with Lynda."
+
+    "However it went, be grateful you took a moment for yourself."
+
+    "We all need more of those."
+    
+    "Thank you for playing <3."
 
     "This was for No One in Particular."
+
+    "CREDITS!"
+
+    "Background Art: Kira Fountain"
+
+    "Character Artist: Tuana Bicakci"
+
+    "Title and Reflection Music: Come As You Are and Dream Diary by Pamela Yuen"
+
+    "Main Game Theme: DJ Possum by Stijn van Wakeren"
 
     return
 

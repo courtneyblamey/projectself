@@ -211,3 +211,7 @@ init python:
 
 #dev mode force
 define config.developer = True
+
+#start menu music config
+define config.main_menu_music = "audio/Pamela Yuen - Come As You Are.mp3"
+define config.main_menu_music_fadein = 1.5

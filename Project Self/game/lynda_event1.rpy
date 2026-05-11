@@ -1,7 +1,9 @@
 label lyndaevent1:
 
 scene bg pc apartment at bg_fit
+with Dissolve(2.0)
 
+"After a long week it is finally the weekend again."
 "You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
 
 menu:
@@ -224,6 +226,7 @@ label goupstairspanic:
     "You skid around the corner to see Lynda's door open and run to it."
 
     scene bg lynda apartment at bg_fit
+    with vpunch
 
     show lynda sad at char_center
 
@@ -240,6 +243,7 @@ label goupstairspanic:
 
 label enteraptsink:
     scene bg lynda apartment at bg_fit
+    with vpunch
 
     show lynda sad at char_center
 
@@ -673,5 +677,6 @@ label lyndatidyup:
 
         "You both get to mopping up the kitchen, in a slightly awkward silence, before heading back home for the night."
 
-
+    hide bg lynda apartment 
+    with Dissolve(1.0)
     jump lyndainteraction3

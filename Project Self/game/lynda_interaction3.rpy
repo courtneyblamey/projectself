@@ -313,9 +313,13 @@ label endlyndainteraction3:
 
         if ChaosLaundry:
             "You decide to scroll on your phone for the last five minutes of the cycle and collect them, heading back upstairs for the night."
+            hide bg laundry 
+            with Dissolve(1.0)
             jump lyndaevent2
         else:
             "You load your next batch of clothes and head back upstairs. Eventually completing your laundry just in time for a reasonable bedtime."
+            hide bg laundry 
+            with Dissolve(1.0)
             jump lyndaevent2
 
     elif lynda_rating < 5 and ChaosLaundry:
@@ -324,8 +328,12 @@ label endlyndainteraction3:
     elif lynda_rating < 5 and DiligentLaundry:
         "You move over the current load and prep the next one, which you do one more time for the delicates, before bringing the last load upstairs." 
         "You lay out your delicates to dry, realising you should have done them first, and fold the remaining laundry while watching TV. Eventually, you sort it all away and flomp into bed for the night."
+        hide bg laundry 
+        with Dissolve(1.0)
         jump lyndaevent2
     else:
+        hide bg laundry 
+        with Dissolve(1.0)
         jump lyndaevent2
 
 

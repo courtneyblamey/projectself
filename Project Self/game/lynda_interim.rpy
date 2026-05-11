@@ -3,7 +3,7 @@ label lynda_interim:
     #this scene goes between interaction 1 and 2 to set up the premise that no one turns up to the first tenant's meeting.
 
     scene bg lobby at bg_fit
-    with dissolve
+    with Dissolve(2.0)
     "During your walk home you scroll through some articles on how to approach forming a tenant association. Many recommend forming genuine connections with each other to help with organising and delegating leadership to one or two people to help efficiency."
 
     m "Guess I self-elect as leader?"
@@ -20,13 +20,13 @@ label lynda_interim:
 
     "About ten signatures are scrawled on the paper."
 
-    m "That's 50% of folks signed up!"
+    m "That's 50%% of folks signed up!"
 
     m "This is going to be easier than I thought."
     
     "You take down the list and carry your bag of snacks and sodas up to your apartment."
 
-    scene pc apartment at bg_fit
+    scene bg pc apartment at bg_fit
     with dissolve
 
     "You set up the space and unbolt the door so folks can head on in."
@@ -93,19 +93,30 @@ label waiting:
 label stillwaiting:
     "A full hour goes by."
 
-    m "I don't think anyone is coming... why sign up if you won't turn up?"
+    m "I don't think anyone is coming..."
 
     "A pang of frustration hits. Then, realisation."
 
-    m "I sign up for things and don't turn up hoping that others will be there..."
+    m "Ah..."
+    
+    m "I sign up for things and don't turn up hoping that others will be there in my stead..."
 
-    m "...I need to convince them it is {i}worth{/i} participating. That a difference can come from this."
+    m "Okay."
+    
+    m "{i}Okay{/i}."
+    
+    m "I just need to {i}convince{/i} them it is worth participating."
+
+    m "Somehow..."
+
+    m "For now... we save face."
 
     "You clear your coffee table and write a new sign for the bulletin board."
 
-    "{i} Thanks to all who came tonight! We'll meet again next month to discuss grievances in the building we want dealt with! We already have water pressure as one of them. And if you haven't signed up, you can still!"
+    "{i}Thanks to all who came tonight! We'll meet again next month to discuss grievances in the building we want dealt with! We already have water pressure as one of them. And if you haven't signed up, you still can!{/i}"
 
     scene bg lobby at bg_fit
+    with dissolve
 
     "You trot downstairs with new determination and pin up the sheet."
 
@@ -116,5 +127,8 @@ label stillwaiting:
     m "Right?"
 
     "Right."
+
+    hide bg pc apartment
+    with Dissolve(1.0)
 
     jump lyndainteraction2

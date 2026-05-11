@@ -1,6 +1,6 @@
 label lyndainteraction1:
     scene bg lobby at bg_fit
-    with dissolve
+    with Dissolve(2.0)
     play music "audio/58. DJ Possum.mp3" fadein 1.5
     
     "It has been a busy week."
