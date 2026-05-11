@@ -337,7 +337,7 @@ menu:
                 "You then pick up the box of angled windows and place it overtop, slowly piecing together the device, as Lynda watches on chewing her rosy pink stained lip."
                 "You talk her through each phase, ensuring she's following along and answering her questions. She slowly becomes more and more inquisitive as you get ready to boot up the device."
                 show lynda unsure at char_center
-                l "Okay and so this then refracts? the projection to make it look 3D?"
+                l "Okay and so this then refracts the projection to make it look 3D...?"
                 m "Exactly, yeah! And each of these cubes holds the data of the images and words that will play."
                 m "Wanna boot it up?"
                 show lynda laugh at char_center

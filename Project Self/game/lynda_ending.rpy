@@ -7,9 +7,8 @@ label gameendingbad:
     "A FEW WEEKS LATER."
     "As you enjoy your morning coffee you hear some commotion outside. You peer out the window to see a moving truck slowly filling up with furniture. A cat tower, wine rack, and antique box sit waiting to be added."
     "Today must be the day Lynda moves out."
-    "A flicker of irritation courses through you."
-    "While she might not have joined your cause, now's the time to start thinking about the others."
-    m "Guess it's time to chat with the other tenants."
+    "A flicker of frustration courses through you before you let out a sigh."
+    m "Well, guess it's time to chat with the other tenants."
     jump lyndareflectiontime
 
 label gameendingneut:
