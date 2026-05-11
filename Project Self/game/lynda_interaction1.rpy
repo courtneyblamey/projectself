@@ -67,8 +67,8 @@ label notice_pipes:
 
 label notice_noise:
 
-    "{i}Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building."
-    "This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.{/i}"
+    "{i}Dear tenants, we have been made aware that there is a beeping noise coming from inside the electrical room of the building.{/i}"
+    "{i}This is nothing to be concerned about and nothing can be done to silence it. With that in mind please do not email us about the beeping.{/i}"
 
     "A slight concern rises in your stomach."
 

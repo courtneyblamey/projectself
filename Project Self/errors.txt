@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 103: end of line expected.
-    if not renpy.variant("small"):
-    ^
+File "game/screens.rpy", line 294: keyword argument 'yanchor' is incompatible with 'yalign'.
+    yanchor 0.5
+           ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sat May  9 16:01:59 2026
+Mon May 11 18:02:49 2026
