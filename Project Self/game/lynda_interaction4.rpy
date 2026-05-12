@@ -10,7 +10,7 @@ label lyndanoshow:
 scene bg pc apartment at bg_fit
 with Dissolve(2.0)
 
-"Another day rolls by. It is a crisp fall morning, and the sunlight cascades upon your windowsi-"
+"Another day rolls by. It is a crisp fall Saturday morning, and the sunlight cascades upon your windowsi-"
 
 "Oh, that's kinda dusty."
 
@@ -1477,7 +1477,7 @@ menu:
 
     "No":
         $ imposter = False
-        
+
 hide bg pc apartment
 with Fade(3.0)
 jump lyndaevent3

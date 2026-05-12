@@ -11,6 +11,7 @@ elif lynda_rating >= 8:
 label lyndaevent3bad:
     scene bg lobby at bg_fit
     with Dissolve(2.0)
+    "A COUPLE WEEKS LATER"
     "On your way back in from a walk you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."
@@ -172,6 +173,7 @@ label lyndabadendmenu:
 label lyndaevent3neut:
     scene bg lobby at bg_fit
     with Dissolve(2.0)
+    "A COUPLE WEEKS LATER"
     "On your way back in from a walk you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."
@@ -350,6 +352,7 @@ label lyndafriendship:
 label lyndaevent3good:
     scene bg lobby at bg_fit
     with Dissolve(2.0)
+    "A COUPLE WEEKS LATER"
     "On your way back in from a walk, you spot a letter jutting out of your mailbox."
     m "Huh."
     "Upon unlocking it and large brown envelope falls out. It was crammed in poorly."

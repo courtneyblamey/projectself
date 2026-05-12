@@ -4,6 +4,8 @@ label lynda_interim:
 
     scene bg lobby at bg_fit
     with Dissolve(2.0)
+    "A COUPLE DAYS LATER"
+    
     "During your walk home you scroll through some articles on how to approach forming a tenant association. Many recommend forming genuine connections with each other to help with organising and delegating leadership to one or two people to help efficiency."
 
     m "Guess I self-elect as leader?"

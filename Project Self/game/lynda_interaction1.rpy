@@ -1,7 +1,7 @@
 label lyndainteraction1:
     scene bg lobby at bg_fit
     with Dissolve(2.0)
-    play music "audio/58. DJ Possum.mp3" fadein 1.5
+    play music "audio/58. DJ Possum.mp3" fadeout 2.0 fadein 2.0
     
     "It has been a busy week."
     "You've just moved into a new apartment, started a new role at Corporation Ltd., dyed your hair a new colour, and to top it all off - you wrapped your last therapy session for a while last week."

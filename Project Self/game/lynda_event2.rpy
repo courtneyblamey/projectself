@@ -2,8 +2,9 @@ label lyndaevent2:
 
 scene bg pc apartment at bg_fit
 with Dissolve(2.0)
+"A FEW DAYS LATER"
 
-"It's a quiet and grey afternoon, you decide to..."
+"It's a quiet and grey afternoon. The office had a half day today with a holiday weekend on the horizon. So, you decide to spend your free time..."
 
 menu:
     "Bake some cookies":

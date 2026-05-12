@@ -3,6 +3,8 @@ label lyndainteraction3:
     scene bg pc apartment at bg_fit
     with dissolve
 
+    "THE FOLLOWING SUNDAY"
+
     "After scrolling social media for the morning, you roll over to spot your mountain of clothes bursting out of your laundry basket."
 
     m "I should probably deal with that."

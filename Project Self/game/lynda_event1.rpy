@@ -2,8 +2,9 @@ label lyndaevent1:
 
 scene bg pc apartment at bg_fit
 with Dissolve(2.0)
+"THE WEEKEND"
 
-"After a long week it is finally the weekend again."
+"After a long week it is finally the weekend once more. Your first official one in your new place."
 "You're settled on your couch for the evening scrolling through a streaming service for SOMETHING good to watch."
 
 menu:

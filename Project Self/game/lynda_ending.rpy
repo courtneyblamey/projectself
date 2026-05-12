@@ -4,7 +4,7 @@ label gameendingbad:
     hide black_overlay 
     scene bg pc apartment at bg_fit
     with Dissolve(3.0)
-    "A FEW WEEKS LATER."
+    "A MONTH LATER."
     "As you enjoy your morning coffee you hear some commotion outside. You peer out the window to see a moving truck slowly filling up with furniture. A cat tower, wine rack, and antique box sit waiting to be added."
     "Today must be the day Lynda moves out."
     "A flicker of frustration courses through you before you let out a sigh."
@@ -14,7 +14,7 @@ label gameendingbad:
 label gameendingneut:
     scene bg pc apartment at bg_fit
     with Dissolve(3.0)
-    "A FEW WEEKS LATER."
+    "A MONTH LATER."
     "As you enjoy your morning coffee you hear some commotion outside. You peer out the window to see a moving truck slowly filling up with furniture. A cat tower, wine rack, and antique box sit waiting to be added."
     "Today must be the day Lynda moves out."
     "A wave of sadness hits."
@@ -25,7 +25,7 @@ label gameendingneut:
 label gameendinggood:
     scene bg lobby at bg_fit
     with Dissolve(3.0)
-    "A FEW WEEKS LATER."
+    "A MONTH LATER."
     show lynda neutral at char_center
     l "Yeah, just stack them here for now!"
     "You lug some moving boxes over to the lobby doorway."
