@@ -95,7 +95,8 @@ label notice_after:
 
     l "I thought I heard some chatter this morning outside my window - are you the one I heard telling someone 'no one will steal my stuff from the sidewalk it's 10am'?"
 
-    "You recall a joking exchange between yourself and your friend over ferrying things indoors when they had to leave. They looked guilty, but you didn't want them to worry. Plus, stealing is a night crime, everyone knows that."
+    "You recall a joking exchange between yourself and your friend over ferrying things indoors when they had to leave. They looked guilty, but you didn't want them to worry." 
+    "Plus, stealing is a night crime, everyone knows that."
 
     m "Hah, yes that was me."
 
@@ -269,7 +270,8 @@ if BuildingPastGood:
 
     m "Lynda suggested this, maybe she'd be interested… I'll bring it up when I next see her."
 
-    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
+    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general." 
+    "There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
     jump lyndainteraction2
 else:
@@ -342,7 +344,8 @@ else:
 
     m "...maybe Lynda? I'll bring it up when I next see her."
 
-    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
+    "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general." 
+    "There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
     scene bg_black at bg_fit
     with Dissolve(2.0)

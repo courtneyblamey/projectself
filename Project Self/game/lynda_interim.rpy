@@ -16,7 +16,7 @@ label lynda_interim:
 
     "You open the building door and spot your sign up list on the bulletin board."
 
-    "{i}Are you bothered by issues in your apartment? Sign up to help form a tenants association so we can work together and hold our building managers accountable!/{i}"
+    "{i}Are you bothered by issues in your apartment? Sign up to help form a tenants association so we can work together and hold our building managers accountable!{/i}"
 
     "{i}First meeting Apt 101 next Tuesday evening, snacks provided!/{i}"
 
