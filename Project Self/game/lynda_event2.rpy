@@ -1678,6 +1678,6 @@ label beanconvincebad:
 
 
 label beanconvinceend:
-    hide bg pc apartment
+    scene bg_black at bg_fit
     with Dissolve(2.0)
     jump lyndainteraction4check

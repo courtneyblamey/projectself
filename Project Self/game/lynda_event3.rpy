@@ -111,6 +111,8 @@ label lyndabadendmenu:
             hide lynda neutral
             "You stand there for a moment absorbing the failure."
             m "fuck."
+            scene bg_black at bg_fit
+            with Dissolve(2.0)
             jump gameendingbad
 
         "Be angry":
@@ -139,6 +141,8 @@ label lyndabadendmenu:
                 "Fuck this":
                     m "I'm over this. I can't convince anyone to sign up, its like no one cares or maybe {i}maybe{/i} they just aren't willing to spend the energy to care."
                     m "Screw all of this."
+                    scene bg_black at bg_fit
+                    with Dissolve(2.0)
                     jump gameendingbad
                 "Fuck her":
                     "You glower at the shut door and storm back downstairs."
@@ -148,6 +152,8 @@ label lyndabadendmenu:
                     m "Hope it doesn't distract you from the APARTMENT SHOPPING."
                     "You flomp onto your bed, put on some headphones, and curl up under the blankets."
                     "A couple hours later, someone starts banging on your wall telling you to shut it off. You switch off the TV and curl back up in your pit of grump."
+                    scene bg_black at bg_fit
+                    with Dissolve(2.0)
                     jump gameendingbad
 
         "Try to appeal":
@@ -167,6 +173,8 @@ label lyndabadendmenu:
             "Lynda shuts the door."
             m "..."
             m "Well, shit."
+            scene bg_black at bg_fit
+            with Dissolve(2.0)
             jump gameendingbad
 
 
@@ -475,8 +483,8 @@ with dissolve
 "You wish them a good night and head downstairs. A pang of sadness hits knowing you're down one point of support."
 m "I'll just have to convince the others."
 m "But for now, I digest all this food in a blanket pile."
-hide bg pc apartment
-with dissolve
+scene bg_black at bg_fit
+with Dissolve(2.0)
 jump gameendingneut
 
 label politeno:
@@ -505,8 +513,8 @@ scene bg pc apartment at bg_fit
 with dissolve
 m "Guess I'll need to convince some of the others."
 "You get into your apartment, reheat your leftovers, and lock in on binge watching something."
-hide bg pc apartment
-with dissolve
+scene bg_black at bg_fit
+with Dissolve(2.0)
 jump gameendingneut
 
 
@@ -525,7 +533,7 @@ label lyndasaysyes:
     "Anna serves an amazing pasta dish with accompanying salads and then homemade cookies and ice cream."
     "At the point you think you're going to burst, Anna hands you a tupperware filled with leftovers to take home."
     "You wish them a good night and head downstairs, feeling full of optimism - and food."
-    hide bg lynda apartment
-    with dissolve
+    scene bg_black at bg_fit
+    with Dissolve(2.0)
     jump gameendinggood
 

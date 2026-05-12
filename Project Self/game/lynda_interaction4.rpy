@@ -91,6 +91,9 @@ label lyndanoshowend:
 
     "You put your phone away and focus back on cleaning, wondering what caused such a last-minute cancellation from Lynda."
 
+    scene bg_black at bg_fit
+    with Dissolve(2.0)
+
     jump lyndaevent3
 
 label lyndainteraction4:
@@ -513,6 +516,9 @@ m "[say_drunk('Yeah... yeah that sounds good.')]"
 
 "You both grab your coats and wobble out."
 
+scene bg_black at bg_fit
+with Dissolve(2.0)
+
 jump lyndagoodend4
 
 label lyndabar3:
@@ -547,6 +553,9 @@ label lyndabar3:
         "You both grab your coats and head out into the evening."
 
         hide lynda laugh 
+
+        scene bg_black at bg_fit
+        with Dissolve(2.0)
 
         jump lyndagoodend4
 
@@ -1436,8 +1445,8 @@ menu:
     "No":
         $ imposter = False
 
-hide bg pc apartment
-with Fade(3.0)
+scene bg_black at bg_fit
+with Dissolve(3.0)
 
 jump lyndaevent3
 
@@ -1478,8 +1487,8 @@ menu:
     "No":
         $ imposter = False
 
-hide bg pc apartment
-with Fade(3.0)
+scene bg_black at bg_fit
+with Dissolve(3.0)
 jump lyndaevent3
 
     

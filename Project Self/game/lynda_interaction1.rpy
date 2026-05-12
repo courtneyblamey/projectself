@@ -344,6 +344,9 @@ else:
 
     "You spend the rest of the evening checking out how to run the association and details on tenants' rights in general. There's a sense of excitement, even if it means trying to persuade some total strangers to join you on the journey."
 
+    scene bg_black at bg_fit
+    with Dissolve(2.0)
+
     jump lynda_interim
 
 

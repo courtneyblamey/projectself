@@ -227,6 +227,8 @@ label lyndareflectionend:
 
     "Main Game Theme: DJ Possum by Stijn van Wakeren"
 
+    "QA: Tiff, Jules, and Michael - thank you all <3"
+
     return
 
 

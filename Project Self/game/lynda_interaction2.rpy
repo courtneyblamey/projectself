@@ -334,7 +334,7 @@ menu:
                 "You reach for one of the cubes."
                 m "This goes into the base."
                 l "Okay, this makes sense."
-                "You then pick up the box of angled windows and place it overtop, slowly piecing together the device, as Lynda watches on chewing her rosy pink stained lip."
+                "You then pick up the box of angled windows and place it overtop, slowly piecing together the device, as Lynda watches on chewing her lip."
                 "You talk her through each phase, ensuring she's following along and answering her questions. She slowly becomes more and more inquisitive as you get ready to boot up the device."
                 show lynda unsure at char_center
                 l "Okay and so this then refracts the projection to make it look 3D...?"
@@ -399,6 +399,6 @@ label lyndalastbox:
     else:
         m "I'm sure Lynda has it handled, what's a bit of tech anyway!"
     "You head off to your apartment for the night."
-    hide bg lynda apartment 
-    with Dissolve(1.0)
+    scene bg_black at bg_fit
+    with Dissolve(2.0)
     jump lyndaevent1

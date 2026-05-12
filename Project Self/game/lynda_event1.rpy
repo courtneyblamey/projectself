@@ -678,6 +678,6 @@ label lyndatidyup:
 
         "You both get to mopping up the kitchen, in a slightly awkward silence, before heading back home for the night."
 
-    hide bg lynda apartment 
-    with Dissolve(1.0)
+    scene bg_black at bg_fit
+    with Dissolve(2.0)
     jump lyndainteraction3
