@@ -233,3 +233,18 @@ Hopefully, this breakthrough will allow the next era of keyboard smashing and se
 
 Currently, I'm editing the dialogue exchanges to account for the new revelation that Lynda's character is signed up but didn't turn up to the meeting. Now, I have the issue that the desire to connect with Lynda is *overshadowed* by the tenant association. There could be the typical binary choices that carry valence for *how* to encourage her, i.e., lean into the building issues rather than her personal struggles. Balancing Lynda-as-tenant and Lynda-as-potential-friendship without the player being made to feel shitty about it being a purely transactional relationship has slowed my progress on how to orient the edits. I've made some good starts, but now I'm pondering in the moment about it... I'll be back.
 
+### Simulating Social Intricacies
+
+#### 08-06-2026
+
+#### Binary vs. Nuance
+
+Now that I'm writing these choices with a different motivation, it is hard to not opt for the binary (as can be seen in the Genuine vs. Association variable). Even mapping the Bean escape event convince string means feeling like I'm offering just two, or that these two choices are up to be interpreted either way without HEAVY signposting. So, I'll make it asymmetrical: two of the choices are "Association" one is "Genuine" and I'll shuffle that format as I see fit. With more time I would attach it to the relationship variable between the PC and Lynda, but even then, you can progress her relationship without picking genuine options. 
+
+### Simulating Social Intricacies II
+
+#### 11-05-2026
+
+#### Binary vs. Nuance vs. Time
+
+So, at this point, I think a done build is better than a perfect build. All these ruminations will help me on the next iteration of the project, and offers me something tangible to talk about for the design knowledge gained for trying to translate narrative and dialogue systems in a meaningful way. I could even be that a visual novel *isn't* the way to do this, because there are so many attached expectations (see: Lynda as dateable candidate - maybe I should just have Anna live there with her to offset this in the next pass.) Or I need to move away from too many of the formats of the visual novel, and out of Ren'Py to start. I chose the engine because it offered a low bar of entry to do what I wanted, but I have consistently bumped into the limitations (or my lack of knowledge) of this engine. I do think I'll heed Pippin's advice and look into Godot once the dissertation is over. I've been itching to get back into more game dev now that I've made this slice. There's definitely something here, even if it wasn't quite how I wanted it!
