@@ -80,7 +80,7 @@ label lyndareflectiontime:
     "If the following section becomes too much for you, please feel free to save and exit the game."
     "Some big questions for you [player_name]:"
     
-    "Do you ever doubt my skills?"
+    "Do you ever doubt your skills?"
     menu:
         "Yes":
             jump yesdoubtskills
@@ -157,7 +157,7 @@ label notalkstruggle:
         jump harder
 
 label harder:
-    "Are you harder on myself than you should be?"
+    "Are you harder on yourself than you should be?"
     menu:
         "Yes":
             jump yesharder
